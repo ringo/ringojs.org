@@ -6,6 +6,6 @@ ringojs, and ringowiki) with:
     git submodule init
     git submodule update
 
-Then run the following command:
+After that, you can start the app with:
 
-    ringo ringo/webapp .
+    ringo main.js
