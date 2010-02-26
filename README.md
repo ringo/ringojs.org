@@ -1,7 +1,7 @@
 This is the application running on <http://ringojs.org/>.
 
-Steps to run this app locally create symbolic links to the 
-demo, jsdoc and ringowiki apps in this directory. Then run the 
+To run this app locally create symbolic links to the demo, 
+jsdoc and ringowiki apps in this directory. Then run the 
 following command:
 
     ringo ringo/webapp .
