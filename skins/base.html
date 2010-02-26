@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>RingoJS<% title | prefix " - " %></title>
+<link rel="stylesheet" href="/static/style.css" />
+<link rel="stylesheet" href="/static/sh_hns.min.css" />
+<script type="text/javascript" src="/static/sh_main.min.js"></script>
+<script type="text/javascript" src="/static/sh_javascript.min.js"></script>    
+<% render 'head' %>
+</head>
+
+<body onload="sh_highlightDocument()">
+<div id="wrap">
+    <div id="header">
+        <a class="toplink" href="/wiki/" style="background-color: #d55;">Wiki</a>
+        <a class="toplink" href="/wiki/code" style="background-color: #669;">Code</a>
+        <a class="toplink" href="/api/" style="background-color: #9c3;">Docs</a>
+        <a class="toplink" href="/demo/" style="background-color: #cb3;">Demo</a>
+    </div>
+    <div id="main">
+        <% title | prefix <h1> | suffix </h1> %>
+        <% render content %>
+    </div>
+    <div id="menu">
+        <% render menu %>
+    </div>
+</div>
+</body>
+</html>
+
+<% subskin 'content' %>
+Overwrite this subskin to add content.
+
+<% subskin 'menu' %>
+<% navigation %>

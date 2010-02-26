@@ -1,0 +1,121 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 830px;
+    font-family: sans-serif;
+    font-size: 90%;
+    line-height: 160%;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: dodgerblue;
+}
+
+a:active {
+    color: darkorange;
+}
+
+#wrap {
+    margin: 0 auto;
+    width: 800px;
+}
+
+#header {
+    height: 40px;
+}
+
+#header h1 {
+    float: left;
+    color: #c00;
+    margin: 10px 10px;
+    padding: 15px 5px;
+}
+
+#main {
+    clear: both;
+    float: left;
+    width: 530px;
+    margin: 0 10px;
+    padding: 5px;
+}
+
+#menu {
+    float: right;
+    width: 200px;
+}
+
+
+#menu ul li {
+    list-style: none;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    padding: 4px;
+    display: block;
+}
+
+#menu a:hover {
+    background-color: #cde;
+}
+
+#menu a.highlight, a.highlight#hover {
+    background-color: black;
+    color: white;
+}
+
+#footer {
+    margin-top: 3em;
+    text-align: center;
+    color: #666;
+    font-size: 80%;
+    clear:both;
+}
+
+pre.code {
+    background-color: #cde;
+    border-width: 1px;
+    border-color: #9ab;
+    border-style: solid;
+    padding: 0.8em;
+    line-height: 145%;    
+}
+
+a.toplink {
+    padding: 0.3em;
+    margin: 0.3em;
+    font-weight: bold;
+    color: white; 
+    text-decoration: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+}
+
+a.toplink:hover {
+    color: white;
+}
+
+
+textarea {
+    width: 90%;
+    height: 30em;
+}
+
+input.title {
+    width: 90%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
