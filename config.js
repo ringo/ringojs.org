@@ -10,7 +10,7 @@ exports.middleware = [
 ];
 
 exports.urls = [
-    [ '^$', function() { throw { redirect: '/wiki'}; } ],
+    [ '^$', function() { throw { redirect: '/wiki/'}; } ],
     [ '^demo', './demo/config' ],
     [ '^api', './jsdoc/config' ],
     [ '^wiki', './ringowiki/config' ]
