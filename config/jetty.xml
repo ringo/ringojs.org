@@ -159,11 +159,23 @@
     <New class="org.mortbay.jetty.servlet.Context" id="cgiContext">
       <Arg><Ref id="contexts"/></Arg>
       <Arg>/stats</Arg>
-      <Arg type="Boolean">true</Arg> <!-- session support -->
-      <Arg type="Boolean">true</Arg> <!-- security support -->
+      <Arg type="Boolean">false</Arg> <!-- session support -->
+      <Arg type="Boolean">false</Arg> <!-- security support -->
       <Set name="resourceBase">/usr/lib/cgi-bin/</Set>
       <Call name="addServlet">
           <Arg>org.mortbay.servlet.CGI</Arg>
+          <Arg>/</Arg>
+      </Call>
+    </New>
+
+    <New class="org.mortbay.jetty.servlet.Context" id="cgiStaticContext">
+      <Arg><Ref id="contexts"/></Arg>
+      <Arg>/stats/icon</Arg>
+      <Arg type="Boolean">false</Arg> <!-- session support -->
+      <Arg type="Boolean">false</Arg> <!-- security support -->
+      <Set name="resourceBase">/usr/share/awstats/icon</Set>
+      <Call name="addServlet">
+          <Arg>org.mortbay.jetty.servlet.DefaultServlet</Arg>
           <Arg>/</Arg>
       </Call>
     </New>
