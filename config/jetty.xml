@@ -153,6 +153,21 @@
     </Set>
     -->
 
+    <!-- ======================================================= -->
+    <!-- Configure CGI servlet context for awstats -->
+    <!-- ======================================================= -->
+    <New class="org.mortbay.jetty.servlet.Context" id="cgiContext">
+      <Arg><Ref id="contexts"/></Arg>
+      <Arg>/stats</Arg>
+      <Arg type="Boolean">true</Arg> <!-- session support -->
+      <Arg type="Boolean">true</Arg> <!-- security support -->
+      <Set name="resourceBase">/usr/lib/cgi-bin/</Set>
+      <Call name="addServlet">
+          <Arg>org.mortbay.servlet.CGI</Arg>
+          <Arg>/</Arg>
+      </Call>
+    </New>
+
     <!-- =========================================================== -->
     <!-- Configure Request Log to log directory                      -->
     <!-- =========================================================== -->
