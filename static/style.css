@@ -6,8 +6,8 @@ body, html {
 body {
     min-width: 830px;
     font-family: sans-serif;
-    font-size: 90%;
-    line-height: 160%;
+    font-size: 13px;
+    line-height: 22px;
 }
 
 a {
