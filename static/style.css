@@ -49,15 +49,19 @@ a:active {
 }
 
 #logo {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     border: 0;
 }
 
 #menu {
     float: right;
-    width: 200px;
+    width: 150px;
 }
 
+.navigation ul {
+    margin: 0;
+    padding: 0;
+}
 
 .navigation ul li {
     list-style: none;
