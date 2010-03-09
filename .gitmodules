@@ -1,6 +1,0 @@
-[submodule "vendor/ringojs"]
-	path = vendor/ringojs
-	url = git://github.com/ringo/ringojs.git
-[submodule "vendor/ringowiki"]
-	path = vendor/ringowiki
-	url = git://github.com/ringo/ringowiki.git
