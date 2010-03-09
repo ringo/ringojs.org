@@ -52,22 +52,23 @@ a:active {
 }
 
 
-#menu ul li {
+.navigation ul li {
     list-style: none;
 }
 
-#menu a {
+.navigation a {
     text-decoration: none;
-    color: black;
+    color: #003;
+    background-color: #eef;
     padding: 4px;
     display: block;
 }
 
-#menu a:hover {
+.navigation a:hover {
     background-color: #cde;
 }
 
-#menu a.highlight, a.highlight#hover {
+.navigation a.highlight, a.highlight#hover {
     background-color: black;
     color: white;
 }
