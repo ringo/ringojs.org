@@ -12,10 +12,12 @@ body {
 
 a {
     color: blue;
+    text-decoration: none;
 }
 
 a:hover {
     color: dodgerblue;
+    text-decoration: underline;
 }
 
 a:active {
