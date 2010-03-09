@@ -160,12 +160,39 @@
       <Arg><Ref id="contexts"/></Arg>
       <Arg>/stats</Arg>
       <Arg type="Boolean">false</Arg> <!-- session support -->
-      <Arg type="Boolean">false</Arg> <!-- security support -->
+      <Arg type="Boolean">true</Arg> <!-- security support -->
       <Set name="resourceBase">/usr/lib/cgi-bin/</Set>
       <Call name="addServlet">
           <Arg>org.mortbay.servlet.CGI</Arg>
           <Arg>/</Arg>
       </Call>
+      <Get name="securityHandler">
+          <Set name="userRealm">
+              <New class="org.mortbay.jetty.security.HashUserRealm">
+                  <Arg>admin</Arg>
+                  <Arg>/usr/local/ringojs.org/realm.properties</Arg>
+              </New>
+          </Set>
+          <Set name="constraintMappings">
+              <Array type="org.mortbay.jetty.security.ConstraintMapping">
+                  <Item>
+                      <New class="org.mortbay.jetty.security.ConstraintMapping">
+                          <Set name="constraint">
+                              <New class="org.mortbay.jetty.security.Constraint">
+                                  <Arg>
+                                      <Get class="org.mortbay.jetty.security.Constraint"
+                                           name="__BASIC_AUTH"/>
+                                  </Arg>
+                                  <Arg>admin</Arg>
+                                  <Set name="authenticate">true</Set>
+                              </New>
+                          </Set>
+                          <Set name="pathSpec">/*</Set>
+                      </New>
+                  </Item>
+              </Array>
+          </Set>
+      </Get>
     </New>
 
     <New class="org.mortbay.jetty.servlet.Context" id="cgiStaticContext">
