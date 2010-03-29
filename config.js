@@ -23,3 +23,6 @@ exports.static = [
     [ '/static', './static' ]
 ];
 
+exports.jars = [
+    "jars/jetty-servlets-7.0.1.v20091125.jar"
+];
