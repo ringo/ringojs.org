@@ -5,15 +5,15 @@ exports.middleware = [
     'ringo/middleware/etag',
     'ringo/middleware/responselog',
     'ringo/middleware/error',
-    'ringo/middleware/notfound'
+    'ringo/middleware/notfound',
     // 'ringo/middleware/profiler'
 ];
 
 exports.urls = [
-    [ '^$', function() { throw { redirect: '/wiki/'}; } ],
-    [ '^demo', './demo/config' ],
-    [ '^api', './jsdoc/config' ],
-    [ '^wiki', './ringowiki/config' ]
+    [ '^/$', function() { throw { redirect: '/wiki/'}; } ],
+    [ '^/demo', './demo/config' ],
+    [ '^/api', './jsdoc/config' ],
+    [ '^/wiki', './ringowiki/config' ]
 ];
 
 exports.static = [
