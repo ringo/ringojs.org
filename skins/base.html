@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/static/style.css" />
 <link rel="stylesheet" href="/static/sh_hns.min.css" />
 <script type="text/javascript" src="/static/sh_main.min.js"></script>
-<script type="text/javascript" src="/static/sh_javascript.min.js"></script>    
+<script type="text/javascript" src="/static/sh_javascript.min.js"></script>
 <% render 'head' %>
 </head>
 
@@ -14,10 +14,12 @@
 <a href="http://github.com/ringo/ringojs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/static/forkme_right_green_007200.png" alt="Fork me on GitHub" /></a>
 <div id="wrap">
     <div id="header">
-        <a class="toplink" href="/wiki/" style="background-color: #d55;">Wiki</a>
-        <a class="toplink" href="/wiki/code" style="background-color: #669;">Code</a>
-        <a class="toplink" href="/wiki/documentation" style="background-color: #9c3;">Docs</a>
-        <a class="toplink" href="/demo/" style="background-color: #cb3;">Demo</a>
+      <ul>
+        <li><a id="wiki" class="toplink" href="/wiki/">Wiki</a></li>
+        <li><a id="code" class="toplink" href="/wiki/code">Code</a></li>
+        <li><a id="docs" class="toplink" href="/wiki/documentation">Docs</a></li>
+        <li><a id="demo" class="toplink" href="/demo/">Demo</a></li>
+      </ul>
     </div>
     <div id="main">
         <% title | prefix <h1> | suffix </h1> %>
@@ -36,3 +38,4 @@ Overwrite this subskin to add content.
 
 <% subskin 'menu' %>
 <% navigation %>
+
