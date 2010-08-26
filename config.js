@@ -9,16 +9,27 @@ exports.middleware = [
     // 'ringo/middleware/profiler'
 ];
 
+exports.webHooConfig = {
+    jsdoc: {
+        repository: {
+            path: '/home/simon/ringojs/modules/',
+            name: 'master'
+        }, 
+        exportDirectory: '/usr/local/htdocs/api/master/'
+    }
+};
+
 exports.urls = [
     [ '^/$', function() { throw { redirect: '/wiki/'}; } ],
+    [ '^/webhook', './webhooks' ],
     [ '^/demo', './demo/config' ],
-    [ '^/api', './jsdoc/config' ],
     [ '^/wiki', './ringowiki/config' ]
 ];
 
 exports.static = [
     [ '/demo/static', './demo/static' ], 
     [ '/api/static', './jsdoc/static' ],
+    [ '/api', '/usr/local/htdocs/api/' ],
     [ '/wiki/static', './ringowiki/static' ],
     [ '/static', './static' ]
 ];
