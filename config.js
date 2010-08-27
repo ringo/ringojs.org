@@ -10,12 +10,17 @@ exports.middleware = [
 ];
 
 exports.webHookConfig = {
+    // list of refs for which webhook logic is active
+    refs: {'refs/heads/master': true},    
     jsdoc: {
         repository: {
             path: '/home/simon/ringojs/modules/',
             name: 'master'
         }, 
         exportDirectory: '/usr/local/htdocs/api/master/'
+    },
+    git: {
+        pullDirectory: '/home/simon/ringojs/.git/',
     }
 };
 
