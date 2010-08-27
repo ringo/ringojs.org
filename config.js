@@ -9,7 +9,7 @@ exports.middleware = [
     // 'ringo/middleware/profiler'
 ];
 
-exports.webHooConfig = {
+exports.webHookConfig = {
     jsdoc: {
         repository: {
             path: '/home/simon/ringojs/modules/',
