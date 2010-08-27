@@ -4,7 +4,7 @@ var {command} = require('ringo/subprocess');
 
 exports.git = function git(req) {
     try {
-        var {ref, commits} = JSON.parse(req.params.payload);
+        var {ref} = JSON.parse(req.params.payload);
         if (ref in config.refs) {
             // update git
             command("/usr/bin/git","--git-dir=" + config.git.pullDirectory , "pull");
