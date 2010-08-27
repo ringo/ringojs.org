@@ -1,7 +1,7 @@
 var config = require('./config').webHookConfig.jsdoc;
 var jsdoc = require('./jsdoc/doc');
 
-exports.renderJsdoc = function renderJsdoc(req) {
+exports.git = function git(req) {
     try {
         jsdoc.renderRepository(config.repository, config.exportDirectory, true);
         return {status: 200, headers: {}, body: ['kthxbye']};
