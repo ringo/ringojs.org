@@ -14,13 +14,13 @@ exports.webHookConfig = {
     refs: {'refs/heads/master': true},    
     jsdoc: {
         repository: {
-            path: '/home/simon/ringojs/modules/',
+            path: '/usr/local/ringojs.org/vendor/docs-master/modules/',
             name: 'master'
         }, 
-        exportDirectory: '/usr/local/htdocs/api/master/'
+        exportDirectory: '/usr/local/ringojs.org/api/master/'
     },
     git: {
-        pullDirectory: '/home/simon/ringojs/.git/',
+        pullDirectory: '/usr/local/ringojs.org/vendor/docs-master/.git/',
     }
 };
 
@@ -34,8 +34,8 @@ exports.urls = [
 exports.static = [
     [ '/demo/static', './demo/static' ], 
     [ '/api/static', './jsdoc/static' ],
-    [ '/api', '/usr/local/htdocs/api/' ],
     [ '/wiki/static', './ringowiki/static' ],
+    [ '/api', './api' ],
     [ '/static', './static' ]
 ];
 
