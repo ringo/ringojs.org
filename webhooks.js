@@ -7,7 +7,8 @@ exports.git = function git(req) {
         var {ref} = JSON.parse(req.params.payload);
         if (ref in config.refs) {
             // update git
-            command("/usr/bin/git","--git-dir=" + config.git.pullDirectory , "pull");
+            command("/usr/bin/git","--git-dir=" + config.git.pullDirectory , "fetch", "origin");
+            command("/usr/bin/git","--git-dir=" + config.git.pullDirectory , "reset", "--hard", "origin/master");
             // render docs
             jsdoc.renderRepository(config.jsdoc.repository, config.jsdoc.exportDirectory, true);
         }
