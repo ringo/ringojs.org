@@ -33,7 +33,6 @@ exports.urls = [
 
 exports.static = [
     [ '/demo/static', './demo/public/static' ],
-    [ '/api/static', './jsdoc/static' ],
     [ '/wiki/static', './ringowiki/static' ],
     [ '/api', './api' ],
     [ '/static', './static' ]
