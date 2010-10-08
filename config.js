@@ -15,7 +15,7 @@ exports.webHookConfig = {
     jsdoc: {
         repository: {
             path: '/usr/local/ringojs.org/vendor/docs-master/modules/',
-            name: 'master'
+            name: 'RingoJS API master'
         }, 
         exportDirectory: '/usr/local/ringojs.org/site/api/master/'
     },
