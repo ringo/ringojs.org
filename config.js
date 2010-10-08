@@ -28,7 +28,8 @@ exports.urls = [
     [ '^/$', function() { throw { redirect: '/wiki/'}; } ],
     [ '^/webhook', './webhooks' ],
     [ '^/demo', './demo/config' ],
-    [ '^/wiki', './ringowiki/config' ]
+    [ '^/wiki', './ringowiki/config' ],
+    [ '', './simplesite/config' ]
 ];
 
 exports.static = [
