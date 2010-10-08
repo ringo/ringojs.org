@@ -1,7 +1,7 @@
 <div class="navigation">
  <ul><li> <a href="/test.md">Getting Started</a></li></ul>
- <ul><li> <a href="/test.md">Screencasts</a></li></ul>
  <ul><li> <a href="/test.md">Downloads</a></li></ul>
+ <ul><li> <a href="/test.md">Screencasts</a></li></ul>
  <ul><li> <a href="/test.md">Documentation</a></li></ul>
  <ul><li> <a href="/test.md">Contributing</a></li></ul>
  <ul><li> <a href="/test.md">Source Code</a></li></ul>

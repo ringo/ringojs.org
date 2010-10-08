@@ -17,7 +17,7 @@ exports.webHookConfig = {
             path: '/usr/local/ringojs.org/vendor/docs-master/modules/',
             name: 'master'
         }, 
-        exportDirectory: '/usr/local/ringojs.org/api/master/'
+        exportDirectory: '/usr/local/ringojs.org/site/api/master/'
     },
     git: {
         pullDirectory: '/usr/local/ringojs.org/vendor/docs-master/.git/',
@@ -35,8 +35,6 @@ exports.urls = [
 exports.static = [
     [ '/demo/static', './demo/public/static' ],
     [ '/wiki/static', './ringowiki/static' ],
-    [ '/api', './api' ],
-    [ '/static', './static' ]
 ];
 
 exports.jars = [
