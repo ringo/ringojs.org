@@ -1,6 +1,6 @@
 <div class="navigation">
  <ul><li> <a href="/getting_started">Getting Started</a></li></ul>
- <ul><li> <a href="/download">Downloads</a></li></ul>
+ <ul><li> <a href="/downloads">Downloads</a></li></ul>
  <ul><li> <a href="/documentation">Documentation</a></li></ul>
  <ul><li> <a href="/screencasts">Screencasts</a></li></ul>
  <!-- <ul><li> <a href="/contributing">Contributing</a></li></ul> -->
