@@ -25,7 +25,6 @@ exports.webHookConfig = {
 };
 
 exports.urls = [
-    [ '^/$', function() { throw { redirect: '/wiki/'}; } ],
     [ '^/webhook', './webhooks' ],
     [ '^/demo', './demo/config' ],
     [ '^/wiki', './ringowiki/config' ],
