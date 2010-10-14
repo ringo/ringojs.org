@@ -64,6 +64,7 @@ a:active {
 }
 
 #menu {
+    margin-top: 35px;
     float: right;
     width: 150px;
 }
