@@ -12,7 +12,7 @@ and [get started](wiki/getting_started)!</span>
 <span class="large invert">Instant reloading</span> Edit your app, reload the 
 page, and instantly see the changes in your browser.
 
-<span class="large invert">Full Web Support</span> Ringo comes with most things 
+<span class="large invert">Full web support</span> Ringo comes with most things 
 you'll need to build real world web applications, and more are available as 
 packages.
 
@@ -23,5 +23,6 @@ a full featured graphical debugger: Ringo makes it easy to fix what's wrong.
 means you get the strength of the JVM and a bazillion of Java libraries
 for free.
 
-<span class="large invert">Fast</span> Rhino is no V8, but we think it's fast
-enough for all but the most CPU intensive applications. Try for yourself!
+<span class="large invert">It's fast</span> We don't have the world's fastest
+JS runtime, but Ringo will rip through your average web application. Try for
+yourself!
