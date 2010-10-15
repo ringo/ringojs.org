@@ -5,6 +5,9 @@ body, html {
 
 body {
     font-family: sans-serif;
+}
+
+p, li {
     font-size: 0.95em;
     line-height: 1.5em;
 }
