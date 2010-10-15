@@ -32,6 +32,7 @@ Overview of Ringo documentation resources.
   * [Debugger]
   * [Security]
   * [Storage]
+  * [Web Framework][Web_Framework]
   * [Webapp Extensions][Webapp_Extensions]
   * [Modern JavaScript Support in Ringo][Modern_JavaScript_Support]
 
