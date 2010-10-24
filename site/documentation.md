@@ -5,10 +5,10 @@ Overview of Ringo documentation resources.
 ## References
 
   * Ringo API Reference
-    * [master](http://ringojs.org/api/master/)
-    * [v0.6](http://ringojs.org/api/v0.6/)
-    * [v0.5](http://ringojs.org/api/v0.5/)
-    * [v0.4](http://ringojs.org/api/v0.4/)
+    * [master](/api/master/)
+    * [v0.6](/api/v0.6/)
+    * [v0.5](/api/v0.5/)
+    * [v0.4](/api/v0.4/)
   * [Ringo Global Functions][Global Functions]
   * [Ringo Storage Framework][Storage]
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)
