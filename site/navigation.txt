@@ -3,6 +3,6 @@
  <ul><li> <a href="/downloads">Downloads</a></li></ul>
  <ul><li> <a href="/documentation">Documentation</a></li></ul>
  <ul><li> <a href="/screencasts">Screencasts</a></li></ul>
- <!-- <ul><li> <a href="/contributing">Contributing</a></li></ul> -->
+ <ul><li> <a href="/contributing">Contributing</a></li></ul>
  <ul><li> <a href="/code">Code</a></li></ul>
 </div>
