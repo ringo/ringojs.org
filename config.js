@@ -28,14 +28,14 @@ exports.urls = [
     [ '^/webhook', './webhooks' ],
     [ '^/demo', './demo/config' ],
     [ '^/wiki', './ringowiki/config' ],
-    [ '^/irc', './ringobot/config' ],
+    [ '^/bot', './ringobot/config' ],
     [ '', './simplesite/config' ]
 ];
 
 exports.static = [
     [ '/demo/static', './demo/public/static' ],
     [ '/wiki/static', './ringowiki/static' ],
-    [ '/irc/static', './ringobot/static' ],
+    [ '/bot/static', './ringobot/static' ],
 ];
 
 exports.jars = [
