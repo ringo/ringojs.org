@@ -28,14 +28,21 @@ exports.urls = [
     [ '^/webhook', './webhooks' ],
     [ '^/demo', './demo/config' ],
     [ '^/wiki', './ringowiki/config' ],
+    [ '^/irc', './ringobot/config' ],
     [ '', './simplesite/config' ]
 ];
 
 exports.static = [
     [ '/demo/static', './demo/public/static' ],
     [ '/wiki/static', './ringowiki/static' ],
+    [ '/irc/static', './ringobot/static' ],
 ];
 
 exports.jars = [
     "jars/jetty-servlets-7.0.1.v20091125.jar"
+];
+
+exports.extensions = [
+    "ringo/cometd",
+    "ringobot/bot"
 ];
