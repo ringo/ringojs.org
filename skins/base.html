@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div id="main">
-        <% title | prefix <h1> | suffix </h1> %>
+        <% headline | wrap <h1> </h1> %>
         <% render content %>
     </div>
     <div id="menu">
@@ -38,4 +38,3 @@ Overwrite this subskin to add content.
 
 <% subskin 'menu' %>
 <% navigation %>
-
