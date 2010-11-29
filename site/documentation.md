@@ -9,6 +9,7 @@ Overview of Ringo documentation resources.
     * [v0.6](/api/v0.6/)
     * [v0.5](/api/v0.5/)
     * [v0.4](/api/v0.4/)
+  * [Stick API Reference](/api/stick/)
   * [Ringo Global Functions][Global Functions]
   * [Ringo Storage Framework][Storage]
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)
