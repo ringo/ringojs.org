@@ -5,7 +5,7 @@ JavaScript engine. It is geared to web applications, but can be used for command
 line or even GUI applications as well.
 
 <span class="large">[Download the 0.6 release](/downloads)
-and [get started](wiki/getting_started)!</span>
+and [get started](/getting_started)!</span>
 
 ## Features at a Glance
 
