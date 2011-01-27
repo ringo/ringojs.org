@@ -6,6 +6,7 @@ Overview of Ringo documentation resources.
 
   * Ringo API Reference
     * [master](/api/master/)
+    * [v0.7](/api/v0.7/)
     * [v0.6](/api/v0.6/)
     * [v0.5](/api/v0.5/)
     * [v0.4](/api/v0.4/)

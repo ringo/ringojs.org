@@ -15,14 +15,14 @@ We try to release often - at least every 2 months - but Ringo is moving fast and
 ## Ringo requires Java 1.5+
 
 We recommend the Java Sun Package. Either download it from [the Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/jdk6-jsp-136632.html) or on Debian simply `aptitude install sun-java6-jdk`
-  
+
 ## Option 1: Get the latest official release
 
 Download the latest Ringo release:
 
-  * [Debian Package](http://github.com/downloads/ringo/ringojs/ringojs_0.6-1_all.deb)
-  * [Zip](http://github.com/downloads/ringo/ringojs/ringojs-0.6.zip)
-  * [Tar.gz](http://github.com/downloads/ringo/ringojs/ringojs-0.6.tar.gz)
+  * [Debian Package](http://github.com/downloads/ringo/ringojs/ringojs_0.7-1_all.deb)
+  * [Zip](http://github.com/downloads/ringo/ringojs/ringojs-0.7.zip)
+  * [Tar.gz](http://github.com/downloads/ringo/ringojs/ringojs-0.7.tar.gz)
 
 Install the `.deb` or unpack the archive you downloaded. Ringo is now ready to use. See [First Steps] for a mini intro on what you can do with Ringo.
 
@@ -38,6 +38,6 @@ Change to the `ringojs` directory you just checked out and run `ant` with the `j
 
     $ ant jar
 
-After this completes, you'll now have a file called `lib/ringo.jar`. 
+After this completes, you'll now have a file called `lib/ringo.jar`.
 
 Ringo is now ready to use. See [First Steps] for a mini intro on what you can do with Ringo.
