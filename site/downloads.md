@@ -14,7 +14,7 @@
 
 ## Git Snapshots
 
- * [RingoJS v0.7.0 tar.gz git snapshot](http://github.com/ringo/ringojs/tarball/master)
- * [RingoJS v0.7.0 zip git snapshot](http://github.com/ringo/ringojs/zipball/master)
+ * [RingoJS master tar.gz git snapshot](http://github.com/ringo/ringojs/tarball/master)
+ * [RingoJS master zip git snapshot](http://github.com/ringo/ringojs/zipball/master)
 
 Also see [Packages] and [Applications].
