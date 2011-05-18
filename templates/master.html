@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{{title}} - RingoJS</title>
+<link rel="stylesheet" href="/static/main.css" />
+<link rel="stylesheet" href="/static/sh_hns.min.css" />
+<script type="text/javascript" src="/static/sh_main.min.js"></script>
+<script type="text/javascript" src="/static/sh_javascript.min.js"></script>
+{{{head}}}
+</head>
+
+<body onload="sh_highlightDocument()">
+<a href="http://github.com/ringo/ringojs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/static/forkme_right_green_007200.png" alt="Fork me on GitHub" /></a>
+<div id="wrap">
+    <div id="main">
+        <h1>{{headline}}</h1>
+        {{{content}}}
+    </div>
+    <div id="menu">
+
+        <a href="/"><img id="logo" src="/static/ringojs.png" alt="" width="150" height="71"/></a>
+        <div class="navigation">
+            <ul>
+                <li> <a href="/getting_started">Getting Started</a></li>
+                <li> <a href="/downloads">Downloads</a></li>
+                <li> <a href="/screencasts">Screencasts</a></li>
+              <li><a id="docs" class="toplink" href="/documentation">Documentation</a></li>
+                <li> <a href="/api/master">API Master</a></li>
+                <li> <a href="/api/v0.7">API v0.7</a></li>
+              <li><a id="wiki" class="toplink" href="/wiki/">Wiki</a></li>
+                <li></li><a href="/wiki/list/">All Pages</a>
+                <li><a href="/wiki/recent/">Recent Changes</a></li>
+              <li> <a id="code" class="toplink"href="/contributing">Contributing</a></li>
+                <li> <a href="/code">Code</a></li>
+            </ul>
+        </div>
+        <div style="margin-top: 1.5em; font-size: 14px;">
+            {{{menu}}}
+        </div>
+    </div>
+</div>
+</body>
+</html>

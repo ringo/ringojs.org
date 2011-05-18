@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-size: 0.95em;
+    font-size: 0.94em;
 }
 
 body {
@@ -18,12 +18,11 @@ a {
 }
 
 a:hover {
-    color: #ff8c00;
     text-decoration: underline;
 }
 
 a:active {
-    color: red;
+    color: #3366ff;
 }
 
 #wrap {
@@ -31,38 +30,17 @@ a:active {
     width: 750px;
 }
 
-#header {
-    height: 45px;
-}
-
-#header ul {
-    list-style: none;
-    margin: 0 0.3em;
-    padding: 0.2em;
-}
-
-#header li {
-    float: left;
-    margin: 0 0.3em;
-}
-
-#header h1 {
-    float: left;
-    color: #c00;
-    margin: 10px 10px;
-    padding: 15px 5px;
-}
-
 #main {
     clear: both;
     float: left;
     width: 530px;
-    margin: 0 10px;
+    margin: 30px 10px;
     padding: 5px;
 }
 
 #logo {
-    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 6px;
     border: 0;
 }
 
@@ -80,6 +58,9 @@ a:active {
 .navigation ul li {
     list-style: none;
 }
+#menu ul li {
+    list-style: none;
+}
 
 .navigation a {
     text-decoration: none;
@@ -90,7 +71,7 @@ a:active {
 }
 
 .navigation a:hover {
-    background-color: #bbe;
+    background-color: #aac;
 }
 
 .navigation a.highlight, a.highlight#hover {
@@ -120,50 +101,28 @@ pre.code, pre.sh_javascript {
 }
 
 a.toplink {
+    background-color: #bbe;
     padding: 0.5em 0.7em;
-    margin: 0.3em;
     font-weight: bold;
     text-shadow: #666 1px 1px 2px;
     color: white;
     text-decoration: none;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    -moz-border-radius-bottomleft: 7px;
-    -moz-border-radius-bottomright: 7px;
-    -webkit-border-bottom-left-radius: 7px;
-    -webkit-border-bottom-right-radius: 7px;
+    margin-left: -8px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -moz-border-radius-topleft: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
 }
 
-a#wiki {
-    background-color: #d55;
+a.toplink:hover {
+    background-color: #99c;
 }
 
-a#wiki:hover {
-    background-color: #e00;
-}
-
-a#code {
-    background-color: #669;
-}
-
-a#code:hover {
-    background-color: #77d;
-}
-
-a#docs {
-    background-color: #9c3;
-}
-
-a#docs:hover {
-    background-color: #9d3;
-}
-
-a#demo {
-    background-color: #cb3;
-}
-
-a#demo:hover {
-    background-color: #dc4;
+td {
+    vertical-align: top;
+    padding: 0 10px;
 }
 
 textarea {

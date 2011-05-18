@@ -1,5 +1,5 @@
 #!/usr/bin/env ringo
 
-if (require.main == module.id) {
-    require("ringo/webapp").main(module.directory);
+if (require.main == module) {
+    require("ringo/httpserver").main(module.directory);
 }

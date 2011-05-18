@@ -1,13 +1,18 @@
-exports.app = require('ringo/webapp').handleRequest;
 
-exports.middleware = [
-    'ringo/middleware/gzip',
-    'ringo/middleware/etag',
-    'ringo/middleware/responselog',
-    'ringo/middleware/error',
-    'ringo/middleware/notfound',
-    // 'ringo/middleware/profiler'
-];
+var {Application} = require("stick");
+var app = exports.app = Application();
+app.configure(masterTemplate, "mount");
+app.mount("/wiki", module.resolve("ringowiki/config"));
+app.mount("/bot", module.resolve("ringobot/config"));
+app.mount("", module.resolve("simplesite/config"));
+
+var masterTemplatePath = module.resolve("templates/master.html");
+function masterTemplate(next, app) {
+    return function(req) {
+        req.env.masterTemplate = masterTemplatePath;
+        return next(req);
+    }
+}
 
 exports.webHookConfig = {
     // list of refs for which webhook logic is active
@@ -24,7 +29,7 @@ exports.webHookConfig = {
     }
 };
 
-exports.urls = [
+/* exports.urls = [
     [ '^/webhook', './webhooks' ],
     [ '^/demo', './demo/config' ],
     [ '^/wiki', './ringowiki/config' ],
@@ -45,4 +50,4 @@ exports.jars = [
 exports.extensions = [
     "ringo/cometd",
     "ringobot/bot"
-];
+]; */
