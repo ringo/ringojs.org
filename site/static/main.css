@@ -9,7 +9,7 @@ body {
 }
 
 p, li {
-    line-height: 1.5em;
+    line-height: 1.55em;
 }
 
 a {
@@ -39,7 +39,7 @@ a:active {
 }
 
 #logo {
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 6px;
     border: 0;
 }
@@ -71,7 +71,7 @@ a:active {
 }
 
 .navigation a:hover {
-    background-color: #aac;
+    background-color: #bbd;
 }
 
 .navigation a.highlight, a.highlight#hover {
@@ -101,8 +101,8 @@ pre.code, pre.sh_javascript {
 }
 
 a.toplink {
-    background-color: #bbe;
-    padding: 0.5em 0.7em;
+    background-color: #aac;
+    padding: 4px 12px;
     font-weight: bold;
     text-shadow: #666 1px 1px 2px;
     color: white;
@@ -117,7 +117,7 @@ a.toplink {
 }
 
 a.toplink:hover {
-    background-color: #99c;
+    background-color: #88a;
 }
 
 td {
