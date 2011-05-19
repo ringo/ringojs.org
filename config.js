@@ -3,7 +3,7 @@ var {Application} = require("stick");
 var app = exports.app = Application();
 app.configure("gzip", "etag", masterTemplate, "mount");
 app.mount("/wiki", module.resolve("ringowiki/config"));
-app.mount("/bot", module.resolve("ringobot/config"));
+// app.mount("/bot", module.resolve("ringobot/config"));
 app.mount("", module.resolve("simplesite/config"));
 
 var masterTemplatePath = module.resolve("templates/master.html");
