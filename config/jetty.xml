@@ -16,17 +16,18 @@
     <!-- Server Thread Pool                                          -->
     <!-- =========================================================== -->
     <Set name="ThreadPool">
-      <!-- Default bounded blocking threadpool
-      -->
+      <!-- Default queued blocking threadpool -->
       <New class="org.eclipse.jetty.util.thread.QueuedThreadPool">
-        <Set name="minThreads">10</Set>
-        <Set name="maxThreads">200</Set>
+        <Set name="minThreads">8</Set>
+        <Set name="maxThreads">254</Set>
       </New>
 
-      <!-- Optional Java 5 bounded threadpool with job queue
-      <New class="org.eclipse.thread.concurrent.ThreadPool">
-        <Set name="corePoolSize">50</Set>
-        <Set name="maximumPoolSize">50</Set>
+      <!-- Optional Java 5 bounded threadpool with job queue -->
+      <!--
+      <New class="org.eclipse.jetty.util.thread.ExecutorThreadPool">
+        <Arg type="int">32</Arg>
+        <Arg type="int">256</Arg>
+        <Arg type="int">60000</Arg>
       </New>
       -->
     </Set>
@@ -42,17 +43,18 @@
     <!-- Use this connector for many frequently idle connections
          and for threadless continuations.
     -->
+
     <Call name="addConnector">
       <Arg>
           <New class="org.eclipse.jetty.server.nio.SelectChannelConnector">
             <Set name="host"><Property name="host"/></Set>
             <Set name="port"><Property name="port" default="8080"/></Set>
-            <Set name="maxIdleTime">30000</Set>
-            <Set name="Acceptors">2</Set>
+            <Set name="maxIdleTime">300000</Set>
+            <Set name="Acceptors">4</Set>
             <Set name="statsOn">false</Set>
             <Set name="confidentialPort">8443</Set>
-	    <Set name="lowResourcesConnections">5000</Set>
-	    <Set name="lowResourcesMaxIdleTime">5000</Set>
+            <Set name="lowResourcesConnections">20000</Set>
+            <Set name="lowResourcesMaxIdleTime">5000</Set>
           </New>
       </Arg>
     </Call>
@@ -75,7 +77,7 @@
     <!-- see jetty-ssl.xml to add an ssl connector. use                  -->
     <!-- java -jar start.jar etc/jetty.xml etc/jetty-ssl.xml             -->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    
+
     <!-- =========================================================== -->
     <!-- Set up global session ID manager                            -->
     <!-- =========================================================== -->
@@ -86,7 +88,7 @@
     </Set>
 
     <!-- =========================================================== -->
-    <!-- Set handler Collection Structure                            --> 
+    <!-- Set handler Collection Structure                            -->
     <!-- =========================================================== -->
     <Set name="handler">
       <New id="Handlers" class="org.eclipse.jetty.server.handler.HandlerCollection">
@@ -150,60 +152,6 @@
     </Call>
     -->
 
-    <!-- ======================================================= -->
-    <!-- Configure CGI servlet context for awstats -->
-    <!-- ======================================================= -->
-    <New class="org.eclipse.jetty.servlet.ServletContextHandler" id="cgiContext">
-      <Arg><Ref id="Contexts"/></Arg>
-      <Arg>/stats</Arg>
-      <Arg type="Boolean">false</Arg> <!-- session support -->
-      <Arg type="Boolean">true</Arg> <!-- security support -->
-      <Set name="resourceBase">/usr/lib/cgi-bin/</Set>
-      <Call name="addServlet">
-          <Arg>org.eclipse.jetty.servlets.CGI</Arg>
-          <Arg>/</Arg>
-      </Call>
-      <Get name="securityHandler">
-          <Set name="loginService">
-              <New class="org.eclipse.jetty.security.HashLoginService">
-                  <Arg>admin</Arg>
-                  <Arg>/usr/local/ringojs.org/realm.properties</Arg>
-              </New>
-          </Set>
-          <Set name="constraintMappings">
-              <Array type="org.eclipse.jetty.security.ConstraintMapping">
-                  <Item>
-                      <New class="org.eclipse.jetty.security.ConstraintMapping">
-                          <Set name="constraint">
-                              <New class="org.eclipse.jetty.http.security.Constraint">
-                                  <Arg>
-                                      <Get class="org.eclipse.jetty.http.security.Constraint"
-                                           name="__BASIC_AUTH"/>
-                                  </Arg>
-                                  <Arg>admin</Arg>
-                                  <Set name="authenticate">true</Set>
-                              </New>
-                          </Set>
-                          <Set name="pathSpec">/*</Set>
-                      </New>
-                  </Item>
-              </Array>
-          </Set>
-      </Get>
-    </New>
-
-    <New class="org.eclipse.jetty.servlet.ServletContextHandler" id="cgiStaticContext">
-      <Arg><Ref id="Contexts"/></Arg>
-      <Arg>/stats/icon</Arg>
-      <Arg type="Boolean">false</Arg> <!-- session support -->
-      <Arg type="Boolean">false</Arg> <!-- security support -->
-      <Set name="resourceBase">/usr/share/awstats/icon</Set>
-      <Call name="addServlet">
-          <Arg>org.eclipse.jetty.servlet.DefaultServlet</Arg>
-          <Arg>/</Arg>
-      </Call>
-    </New>
-
     <!-- =========================================================== -->
     <!-- Configure Request Log to log directory                      -->
     <!-- =========================================================== -->
@@ -225,9 +173,9 @@
     <!-- Configure Request Log to standard error output (console)    -->
     <!-- =========================================================== -->
     <!--
-    <Ref id="RequestLog">
+    <Ref id="requestLog">
       <Set name="requestLog">
-        <New id="RequestLogImpl" class="org.eclipse.jetty.server.NCSARequestLog">
+        <New id="requestLogImpl" class="org.eclipse.jetty.server.NCSARequestLog">
           <Set name="extended">true</Set>
           <Set name="logCookies">false</Set>
           <Set name="LogTimeZone">CET</Set>
@@ -239,11 +187,9 @@
     <!-- =========================================================== -->
     <!-- extra options                                               -->
     <!-- =========================================================== -->
+    <Set name="stopAtShutdown">true</Set>
     <Set name="sendServerVersion">true</Set>
     <Set name="sendDateHeader">true</Set>
-    <!-- Disable graceful shutdown in development mode. -->
-    <!-- You probably want this enabled for deployment. -->
-    <!-- Set name="gracefulShutdown">0</Set -->
-    <!-- Set name="stopAtShutdown">true</Set -->
+    <Set name="gracefulShutdown">1000</Set>
 
 </Configure>
