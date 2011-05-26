@@ -4,8 +4,7 @@ RingoJS is a JavaScript runtime written in Java, based on the Mozilla Rhino
 JavaScript engine. It is geared to web applications, but can be used for command
 line or even GUI applications as well.
 
-<span class="large">[Download the 0.7 release](/downloads)
-and [get started](/getting_started)!</span>
+<span class="large">[Download the Ringo 0.8 release candidate](/downloads)!</span>
 
 ## Features at a Glance
 
