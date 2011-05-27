@@ -30,7 +30,7 @@ a:active {
     width: 750px;
 }
 
-#main {
+div#main {
     clear: both;
     float: left;
     width: 530px;
@@ -39,7 +39,7 @@ a:active {
 }
 
 #logo {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 6px;
     border: 0;
 }
