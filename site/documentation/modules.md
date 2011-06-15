@@ -24,7 +24,7 @@ Module `lib.js` exports a function called `square` by adding it to the `exports`
 object. Module `app.js` imports `lib.js`'s exports object by calling the
 `require` function with `'./lib'` as argument.
 
-Ringo also provides modueles with a `module` object with the following
+Ringo also provides a `module` object to each module with the following
 properties:
 
  * `id` - the canonical id of the module
@@ -51,7 +51,7 @@ Module ids starting with `'./'` or `'../'` are called relative ids. Relative ids
 are looked up relative to the location of the current module following common
 file system semantics.
 
-A module id not starting with `'./'` or `'../'` is called an absoulte id and is
+A module id not starting with `'./'` or `'../'` is called an absolute id and is
 resolved against the module path.
 
 ## The Module Path
