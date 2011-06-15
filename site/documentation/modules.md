@@ -117,9 +117,9 @@ Ringo also provides very basic [package management] support through the
 ## Caching and Reloading
 
 Modules are cached after they are loaded for the first time. Ringo tries to
-resolve module ids to a canonical path in order to load the same module twice,
-but it is possible under some circumstances that this fails and a module is
-loaded twice.
+resolve module ids to a canonical path in order to not load the same module
+twice, but it is possible under rare circumstances that this fails and a module
+is loaded twice.
 
 By default, Ringo's module loader checks if the module or any module it depends
 on has changed each time it is required. If so, the module is loaded again.
