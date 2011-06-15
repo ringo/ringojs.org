@@ -111,7 +111,7 @@ resolve the remaining part of the id against the `lib` directory of that
 package. The location of the `lib` directory can be overridden using the
 `directories.lib` property in package.json.
 
-Ringo also provides very basic [package manangement] support through the
+Ringo also provides very basic [package management] support through the
 `ringo-admin` tool.
 
 ## Caching and Reloading
