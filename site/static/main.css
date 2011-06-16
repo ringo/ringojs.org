@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue',Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
 }
 
 body, p, li {
@@ -65,13 +65,14 @@ div#main {
 .navigation a {
     text-decoration: none;
     color: #003;
+    text-shadow: #ccf 1px 1px 2px;
     background-color: #ddf;
-    padding: 4px;
+    padding: 4px 6px;
     display: block;
 }
 
 .navigation a:hover {
-    background-color: #bbd;
+    background-color: #88b;
 }
 
 .navigation a.highlight, a.highlight#hover {
@@ -101,11 +102,11 @@ pre.code, pre.sh_javascript {
 }
 
 a.toplink {
-    background-color: #aac;
-    padding: 4px 8px;
+    background-color: #bbd;
+    padding: 4px 10px;
     font-weight: bold;
-    text-shadow: #666 1px 1px 2px;
-    color: white;
+    text-shadow: #ccf 1px 1px 2px;
+    color: #003;
     text-decoration: none;
     margin-left: -4px;
     /* margin-left: -8px;
@@ -118,7 +119,7 @@ a.toplink {
 }
 
 a.toplink:hover {
-    background-color: #88a;
+    background-color: #88b;
 }
 
 td {
