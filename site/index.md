@@ -1,12 +1,12 @@
 # Ringo
 
-Ringo is a CommonJS based JavaScript runtime written in Java and based on the Mozilla Rhino
+Ringo is a CommonJS-based JavaScript runtime written in Java and based on the Mozilla Rhino
 JavaScript engine.
 
 <span class="large">[Download the final Ringo 0.8 release](/downloads)!</span>
 
 Our primary goal is to build a stable, high-performance runtime for server-side use.
-The following code is all you need to create a simpe web app:
+The following code is all you need to create a simple web app:
 
     exports.app = function(req) {
         return {
@@ -23,7 +23,7 @@ Simply save the code above as "server.js" and run it by executing `ringo server.
 Like most Ringo apps, this app will automatically reload, picking up any changes you make
 without requiring a restart.
 
-But Ringo lets you do more than web applications. It allows you to
+But Ringo lets you do more than write web applications. It allows you to
 seamlessly use any Java class or library simply by dropping it into the classpath.
 The following code shows how to build a simple desktop application with Swing:
 
