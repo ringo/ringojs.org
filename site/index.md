@@ -6,7 +6,7 @@ JavaScript engine.
 <span class="large">[Download the final Ringo 0.8 release](/downloads)!</span>
 
 Our primary goal is to build a stable, high-performance runtime for server-side use.
-The following code is all you need to create a simpe web server:
+The following code is all you need to create a simpe web app:
 
     exports.app = function(req) {
         return {
@@ -19,6 +19,7 @@ The following code is all you need to create a simpe web server:
     if (require.main == module)
         require("ringo/httpserver").main(module.id);
 
+Simply save the code above as "server.js" and run it by executing `ringo server.js`.
 Like most Ringo apps, this app will automatically reload, picking up any changes you make
 without requiring a restart.
 
