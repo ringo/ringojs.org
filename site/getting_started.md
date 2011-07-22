@@ -7,10 +7,7 @@ Which Version
 
 We try to release often - at least every 2 months - but Ringo is moving fast and with the Git version you will always get the newest features. All Ringo developers use the Git version for their projects and the git master is usually quite stable.
 
-*But*, using the most recent Git version means you should keep an eye on the Ringo [mailing list][group] - big changes that might break your code will be discussed on the list beforehand.
-
-[ant]: http://ant.apache.org/
-[github]: |http://github.com/ringo/ringojs
+*But*, using the most recent Git version means you should keep an eye on the Ringo [mailing list](http://groups.google.com/group/ringojs) - big changes that might break your code will be discussed on the list beforehand.
 
 ## Ringo requires Java 1.5+
 
@@ -28,7 +25,7 @@ Install the `.deb` or unpack the archive you downloaded. Ringo is now ready to u
 
 ## Option 2: Install from Git
 
-In addition to Java you will need Apache Ant to create the jar files, get it from the [Ant Homepage][ant] or on Debian use `aptitude install ant`
+In addition to Java you will need Apache Ant to create the jar files, get it from the [Ant Homepage](http://ant.apache.org/) or on Debian use `aptitude install ant`
 
 Clone the Git repository with:
 
