@@ -24,8 +24,7 @@ without requiring a restart.
 
 But Ringo lets you do more than web applications. It allows you to
 seamlessly use any Java class or library simply by dropping it into the classpath.
-The following code shows how to use the Java Swing to build a simple desktop
-application:
+The following code shows how to build a simple desktop application with Swing:
 
     var {JFrame, JButton} = javax.swing;
 
