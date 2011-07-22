@@ -1,27 +1,47 @@
-# RingoJS
+# Ringo
 
-RingoJS is a JavaScript runtime written in Java, based on the Mozilla Rhino
-JavaScript engine. It is geared to web applications, but can be used for command
-line or even GUI applications as well.
+Ringo is a CommonJS based JavaScript runtime written in Java and based on the Mozilla Rhino
+JavaScript engine.
 
 <span class="large">[Download the final Ringo 0.8 release](/downloads)!</span>
 
-## Features at a Glance
+Our primary goal is to build a stable, high-performance runtime for server-side use.
+The following code is all you need to create a simpe web server:
 
-<span class="large invert">Instant reloading</span> Edit your app, reload the
-page, and instantly see the changes in your browser.
+    exports.app = function(req) {
+        return {
+            status: 200,
+            headers: {"Content-Type": "text/plain"},
+            body: ["Hello World!"]
+        };
+    };
 
-<span class="large invert">Full web support</span> Ringo comes with most things
-you'll need to build real world web applications, and more are available as
-packages.
+    if (require.main == module)
+        require("ringo/httpserver").main(module.id);
 
-<span class="large invert">Easy debugging</span> Helpful error messages and
-a full featured graphical debugger: Ringo makes it easy to fix what's wrong.
+Like most Ringo apps, this app will automatically reload, picking up any changes you make
+without requiring a restart.
 
-<span class="large invert">Pure Java</span> Ringo is written in Java, which
-means you get the strength of the JVM and a bazillion of Java libraries
-for free.
+But Ringo lets you do more than web applications. It allows you to
+seamlessly use any Java class or library simply by dropping it into the classpath.
+The following code shows how to use the Java Swing to build a simple desktop
+application:
 
-<span class="large invert">It's fast</span> We don't have the world's fastest
-JS runtime, but Ringo will rip through your average web application. Try for
-yourself!
+    var {JFrame, JButton} = javax.swing;
+
+    function main() {
+        var frame = new JFrame("Hello World!");
+        var button = new JButton("Bye bye");
+        button.addActionListener(function(e) {
+            system.exit();
+        });
+        frame.add("Center", button);
+        frame.setSize(300, 300);
+        frame.setVisible(true);
+    }
+
+    if (require.main == module)
+        main();
+
+See [the Wiki](/wiki) or [documentation page](/documentation) to learn
+more about Ringo!
