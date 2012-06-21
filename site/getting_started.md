@@ -25,13 +25,17 @@ Install the `.deb` or unpack the archive you downloaded. Ringo is now ready to u
 
 ## Option 2: Install from Git
 
-In addition to Java you will need Apache Ant to create the jar files, get it from the [Ant Homepage](http://ant.apache.org/) or on Debian use `aptitude install ant`
+In addition to Java you will need [Apache Ant](http://ant.apache.org/) to create the jar files and the [Apache Ivy](http://ant.apache.org/ivy/) plugin for Ant, to fetch required dependencies. You can get those tools from their respective websites, or by using your favourite package manager (e.g. on Debian use `apt-get install ant ivy`).
 
 Clone the Git repository with:
 
     $ git clone git://github.com/ringo/ringojs.git
 
-Change to the `ringojs` directory you just checked out and run `ant` with the `jar` target:
+Change to the `ringojs` directory you just checked out and run `ant` with the `update` target to fetch the required dependencies:
+
+    $ ant update
+
+Finally, run the `jar` target to build RingoJS itself:
 
     $ ant jar
 
