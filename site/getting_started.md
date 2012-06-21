@@ -11,7 +11,7 @@ We try to release often - at least every 2 months - but Ringo is moving fast and
 
 ## Ringo requires Java 1.5+
 
-We recommend the Java Sun Package. Either download it from [the Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/jdk6-jsp-136632.html) or on Debian simply `aptitude install sun-java6-jdk`
+We recommend the Java Sun Package. Either download it from [the Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/jdk6-jsp-136632.html) or on Debian simply `apt-get install sun-java6-jdk`
 
 ## Option 1: Get the latest official release
 
