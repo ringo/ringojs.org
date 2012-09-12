@@ -1,13 +1,10 @@
-#!/usr/bin/env ringo
-
 var {Application} = require("stick");
 var app = exports.app = Application();
 app.configure("gzip", "etag", masterTemplate, "mount");
-app.mount("/wiki", module.resolve("ringowiki/main"));
-app.mount("/bot", module.resolve("ringobot/main"));
-app.mount("", module.resolve("simplesite/main"));
+app.mount("", module.resolve("vendor/simplesite/main"));
 
 var masterTemplatePath = module.resolve("templates/master.html");
+
 function masterTemplate(next, app) {
     return function(req) {
         req.env.masterTemplate = masterTemplatePath;
@@ -15,6 +12,7 @@ function masterTemplate(next, app) {
     }
 }
 
+/*
 exports.start = function(server) {
     require("./ringobot/main").start(server);
 }
@@ -37,7 +35,8 @@ exports.webHookConfig = {
         pullDirectory: '/usr/local/ringojs.org/vendor/docs-master/.git/',
     }
 };
+*/
 
 if (require.main === module) {
-    require("ringo/httpserver").main(module.directory);
+    require("ringo/httpserver").main(module.id);
 }
