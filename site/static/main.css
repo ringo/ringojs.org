@@ -108,14 +108,19 @@ header nav li {
 }
 
 footer {
-  background: #e8e8e8;
+  background: #eaeaea;
   margin: 0 auto 65px auto;
   max-width: 880px;
   padding: 30px 50px;
 
+  border-top: 1px solid #ddd;
+
   -webkit-border-radius: 0px 0px 4px 4px;
   border-radius: 0px 0px 4px 4px;
   
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(200, 245, 245, 1);
+  box-shadow: inset 0px 0px 4px 1px rgba(230, 230, 230, 1);
+
   font-size: 13px;
 }
 
