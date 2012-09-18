@@ -1,5 +1,3 @@
-# Ringo
-
 Ringo is a CommonJS-based JavaScript runtime written in Java and based on the Mozilla Rhino
 JavaScript engine.
 

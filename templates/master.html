@@ -2,8 +2,8 @@
 <head>
 <title>{{title}} - RingoJS</title>
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="/static/main.css" />
 <link rel="stylesheet" href="/static/sh_hns.min.css" />
@@ -20,11 +20,11 @@
       <ul>
         <li><a href="/getting_started">Getting Started</a></li>
         <li><a href="/downloads">Downloads</a></li>
-        <li><a href="/screencasts">Screencasts</a></li>
         <li><a href="/documentation">Documentation</a></li>
         <li><a href="/contributing">Contributing</a></li>
       </ul>
     </nav>
+    <div style="clear: both;"></div>
   </header>
 
   <div class="main">
@@ -34,7 +34,13 @@
     </div>
 
     <div class="submenu">
-      {{{menu}}}
+      <div class="wrapper">
+        <button href="/download" class="btn">Download RingoJS<br><small>Release 0.8</small></button>
+
+        <a href="#">Other link A</a>
+        
+        {{{menu}}}        
+      </div>
     </div>
 
   </div>
@@ -68,8 +74,6 @@
         <li><a href="#">Create a Package</a></li>
       </ul>
     </nav>
-
-    <p>RingoJS is released under the Apache License Version 2.0</p>
   </footer>
 
 <!-- FIXME re-enable

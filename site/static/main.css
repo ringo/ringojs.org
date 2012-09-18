@@ -7,89 +7,181 @@ body, html {
 body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   color: #222;
-  background: #fcfcfc;
 }
 
 a {
-  color: #59433B;
+  color: #3879ba;
+  text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #468C8C;
+  color: #5393cf;
+  text-decoration: underline;
 }
 
 
 header {
   display: block;
-  margin-top: 12px;
-}
+  padding-top: 12px;
+  background: #c1ccd1;
+  font-family: 'Source Sans Pro', sans-serif;
 
-header h1 {
-  font-family: 'Racing Sans One', cursive;
-  font-size: 60px;
-  margin: 0;
-  display: inline;
-  float: left;
-}
-
-header h1 a {
-  color: #468C8C;
-  text-shadow: 0px 1px 1px #c0c0c0;
-}
-
-header h1 a:focus,
-header h1 a:hover {
-  text-shadow: 0px 0px 2px #999;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 header a {
+  color: #222;
   text-decoration: none;
+}
+
+header nav a:focus,
+header nav a:hover {
+  color: #222;
 }
 
 header nav {
   margin: 0 auto;
-  overflow: hidden;
-  max-width: 965px;
+  max-width: 940px;
 }
 
 header nav ul {
-  padding-top: 25px;
+  padding: 9px 0 1px 0;
   float: right;
 }
 
 header nav li {
   float: left;
   list-style: none;
-  margin-left: 1.5em;
+  font-size: 19px;
+  margin-left: 2em;
+}
+
+header h1 {
+  font-size: 54px;
+  margin: -10px 0 0 -1px;
+  display: inline;
+  float: left;
+  font-weight: 300;
+}
+
+header h1 a {
+  color: #fff;
+  text-shadow: 0px 1px 1px #c0c0c0;
+  text-decoration: none;
+}
+
+header h1 a:focus,
+header h1 a:hover {
+  color: #fff;
+  text-shadow: 0px 0px 2px #777;
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 13px;
+  color: #050505;
+  padding: 10px 15px;
+  background: -moz-linear-gradient(
+    top,
+    #ffffff 0%,
+    #ebebeb 50%,
+    #dbdbdb 55%,
+    #b5b5b5);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#ffffff),
+    color-stop(0.50, #ebebeb),
+    color-stop(0.55, #dbdbdb),
+    to(#b5b5b5));
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #949494;
+  -moz-box-shadow:
+    0px 1px 1px rgba(000,000,000,0.5),
+    inset 0px 0px 2px rgba(255,255,255,1);
+  -webkit-box-shadow:
+    0px 1px 1px rgba(000,000,000,0.5),
+    inset 0px 0px 2px rgba(255,255,255,1);
+  box-shadow:
+    0px 1px 1px rgba(000,000,000,0.5),
+    inset 0px 0px 2px rgba(255,255,255,1);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.2),
+    0px 1px 0px rgba(255,255,255,1);
+  text-decoration: none;
 }
 
 .main {
+  clear: both;
+  overflow: hidden;
   background: #fff;
-  margin: 18px auto 0 auto;
-  max-width: 880px;
-  padding: 0px 50px;
-
-  border: 1px solid #f5f5f5;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  
-  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(245, 245, 245, 1);
-  box-shadow: inset 0px 0px 4px 1px rgba(245, 245, 245, 1);
+  margin: 9px auto 0 auto;
+  max-width: 940px;
 }
 
-.main h1 {
-  padding-bottom: 6px;
-  border-bottom: 1px solid #e0e0e0;
+.main .submenu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 30%;
+  padding-left: 8%;
+
+  float: left;
+  margin-top: 33px;
+}
+
+.submenu button {
+  width: 100%;
 }
 
 .main .content {
   margin-bottom: 70px;
+  width: 70%;
+  float: left;
+}
+
+.content h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* If headline <h1> is missing on a content page */
+.content > p:first-child {
+  margin-top: 28px;
+}
+
+.content h2 {
+  margin: 28px 0 -12px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.content h3 {
+  margin: 18px 0 -12px 0;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .content p {
-  line-height: 22px;
-  margin: 18px 0;
+  line-height: 24px;
+  margin: 16px 0;
+}
+
+.content p code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 14px;
+  line-height: 18px;
+  display: inline-block;
+  margin: 0px 3px;
+  padding: 0px 3px;
+  white-space: nowrap;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .content pre {
@@ -107,21 +199,29 @@ header nav li {
   box-shadow: inset 0px 0px 1px 1px rgba(210, 210, 210, 1);
 }
 
+.content li {
+  margin-bottom: 4px;
+  line-height: 24px;
+}
+
+.content ul ul {
+  padding-left: 35px;
+}
+
 footer {
-  background: #eaeaea;
-  margin: 0 auto 65px auto;
-  max-width: 880px;
+  margin: 0 auto;
   padding: 30px 50px;
 
-  border-top: 1px solid #ddd;
-
-  -webkit-border-radius: 0px 0px 4px 4px;
-  border-radius: 0px 0px 4px 4px;
-  
+  border-top: 1px solid #ddd;  
   -webkit-box-shadow: inset 0px 0px 4px 1px rgba(200, 245, 245, 1);
   box-shadow: inset 0px 0px 4px 1px rgba(230, 230, 230, 1);
 
   font-size: 13px;
+}
+
+footer nav {
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 footer .ringolinks {
