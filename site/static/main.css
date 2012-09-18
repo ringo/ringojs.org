@@ -244,3 +244,51 @@ footer p {
   font-size: 10px;
   margin: 28px 0 0 0;
 }
+
+@media screen and (max-width: 800px) {
+  .main .content,
+  .main .submenu {
+    float: none;
+    width: 100%;
+    padding: 0 2%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .main .submenu {
+    margin-bottom: 28px;
+  }
+
+  header {
+    padding: 0 2% 4px 2%;
+  }
+
+  header nav h1 ,
+  header nav ul,
+  header nav li {
+    float: none;
+    margin: 0;
+  }
+
+  header nav ul {
+    padding-top: 6px;
+  }
+
+  header nav li {
+    margin: 0 0 4px 20px;
+    list-style: disc;
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+
+  footer ul {
+    float: none;
+    width: 96%;
+    padding: 0 2%;
+    margin-bottom: 10px;
+  }
+}
