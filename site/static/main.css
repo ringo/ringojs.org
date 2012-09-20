@@ -46,7 +46,7 @@ header nav {
 }
 
 header nav ul {
-  padding: 9px 0 1px 0;
+  padding: 8px 0 1px 0;
   float: right;
 }
 
@@ -58,59 +58,41 @@ header nav li {
 }
 
 header h1 {
-  font-size: 54px;
-  margin: -10px 0 0 -1px;
+  margin: 3px 0 0 0;
   display: inline;
   float: left;
-  font-weight: 300;
+}
+
+header h1 img {
+  display: inline;
 }
 
 header h1 a {
   color: #fff;
-  text-shadow: 0px 1px 1px #c0c0c0;
-  text-decoration: none;
-}
-
-header h1 a:focus,
-header h1 a:hover {
-  color: #fff;
-  text-shadow: 0px 0px 2px #777;
   text-decoration: none;
 }
 
 .btn {
+  cursor: pointer;
   font-size: 13px;
   color: #050505;
   padding: 10px 15px;
-  background: -moz-linear-gradient(
-    top,
-    #ffffff 0%,
-    #ebebeb 50%,
-    #dbdbdb 55%,
-    #b5b5b5);
-  background: -webkit-gradient(
-    linear, left top, left bottom, 
-    from(#ffffff),
-    color-stop(0.50, #ebebeb),
-    color-stop(0.55, #dbdbdb),
-    to(#b5b5b5));
+  background: -moz-linear-gradient(top, #ffffff 0%, #ebebeb 50%, #dbdbdb 55%, #b5b5b5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.50, #ebebeb), color-stop(0.55, #dbdbdb), to(#b5b5b5));
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid #949494;
-  -moz-box-shadow:
-    0px 1px 1px rgba(000,000,000,0.5),
-    inset 0px 0px 2px rgba(255,255,255,1);
-  -webkit-box-shadow:
-    0px 1px 1px rgba(000,000,000,0.5),
-    inset 0px 0px 2px rgba(255,255,255,1);
-  box-shadow:
-    0px 1px 1px rgba(000,000,000,0.5),
-    inset 0px 0px 2px rgba(255,255,255,1);
-  text-shadow:
-    0px -1px 0px rgba(000,000,000,0.2),
-    0px 1px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 1px 1px rgba(000,000,000,0.5), inset 0px 0px 2px rgba(255,255,255,1);
+  -webkit-box-shadow: 0px 1px 1px rgba(000,000,000,0.5), inset 0px 0px 2px rgba(255,255,255,1);
+  box-shadow: 0px 1px 1px rgba(000,000,000,0.5), inset 0px 0px 2px rgba(255,255,255,1);
+  text-shadow: 0px -1px 0px rgba(000,000,000,0.2), 0px 1px 0px rgba(255,255,255,1);
   text-decoration: none;
+}
+
+.btn:focus,
+.btn:hover {
+  border: 1px solid #000;
 }
 
 .main {
@@ -138,7 +120,7 @@ header h1 a:hover {
 }
 
 .main .content {
-  margin-bottom: 70px;
+  margin-bottom: 55px;
   width: 70%;
   float: left;
 }
