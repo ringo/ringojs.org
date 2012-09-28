@@ -24,7 +24,6 @@ Overview of Ringo documentation resources.
 ## Topic Pages
   * [Command Line](command_line)
   * [Modules & Scope in RingoJS](modules_and_scopes)
-  * [Request Dispatching]
   * [Logging](logging)
   * [JSGI Middleware](jsgi_middleware)
   * [Profiler](profiler)
