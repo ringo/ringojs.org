@@ -20,6 +20,9 @@ a:hover {
   text-decoration: underline;
 }
 
+a img {
+  border: 0;
+}
 
 header {
   display: block;
@@ -131,7 +134,7 @@ header h1 a {
 
 .content p code,
 .content ul code {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 14px;
   line-height: 18px;
   display: inline-block;
@@ -145,7 +148,7 @@ header h1 a {
 }
 
 .content pre {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 14px;
 
   padding: 8px 10px 10px 10px;
@@ -160,7 +163,7 @@ header h1 a {
 }
 
 .content pre code {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 14px;
   line-height: 18px;
 }

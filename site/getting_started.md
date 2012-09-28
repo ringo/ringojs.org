@@ -1,6 +1,6 @@
 # Getting Started
 
-This is a short guide on how to install RingoJS. See [First Steps] on how to start using Ringo or [Documentation] for an overview of documentation resources.
+This is a short guide on how to install RingoJS. See [First Steps](documentation/first_steps) on how to start using Ringo or [Documentation](documentation) for an overview of documentation resources.
 
 Which Version
 -------------
@@ -15,13 +15,9 @@ We recommend the Java Sun Package. Either download it from [the Oracle download 
 
 ## Option 1: Get the latest official release
 
-Download the latest Ringo release:
+Download the latest Ringo release from the [download page](downloads).
 
-  * [Debian Package](http://github.com/downloads/ringo/ringojs/ringojs_0.7-1_all.deb)
-  * [Zip](http://github.com/downloads/ringo/ringojs/ringojs-0.7.zip)
-  * [Tar.gz](http://github.com/downloads/ringo/ringojs/ringojs-0.7.tar.gz)
-
-Install the `.deb` or unpack the archive you downloaded. Ringo is now ready to use. See [First Steps] for a mini intro on what you can do with Ringo.
+On Debian systems you can install the `.deb` or unpack the archive you downloaded. Ringo is now ready to use.
 
 ## Option 2: Install from Git
 
@@ -41,4 +37,4 @@ Finally, run the `jar` target to build RingoJS itself:
 
 After this completes, you'll now have a file called `lib/ringo.jar`.
 
-Ringo is now ready to use. See [First Steps] for a mini intro on what you can do with Ringo.
+Ringo is now ready to use. See [First Steps](documentation/first_steps) for a mini intro on what you can do with Ringo.

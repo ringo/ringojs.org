@@ -6,37 +6,30 @@ Overview of Ringo documentation resources.
 
   * Ringo API Reference
     * [master](/api/master/)
-    * [v0.8](/api/v0.8/)
-    * [v0.7](/api/v0.7/)
-    * [v0.6](/api/v0.6/)
-    * [v0.5](/api/v0.5/)
-    * [v0.4](/api/v0.4/)
+    * [v0.8](/api/v0.8/) &ndash; [release notes](/release_0_8)
+    * [v0.7](/api/v0.7/) &ndash; [release notes](/release_0_7)
+    * [v0.6](/api/v0.6/) &ndash; [release notes](/release_0_6)
+    * [v0.5](/api/v0.5/) &ndash; [release notes](/release_0_5)
+    * [v0.4](/api/v0.4/) &ndash; [release notes](/release_0_4)
   * [Modules](modules)
-  * [Globals]
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)
+  * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
 
 ## Guides
 
-  * [Installation][Getting Started]
-  * [First Steps][First_Steps]
-  * [Web Application Tutorial][Tutorial]
-  * [Package Management][Package_Management]
+  * [Installation](/getting_started)
+  * [First Steps](first_steps)
+  * [Package Management](package_management)
 
 ## Topic Pages
-  * [Command Line][Command_Line]
-  * [Modules in RingoJS][Modules_in_Ringojs]
-     and the more general [Modules & Scope in Javascript][Modules_and_Scopes]
-  * [HTTP parameter parsing][HTTP_parameter_parsing]
+  * [Command Line](command_line)
+  * [Modules & Scope in RingoJS](modules_and_scopes)
   * [Request Dispatching]
-  * [Logging]
-  * [Middleware]
-  * [Profiler]
-  * [Debugger]
-  * [Security]
-  * [Storage]
-  * [Web Framework][Web_Framework]
-  * [Webapp Extensions][Webapp_Extensions]
-  * [Modern JavaScript Support in Ringo][Modern_JavaScript_Support]
+  * [Logging](logging)
+  * [JSGI Middleware](jsgi_middleware)
+  * [Profiler](profiler)
+  * [Debugger](debugger)
+  * [Security](security)
 
 ## Community
 
