@@ -24,6 +24,11 @@ a img {
   border: 0;
 }
 
+a[href^="http://"] {
+    background: url('external.svg') center right no-repeat;
+    padding-right: 14px;
+}
+
 header {
   display: block;
   padding-top: 12px;
