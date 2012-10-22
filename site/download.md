@@ -1,4 +1,4 @@
-# Downloads
+# Download Ringo
 
 Head to the [github download page](https://github.com/ringo/ringojs/downloads)
 for a full list of Ringo releases.
