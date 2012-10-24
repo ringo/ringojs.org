@@ -20,4 +20,6 @@ for a full list of Ringo releases.
  * [RingoJS master tar.gz git snapshot](http://github.com/ringo/ringojs/tarball/master)
  * [RingoJS master zip git snapshot](http://github.com/ringo/ringojs/zipball/master)
 
-Also see [Packages] and [Applications].
+## Packages for Ringo
+
+You can use the Ringo package repository `rpr` to install packages, which is located at [packages.ringojs.org](http://packages.ringojs.org)

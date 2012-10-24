@@ -18,7 +18,6 @@ Overview of Ringo documentation resources.
 ## Guides
 
   * [Installation](/getting_started)
-  * [First Steps](first_steps)
   * [Package Management](package_management)
 
 ## Topic Pages

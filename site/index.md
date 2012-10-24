@@ -1,10 +1,14 @@
 Ringo is a CommonJS-based JavaScript runtime written in Java and based on the Mozilla Rhino
-JavaScript engine.
+JavaScript engine. It takes a pragmatical and non-dogmatic stance on things like I/O paradigms.
+Blocking *and* asynchronous I/O both have their strengths and weaknesses in different areas.
 
-<span class="large">[Download the final Ringo 0.8 release](/downloads)!</span>
+[Download the current Ringo 0.8 release!](/download)
 
-Our primary goal is to build a stable, high-performance runtime for server-side use.
-The following code is all you need to create a simple web app:
+
+Our aim is to provide an off-browser JavaScript platform that has the right mix of features
+and simplicity to be pleasant to work with and easy to deploy. The primary goal is to build
+a stable, high-performance runtime for server-side use. The following code is all you need to
+create a simple web app:
 
     exports.app = function(req) {
         return {
@@ -23,23 +27,8 @@ without requiring a restart.
 
 But Ringo lets you do more than write web applications. It allows you to
 seamlessly use any Java class or library simply by dropping it into the classpath.
-The following code shows how to build a simple desktop application with Swing:
+This makes it easy to integrate Ringo into existing Java environments and reusing existing
+Java code works without lots of effort or porting issues.
 
-    var {JFrame, JButton} = javax.swing;
-
-    function main() {
-        var frame = new JFrame("Hello World!");
-        var button = new JButton("Bye bye");
-        button.addActionListener(function(e) {
-            system.exit();
-        });
-        frame.add("Center", button);
-        frame.setSize(300, 300);
-        frame.setVisible(true);
-    }
-
-    if (require.main == module)
-        main();
-
-See [the Wiki](/wiki) or [documentation page](/documentation) to learn
+[Get Started](/get_started) or the [documentation page](/documentation) to learn
 more about Ringo!
