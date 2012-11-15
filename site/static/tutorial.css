@@ -9,3 +9,7 @@
    background-repeat: no-repeat;
    min-height: 110px;
 }
+
+.mustknow {
+   border-color: red;
+}
