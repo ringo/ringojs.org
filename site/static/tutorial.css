@@ -1,0 +1,11 @@
+.mustknow, .knowmore {
+   padding-left: 100px;
+   border: 1px solid black;
+   border-radius: 3px 3px 3px 3px;
+   box-shadow: 0 0 1px 1px #D2D2D2 outset;
+   background-image: url('./black-rhino.svg');
+   background-position: 0px center;
+   background-size: 90px;
+   background-repeat: no-repeat;
+   min-height: 110px;
+}
