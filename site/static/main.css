@@ -168,12 +168,8 @@ header h1 a {
   padding: 8px 10px 10px 10px;
   margin-right: 5px;
 
-  border: 3px solid #eee;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  border-left: 3px solid #eee;
 
-  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(210, 210, 210, 1);      
-  box-shadow: inset 0px 0px 1px 1px rgba(210, 210, 210, 1);
 }
 
 .content pre code {
@@ -195,7 +191,7 @@ footer {
   margin: 0 auto;
   padding: 30px 50px;
 
-  border-top: 1px solid #ddd;  
+  border-top: 1px solid #ddd;
   -webkit-box-shadow: inset 0px 0px 4px 1px rgba(200, 245, 245, 1);
   box-shadow: inset 0px 0px 4px 1px rgba(230, 230, 230, 1);
 
