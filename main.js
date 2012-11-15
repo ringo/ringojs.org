@@ -2,6 +2,7 @@ var {Application} = require("stick");
 var app = exports.app = Application();
 app.configure("gzip", "etag", masterTemplate, "mount");
 app.mount("", require("simplesite"));
+app.mount("/bot", require("ringobot"));
 
 var masterTemplatePath = module.resolve("templates/master.html");
 function masterTemplate(next, app) {
@@ -27,7 +28,7 @@ exports.webHookConfig = {
 };
 
 if (require.main === module) {
-    // FIXME shutdown hooks
     var server = new require("ringo/httpserver").Server({app: app});
     server.start();
+    require("ringobot").start(server);
 }
