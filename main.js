@@ -3,9 +3,7 @@
 var {Application} = require("stick");
 var app = exports.app = Application();
 app.configure("gzip", "etag", masterTemplate, "mount");
-app.mount("/wiki", module.resolve("ringowiki/main"));
-app.mount("/bot", module.resolve("ringobot/main"));
-app.mount("", module.resolve("simplesite/main"));
+app.mount("", require("simplesite"));
 
 var masterTemplatePath = module.resolve("templates/master.html");
 function masterTemplate(next, app) {
@@ -13,14 +11,6 @@ function masterTemplate(next, app) {
         req.env.masterTemplate = masterTemplatePath;
         return next(req);
     }
-}
-
-exports.start = function(server) {
-    require("./ringobot/main").start(server);
-}
-
-exports.stop = function(server) {
-    require("./ringobot/main").stop(server);
 }
 
 exports.webHookConfig = {
@@ -39,5 +29,7 @@ exports.webHookConfig = {
 };
 
 if (require.main === module) {
-    require("ringo/httpserver").main(module.directory);
+    // FIXME shutdown hooks
+    var server = new require("ringo/httpserver").Server({app: app});
+    server.start();
 }
