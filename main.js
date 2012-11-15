@@ -1,5 +1,3 @@
-#!/usr/bin/env ringo
-
 var {Application} = require("stick");
 var app = exports.app = Application();
 app.configure("gzip", "etag", masterTemplate, "mount");
