@@ -80,7 +80,7 @@ So we change our "main.js" to export the "app" function and call the httpserver 
     }
     require('ringo/httpserver').main(module.id);
 
-But what about the port? Did we lose the ability to specify the port? Not really, because the Httpserver still reads command line options. Try this for a full list of options available:
+But what about the port? Did we lose the ability to specify the port? No! Because the Httpserver's `main()` reads command line options. Try this for a full list of options available:
 
     $ ringo main.js --help
 
