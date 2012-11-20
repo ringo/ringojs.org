@@ -26,7 +26,7 @@ Overview of Ringo documentation resources.
 
 ## For Ringo developers
 
-  * [Coding standards](documention/coding_standards)
+  * [Coding standards](documentation/coding_standards)
   * [Github Repository](http://github.com/ringo/ringojs)
   * [Issue Tracker](http://github.com/ringo/ringojs/issues)
 

@@ -2,7 +2,7 @@
 
 This is a short guide on how to install RingoJS.
 
-## Ringo requires Java SE 5
+## Requires Java SE 5 or higher
 
 We recommend Java SE 6 or higher to run Ringo, which you find at [the Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/jdk6-jsp-136632.html) or on Debian simply `apt-get install openjdk-6-jre`.
 
@@ -23,6 +23,8 @@ Clone the Git repository with:
 Change to the ringojs directory you just checked out and run ant with the "update" and "jar" target to fetch all dependencies and then build Ringo:
 
     $ ant update jar
+
+Ringo is now ready to use.
 
 ## Ready to use
 
