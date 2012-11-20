@@ -1,9 +1,4 @@
-# Download Ringo
-
-Head to the [github download page](https://github.com/ringo/ringojs/downloads)
-for a full list of Ringo releases.
-
-## Binary Releases
+## Download Ringo
 
  * [RingoJS v0.8 tar.gz archive](http://github.com/downloads/ringo/ringojs/ringojs-0.8.tar.gz)
  * [RingoJS v0.8 zip archive](http://github.com/downloads/ringo/ringojs/ringojs-0.8.zip)
@@ -20,6 +15,10 @@ for a full list of Ringo releases.
  * [RingoJS master tar.gz git snapshot](http://github.com/ringo/ringojs/tarball/master)
  * [RingoJS master zip git snapshot](http://github.com/ringo/ringojs/zipball/master)
 
+For a full list of Ringo downloads head to our [github download page](https://github.com/ringo/ringojs/downloads).
+
 ## Packages for Ringo
 
-You can use the Ringo package repository `rpr` to install packages, which is located at [packages.ringojs.org](http://packages.ringojs.org)
+To install additional Ringo packages you can either use the bare bones `ringo-admin install` command or the more advanced [rp](https://github.com/grob/rp) Ringo package manager.
+
+See the help page on [packages](documentation/packages) for more details.
