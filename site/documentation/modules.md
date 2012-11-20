@@ -1,6 +1,6 @@
 # Modules
 
-Ringo implements the CommonJS Modules 1.1 specification.
+Ringo implements the [CommonJS Modules 1.1](http://wiki.commonjs.org/wiki/Modules/1.1) specification.
 
 ## Anatomy of a Module
 
@@ -28,11 +28,8 @@ Ringo also provides a `module` object to each module with the following
 properties:
 
  * `id` - the canonical id of the module
-
  * `path` - the file path of the module resource
-
  * `uri` - the URL of the module resource
-
  * `exports` - assigning to this property allows modules to replace the
     default exports object.
 
@@ -111,7 +108,7 @@ resolve the remaining part of the id against the `lib` directory of that
 package. The location of the `lib` directory can be overridden using the
 `directories.lib` property in package.json.
 
-Ringo also provides very basic [package management] support through the
+Ringo also provides very basic package management support through the
 `ringo-admin` tool.
 
 ## Caching and Reloading
@@ -126,3 +123,37 @@ on has changed each time it is required. If so, the module is loaded again.
 
 To disable module reloading run ringo with the `-p` or `--production` option,
 or set the `production` servlet init parameter to `true`.
+
+## Ringo Module Extensions
+
+The CommonJS modules specification was kept deliberately small. Ringo provides
+some extra niceties for exporting and importing stuff. The downside to using
+these is that your code is tied to Ringo, but it's relatively easy to convert
+the code to "pure" CommonJS, and there's also a [command line tool](https://github.com/hns/commonize)
+for that purpose.
+
+One Ringo extension is the `include` function. This is similar to `require`, but
+instead of returning the other module's exports object as a whole it directly
+copies each of its properties to the calling module's scope, making them
+usable like they were locally defined.
+
+`include` is great for shell work and quick scripts where typing economy is
+paramount, and that's what it's meant for. It's usually not a great idea to use
+it for large, long lived programs as it conceals the origin of top-level
+functions used in the program.
+
+For this purpose, it's more advisable to use `require` in combination with
+JavaScript 1.8 destructuring assignment to explicitly include selected
+properties from another module in the local scope:
+
+    var {foo, bar} = require("some/module");
+
+The above statements imports the "foo" and "bar" properties of the API exported
+by "some/module" directly in the calling scope.
+
+On the exporting side, Ringo provides an `export` function that takes a variable
+number of local variable names to be exported from the current module.
+Internally, this just copies the given variables to the module's exports object,
+so it's just a way to keep a module's exports in one place.
+
+    export("foo", "bar", "baz");
