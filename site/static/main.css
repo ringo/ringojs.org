@@ -24,16 +24,15 @@ a img {
   border: 0;
 }
 
-a[href^="http://"] {
+a[href^="http://"],
+a[href^="https://"] {
     background: url('external.svg') center right no-repeat;
     padding-right: 14px;
 }
 
 /* Don't mark github links as external */
-a[href^="http://github.com/ringo/"],
-a[href^="http://www.github.com/ringo/"],
-a[href^="http://github.com/downloads/ringo/"],
-a[href^="http://www.github.com/downloads/ringo/"] {
+a[href^="http://www.ringojs.org"],
+a[href^="http://ringojs.org"] {
     background: none;
     padding-right: 0;
 }
