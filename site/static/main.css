@@ -1,148 +1,273 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    font-size: 0.94em;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
 
 body {
-    font-family: 'Helvetica Neue',Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
-}
-
-body, p, li {
-    line-height: 1.55em;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #222;
 }
 
 a {
-    color: blue;
-    text-decoration: none;
+  color: #3879ba;
+  text-decoration: none;
 }
 
+a:focus,
 a:hover {
-    text-decoration: underline;
+  color: #5393cf;
+  text-decoration: underline;
 }
 
-a:active {
-    color: #3366ff;
+a img {
+  border: 0;
 }
 
-#wrap {
-    margin: 0 auto;
-    width: 750px;
+a[href^="http://"] {
+    background: url('external.svg') center right no-repeat;
+    padding-right: 14px;
 }
 
-div#main {
-    clear: both;
-    float: left;
-    width: 530px;
-    margin: 30px 10px;
-    padding: 5px;
+/* Don't mark github links as external */
+a[href^="http://github.com/ringo/"],
+a[href^="http://www.github.com/ringo/"],
+a[href^="http://github.com/downloads/ringo/"],
+a[href^="http://www.github.com/downloads/ringo/"] {
+    background: none;
+    padding-right: 0;
 }
 
-#logo {
-    margin-top: 10px;
-    margin-bottom: 6px;
-    border: 0;
+header {
+  display: block;
+  padding-top: 12px;
+  background: #c1ccd1;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  border-bottom: 1px solid #bfbfbf;
 }
 
-#menu {
-    margin-top: 35px;
-    float: right;
-    width: 150px;
+header a {
+  color: #222;
+  text-decoration: none;
 }
 
-.navigation ul {
+header nav a:focus,
+header nav a:hover {
+  color: #222;
+}
+
+header nav {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+header nav ul {
+  padding: 8px 0 1px 0;
+  float: right;
+}
+
+header nav li {
+  float: left;
+  list-style: none;
+  font-size: 19px;
+  margin-left: 2em;
+}
+
+header h1 {
+  margin: 3px 0 0 0;
+  display: inline;
+  float: left;
+}
+
+header h1 img {
+  display: inline;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  clear: both;
+  overflow: hidden;
+  background: #fff;
+  margin: 9px auto 0 auto;
+  max-width: 940px;
+}
+
+.main .submenu {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 30%;
+  padding-left: 8%;
+
+  float: left;
+  margin-top: 30px;
+}
+
+.submenu button {
+  width: 100%;
+}
+
+.main .content {
+  margin-bottom: 55px;
+  width: 70%;
+  float: left;
+}
+
+.content h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* If headline <h1> is missing on a content page */
+.content > p:first-child {
+  margin-top: 28px;
+}
+
+.content h2 {
+  margin: 30px 0 -12px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.content h3 {
+  margin: 18px 0 -12px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.content p {
+  line-height: 24px;
+  margin: 16px 0;
+}
+
+.content p code,
+.content ul code {
+  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 18px;
+  display: inline-block;
+  margin: 0px 3px;
+  padding: 0px 3px;
+  white-space: nowrap;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.content pre {
+  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+
+  padding: 8px 10px 10px 10px;
+  margin-right: 5px;
+
+  border-left: 3px solid #eee;
+
+}
+
+.content pre code {
+  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.content li {
+  margin-bottom: 4px;
+  line-height: 24px;
+}
+
+.content ul ul {
+  padding-left: 35px;
+}
+
+footer {
+  margin: 0 auto;
+  padding: 30px 50px;
+
+  border-top: 1px solid #ddd;
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(200, 245, 245, 1);
+  box-shadow: inset 0px 0px 4px 1px rgba(230, 230, 230, 1);
+
+  font-size: 13px;
+}
+
+footer nav {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+footer .ringolinks {
+  overflow: hidden;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 25%;
+}
+
+footer h4 {
+  margin: 0;
+}
+
+footer p {
+  font-size: 10px;
+  margin: 28px 0 0 0;
+}
+
+@media screen and (max-width: 800px) {
+  .main .content,
+  .main .submenu {
+    float: none;
+    width: 100%;
+    padding: 0 2%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .main .submenu {
+    margin-bottom: 28px;
+  }
+
+  header {
+    padding: 14px 2% 4px 2%;
+  }
+
+  header nav h1 ,
+  header nav ul,
+  header nav li {
+    float: none;
     margin: 0;
-    padding: 0;
-}
+  }
 
-.navigation ul li {
-    list-style: none;
-}
-#menu ul li {
-    list-style: none;
-}
+  header nav ul {
+    padding-top: 6px;
+  }
 
-.navigation a {
-    text-decoration: none;
-    color: #003;
-    text-shadow: #ccf 1px 1px 2px;
-    background-color: #ddf;
-    padding: 4px 6px;
-    display: block;
-}
+  header nav li {
+    margin: 0 0 4px 20px;
+    list-style: disc;
+    font-size: 16px;
+  }
 
-.navigation a:hover {
-    background-color: #88b;
-}
+  footer {
+    padding: 10px 0;
+  }
 
-.navigation a.highlight, a.highlight#hover {
-    background-color: black;
-    color: white;
-}
-
-#footer {
-    margin-top: 3em;
-    text-align: center;
-    color: #666;
-    font-size: 80%;
-    clear:both;
-}
-
-p code {
-    font-weight: bold;
-}
-
-pre.code, pre.sh_javascript {
-    overflow: auto;
-    background-color: #eef;
-    border-width: 1px;
-    border-color: #bcf;
-    border-style: solid;
-    padding: 0.5em;
-}
-
-a.toplink {
-    background-color: #bbd;
-    padding: 4px 10px;
-    font-weight: bold;
-    text-shadow: #ccf 1px 1px 2px;
-    color: #003;
-    text-decoration: none;
-    margin-left: -4px;
-    /* margin-left: -8px;
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
-    -moz-border-radius-bottomleft: 8px;
-    -moz-border-radius-topleft: 8px;
-    -webkit-border-bottom-left-radius: 8px;
-    -webkit-border-top-left-radius: 8px; */
-}
-
-a.toplink:hover {
-    background-color: #88b;
-}
-
-td {
-    vertical-align: top;
-    padding: 0 10px;
-}
-
-textarea {
-    width: 90%;
-    height: 30em;
-}
-
-input.title {
-    width: 90%;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.large {
-    font-size: 1.12em;
-}
-
-.invert {
-    background: #ddf;
-    padding: 0 3px;
+  footer ul {
+    float: none;
+    width: 96%;
+    padding: 0 2%;
+    margin-bottom: 10px;
+  }
 }
