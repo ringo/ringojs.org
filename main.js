@@ -3,7 +3,7 @@ var app = exports.app = Application();
 app.configure("static", "etag", masterTemplate, "mount");
 app.mount("", require("simplesite"));
 app.mount("/bot", require("ringobot"));
-app.static("/usr/local/ringo/jsdoc/htdocs/");
+app.static("/usr/local/api.ringojs.org/htdocs/");
 
 var masterTemplatePath = module.resolve("templates/master.html");
 function masterTemplate(next, app) {
@@ -13,8 +13,12 @@ function masterTemplate(next, app) {
     }
 }
 
-if (require.main === module) {
+var init = exports.init = function() {
     var server = new require("ringo/httpserver").Server({app: app});
     server.start();
     require("ringobot").start(server);
+}
+
+if (require.main === module) {
+   init();
 }
