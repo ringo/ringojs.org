@@ -3,9 +3,8 @@ Overview of Ringo documentation resources.
 ## References
 
   * Ringo API Reference
-    * [master](http://ringojs.org/api/master/)
-    * [v0.8](http://ringojs.org/api/v0.8/) &ndash; [release notes](Release-0.8)
-    * [list of older API references](http://ringojs.org/api/)
+    * [master](/api/master/index.html)
+    * [v0.8](/api/v0.8/index.html) &ndash; [release notes](Release-0.8)
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)
   * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
 
