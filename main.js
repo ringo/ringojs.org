@@ -3,7 +3,7 @@ var app = exports.app = Application();
 app.configure("static", "etag", masterTemplate, "mount");
 app.mount("", require("simplesite"));
 app.mount("/bot", require("ringobot"));
-app.static("/usr/local/api.ringojs.org/htdocs/");
+app.static("/usr/local/api.ringojs.org/htdocs/", "index.html");
 
 var masterTemplatePath = module.resolve("templates/master.html");
 function masterTemplate(next, app) {
