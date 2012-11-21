@@ -9,7 +9,6 @@ Overview of Ringo documentation resources.
   * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
 
 ## Topic Pages
-  * [Web application tutorial](tutorial/)
   * [Deployment options](documentation/deployment), [Ringo with Spring](documentation/ringo_with_spring)
   * [Command Line Tools](documentation/commandline_tools)
   * Modules
