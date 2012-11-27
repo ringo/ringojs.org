@@ -28,7 +28,7 @@ Now we need a template file to render, and we need to use the environment to act
 
 <div class="knowmore">
 
-Reinhardt is currently beta. But it already provides a big chunk of Django's functionality.
+Reinhardt is currently beta but it already provides a big chunk of Django's functionality.
 
   * almost all of the general [Django help on templates](https://docs.djangoproject.com/en/1.4/topics/templates/) applies to Reinhardt
   * [Django's list of tags and filters](https://docs.djangoproject.com/en/1.4/ref/templates/builtins/) also applies, but not everything is yet implemented. [Reinhardt's README](https://github.com/oberhamsi/reinhardt/blob/master/README) has the details on differences.
