@@ -55,6 +55,7 @@ Our skeleton template is "templates/base.html" and it has only one overwritable 
     <body>
         <div class="wrapper">
             {% block content %}
+               Default content
             {% endblock %}
         </div>
     </body>
