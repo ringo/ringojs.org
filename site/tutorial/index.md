@@ -1,7 +1,7 @@
 About
 ---------
 
-This tutorial does not attempt to be comprehensive and cover every single feature available in Ringo. Instead, it walks you through the creation of a simple wiki and touches on the most important concepts and modules.
+This tutorial does not attempt to be comprehensive and cover every single feature available in Ringo. Instead, it walks you through the creation of a simple wiki and touches on the most important concepts and modules. Nonetheless the later parts of this tutorial are certainly more advanced then the first few.
 
 I assume you already have Ringo installed. See [Getting Started] if you need help with that.
 
