@@ -28,7 +28,7 @@ Another library we want in our tool-belt is [ringo-sqlstore](https://github.com/
 
 The final piece in our package-puzzle is a template engine. We use [Reinhardt](http://github.com/oberhams/reinhardt) for this tutorial. It is heavily inspired by Django's template language.
 
-    {% for story in story_list %}
+    {% for story in stories %}
     <h2>
       <a href="{{ story.getUrl }}">
         {{ story.headline|upper }}
