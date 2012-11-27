@@ -133,9 +133,7 @@ Look at the mapping for "page" at the bottom of our Revision definition:
         }
     }});
 
-A one-to-one relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property, which has the value "Page" in this example.
-
-If you do not specify any additional mapping information, then the objects are by default referenced by their ids. That is want we want here.
+A one-to-one relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property, which has the value "Page" in this example. If you do not specify any additional mapping information (FIXME how would i do that?), then the Page entity is by default referenced by its id. That is want we want here.
 
 Back into the shell to create a test Revision:
 
