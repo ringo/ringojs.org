@@ -61,7 +61,7 @@ Our skeleton template is "templates/base.html" and it has only one overwritable 
     </body>
     </html>
 
-The template we actually use to render wiki pages is called "page.html". It extends the skeleton template and overwrites its `{% block content %}`. Inside this block, the template outputs the capitalized name of the page as well as its body. This is how our "page.html" looks like:
+Remember: the above is just our skeleton template. The template we actually render to display wiki pages is called "page.html". It extends the skeleton template and overwrites its `{% block content %}`. Inside this block, the template outputs the capitalized name of the page as well as its body. This is how our "page.html" looks like:
 
     {% extends "base.html" %}
 
