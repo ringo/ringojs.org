@@ -48,6 +48,8 @@ Time to start a Ringo shell and put something in our database. Assuming you put 
     >> var model = require('./model')
     >> var p = new model.Page({'slug': 'Home'})
     >> p.save()
+    >> console.dir(p)
+    >> // FIXME sqlstore entity "p" should expose all its properties: id and slug
 
 Why is this working? Where did we create the necessary Page table? The store did that for us; the store can not evolve a database schema but it creates tables if they do not yet exist.
 
