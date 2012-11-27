@@ -8,7 +8,9 @@ We recommend Java SE 6 or higher to run Ringo, which you find at [the Oracle dow
 
 ## Option 1: Download the latest release
 
-Download the latest Ringo release from the [download page](download). For convinience, you should add the `/bin` directory to the `PATH` environment variable. Ringo is now ready to use.
+Download the latest Ringo release from the [download page](download). For convinience, you should add the `/bin` directory to the `PATH` environment variable.
+
+See [First Steps](first_steps) for a short introduction on what you can do with Ringo or the [Documentation](documentation) page for an overview of all help resources.
 
 ## Option 2: Install Ringo from Git
 
@@ -23,9 +25,5 @@ Clone the Git repository with:
 Change to the ringojs directory you just checked out and run ant with the "update" and "jar" target to fetch all dependencies and then build Ringo:
 
     $ ant update jar
-
-Ringo is now ready to use.
-
-## Ready to use
 
 See [First Steps](first_steps) for a short introduction on what you can do with Ringo or the [Documentation](documentation) page for an overview of all help resources.

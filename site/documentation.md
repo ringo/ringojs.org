@@ -21,6 +21,7 @@ Overview of Ringo documentation resources.
   * [Profiler](documentation/profiler)
   * [Debugger](documentation/debugger)
   * [Security Features](documentation/security_features)
+  * [Rhino Hacker's Guide](documentation/rhino_hacker_guide)
 
 ## For Ringo developers
 
