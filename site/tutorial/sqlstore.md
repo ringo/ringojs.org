@@ -151,7 +151,8 @@ To connect the revision to the page, we first retrieve the Page instance and ass
 
 The property "page" on a Revision always gives us the full Page object we hooked it up with; not just the id of the Page. This means we can get the 'slug' from the page attached to a revision by simply querying for the Revision and then using plain property access to access the page properties:
 
-    >> store.query('from Revision')[0].page.slug
+    >> var revision = store.query('from Revision')[0];
+    >> revision.page.slug
     'Home'
 
 one-to-many Relations
