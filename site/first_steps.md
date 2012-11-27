@@ -5,7 +5,7 @@ Run the ringo script in the bin directory without arguments:
 
     $ ./bin/ringo
 
-This should start a shell session with a `>>` prompt. Use the `include`, `require`, or `import` functions to load any [RingoJS modules](http://ringojs.org/api/).
+This should start a shell session with a `>>` prompt. Use the `include`, `require`, or `import` functions to load any RingoJS module.
 
     >> var fs = require('fs');
     >> var file = fs.open('README.md');
