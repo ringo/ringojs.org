@@ -112,7 +112,7 @@ Now, the more complex Revision entity: that is the entity where the actual page 
 
  But the Revision is not connected to the Page, yet. We need a "1:1" relation from Revision to Page. ringo-sqlstore makes it easy to define relations because besides the normal field types - text, integer, timestamp, etc. - it also supports two special types: "object" and "collection":
 
-  *  A "collection" is useful for one-to-many relations, and
+  *  A "collection" is useful for one-to-many relations
   * the "object" type provides one-to-one relations
 
 A 1:1 relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property. Look at the mapping for "page" at the very bottom:
