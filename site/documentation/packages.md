@@ -18,7 +18,7 @@ This will make the new `rp` command available in your $RINGO_HOME/bin directory:
 ringo-admin install
 -----------------------------
 
-RingoJS comes with a simple tool for installing [packages]. It can be run using the `ringo-admin` command with `install` as first argument. The install task takes a URL of a zip file containing the package to install as argument.
+RingoJS comes with a simple tool for installing packages. It can be run using the `ringo-admin` command with `install` as first argument. The install task takes a URL of a zip file containing the package to install as argument.
 
 To install a package from the web:
 

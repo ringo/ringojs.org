@@ -1,4 +1,7 @@
-Overview of Ringo documentation resources.
+<p style="display:none">
+Activate this search box once duckduckgo.com has indexed the new site
+<iframe src="http://duckduckgo.com/search.html?site=ringojs.org&prefill=Search RingoJs.org" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+</p>
 
 ## References
 
@@ -15,6 +18,7 @@ Overview of Ringo documentation resources.
     * [Anatomy of a Module](documentation/modules)
     * [Modules by example](tutorial/modules)
     * [Module and Global Scope in Ringo](documentation/module_and_global_scope)
+  * [Package managment](documentation/packages)
   * [Logging](documentation/logging)
   * [Java Integration](documentation/java_integration)
   * [JSGI and Stick](documentation/jsgi_and_stick)

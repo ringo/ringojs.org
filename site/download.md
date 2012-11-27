@@ -17,8 +17,3 @@
 
 For a full list of Ringo downloads head to our [github download page](https://github.com/ringo/ringojs/downloads).
 
-## Packages for Ringo
-
-To install additional Ringo packages you can either use the bare bones `ringo-admin install` command or the more advanced [rp](https://github.com/grob/rp) Ringo package manager.
-
-See the help page on [packages](documentation/packages) for more details.

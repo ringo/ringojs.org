@@ -41,6 +41,14 @@ If you don't pass the app directory on the command line the script will prompt y
 
     $ ./bin/ringo [app directory]/main.js
 
+## Packages for Ringo
+
+To install additional Ringo packages you can either use the bare bones `ringo-admin install` command or the more advanced [rp](https://github.com/grob/rp) Ringo package manager.
+
+See the help page on [packages](documentation/packages) for more details.
+
+## Community help
+
 If you don't find what you are looking for please tell us on the [mailing list][group] or in the [IRC channel][irc]!
 
 [group]: http://groups.google.com/group/ringojs
