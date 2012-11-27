@@ -115,7 +115,7 @@ Now, the more complex Revision entity: that is the entity where the actual page 
   *  A "collection" is useful for one-to-many relations
   * the "object" type provides one-to-one relations
 
-A one-to-one relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property. Look at the mapping for "page" at the very bottom:
+Look at the mapping for "page" at the bottom of our Revision definition:
 
     var Revision = exports.Revision = store.defineEntity('Revision', {properties: {
         body: {
@@ -132,6 +132,8 @@ A one-to-one relation - a "object" mapping - needs to know which kind of entity 
             entity: "Page"
         }
     }});
+
+A one-to-one relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property, which has the value "Page" in this example.
 
 If you do not specify any additional mapping information, then the objects are by default referenced by their ids. That is want we want here.
 
