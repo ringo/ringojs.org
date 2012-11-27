@@ -58,7 +58,7 @@ A named placeholder is prefixed with `:` (colon) and it does not match `/` (slas
     /blogposts/:yearplaceholder/:monthplaceholder/:anotherplaceholder/index.html
 
 
-The above is a valid path description with two placeholders, one for "year" and one for "month".
+The above is a valid path description with two placeholders: one for the year, one for the "month" and "another" placeholeder.
 
 Let's use this new knowledge to setup a URL structure similar to what Wikipedia provides, namely:
 
