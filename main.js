@@ -14,7 +14,7 @@ function masterTemplate(next, app) {
 }
 
 var init = exports.init = function() {
-    var server = new require("ringo/httpserver").Server({app: app});
+    var server = new require("ringo/httpserver").Server({app: app, port:80});
     server.start();
     require("ringobot").start(server);
 }
