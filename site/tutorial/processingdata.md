@@ -34,7 +34,7 @@ We no longer directly talk to the "store", instead I use "model.Page". So you ca
 
     var model = require('./model');
 
-Okay, that is nice and clean but we are not much closer to actually editing the page.
+That is nice and clean but we are not much closer to actually editing the page.
 
 We have an edit view rendering a non-existing "edit.html" template. This "edit.html" should output a HTML form. The following template code does just that:
 
@@ -115,9 +115,7 @@ But more interestingly: what did the `console.dir` output? Something like this:
         }
     }
 
-Okay, it is a request with "method" type POST; that's good but were is the actual POST data? Raw JSGI does not help us much; if you read the Specification, you know the whole request body is in the "input" property.
-
-We do not want to deal with the details of how this works... so again: Stick to the rescue!
+We have a request with "method" type POST but where is the actual POST data? Stick to the rescue!
 
 By adding the "params" middleware  Stick provides us with new request properties "queryParams", "postParams", and "params". First, configure our Stick application to use the "params" middleware:
 
