@@ -63,7 +63,7 @@ The above is a valid path description with two placeholders: one for the year, o
 Let's use this new knowledge to setup a URL structure similar to what Wikipedia provides, namely:
 
   * "/Home" - the wiki content pages, which have only one segment but any character in that first segment
-  * "/Home/edit" - and the "edit" view for each content page, which shares the first segment with its wiki page, followed by "edit"
+  * "/Home/edit" - the "edit" view for each content page, which shares the first segment with its wiki page, followed by "edit"
 
 As a path specification, the above translates into these routes:
 
