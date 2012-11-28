@@ -18,7 +18,7 @@ My library of choice for URL routing is [Stick](https://github.com/hns/stick). S
 
 Ringo ships with a Httpserver, which follows the [JSGI](http://wiki.commonjs.org/wiki/JSGI) standard, so we could implement a web framework ourselves in JavaScript. We look at how this could be done in the next section of the tutorial. But we will soon rely on Stick to provide some basic scaffolding.
 
-Stick's original author thought it is funny to describe Stick as a "JSGI middleware composition layer and application framework" - which is the technically correct elaboration on "web framework on top of JSGI".
+Stick's original author presumably thought it is funny to describe Stick as a "JSGI middleware composition layer and application framework" - which is the technically correct elaboration on "web framework on top of JSGI".
 
 </div>
 
@@ -28,7 +28,7 @@ Another library we want in our tool-belt is [ringo-sqlstore](https://github.com/
 
 The final piece in our package-puzzle is a template engine. We use [Reinhardt](http://github.com/oberhams/reinhardt) for this tutorial. It is heavily inspired by Django's template language.
 
-    {% for story in story_list %}
+    {% for story in stories %}
     <h2>
       <a href="{{ story.getUrl }}">
         {{ story.headline|upper }}

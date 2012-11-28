@@ -28,7 +28,7 @@ Now we need a template file to render, and we need to use the environment to act
 
 <div class="knowmore">
 
-Reinhardt is currently beta. But it already provides a big chunk of Django's functionality.
+Reinhardt is currently beta but it already provides a big chunk of Django's functionality.
 
   * almost all of the general [Django help on templates](https://docs.djangoproject.com/en/1.4/topics/templates/) applies to Reinhardt
   * [Django's list of tags and filters](https://docs.djangoproject.com/en/1.4/ref/templates/builtins/) also applies, but not everything is yet implemented. [Reinhardt's README](https://github.com/oberhamsi/reinhardt/blob/master/README) has the details on differences.
@@ -55,12 +55,13 @@ Our skeleton template is "templates/base.html" and it has only one overwritable 
     <body>
         <div class="wrapper">
             {% block content %}
+               Default content
             {% endblock %}
         </div>
     </body>
     </html>
 
-The template we actually use to render wiki pages is called "page.html". It extends the skeleton template and overwrites its `{% block content %}`. Inside this block, the template outputs the capitalized name of the page as well as its body. This is how our "page.html" looks like:
+Remember: the above is just our skeleton template. The template we actually render to display wiki pages is called "page.html". It extends the skeleton template and overwrites its `{% block content %}`. Inside this block, the template outputs the capitalized name of the page as well as its body. This is how our "page.html" looks like:
 
     {% extends "base.html" %}
 

@@ -16,4 +16,7 @@ The "google-diff-match-patch" library does just that. It is available in multipl
 
 [Download the zip file](code.google.com/p/google-diff-match-patch/downloads/) and extract the java file "java/diff_match_patch.java" into a new directory "./lib" in our wiki directory. Then compile the java file with (I assume you have a Java Development Kit installed!)
 
-   $ javac diff_match_patch.java
+    $ javac diff_match_patch.java
+   
+   
+// FIXME to be continued

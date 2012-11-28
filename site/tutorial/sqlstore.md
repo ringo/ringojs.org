@@ -48,6 +48,8 @@ Time to start a Ringo shell and put something in our database. Assuming you put 
     >> var model = require('./model')
     >> var p = new model.Page({'slug': 'Home'})
     >> p.save()
+    >> console.dir(p)
+    >> // FIXME sqlstore entity "p" should expose all its properties: id and slug
 
 Why is this working? Where did we create the necessary Page table? The store did that for us; the store can not evolve a database schema but it creates tables if they do not yet exist.
 
@@ -108,12 +110,12 @@ Now, the more complex Revision entity: that is the entity where the actual page 
         }
     }});
 
- But the Revision is not connected to the Page, yet. We need a "1:1" relation from Revision to Page. ringo-sqlstore makes it easy to define relations because besides the normal field types - text, integer, timestamp, etc. - it also supports two special types: "object" and "collection":
+ But the Revision is not connected to the Page, yet. We need a one-to-one relation from Revision to Page. ringo-sqlstore makes it easy to define relations because besides the normal field types - text, integer, timestamp, etc. - it also supports two special types: "object" and "collection":
 
-  *  A "collection" is useful for one-to-many relations, and
+  *  A "collection" is useful for one-to-many relations
   * the "object" type provides one-to-one relations
 
-A 1:1 relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property. Look at the mapping for "page" at the very bottom:
+Look at the mapping for "page" at the bottom of our Revision definition:
 
     var Revision = exports.Revision = store.defineEntity('Revision', {properties: {
         body: {
@@ -131,7 +133,7 @@ A 1:1 relation - a "object" mapping - needs to know which kind of entity it refe
         }
     }});
 
-If you do not specify any additional mapping information, then the objects are by default referenced by their ids. That is want we want here.
+A one-to-one relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property, which has the value "Page" in this example. If you do not specify any additional mapping information (FIXME how would i do that?), then the Page entity is by default referenced by its id. That is want we want here.
 
 Back into the shell to create a test Revision:
 
@@ -149,7 +151,8 @@ To connect the revision to the page, we first retrieve the Page instance and ass
 
 The property "page" on a Revision always gives us the full Page object we hooked it up with; not just the id of the Page. This means we can get the 'slug' from the page attached to a revision by simply querying for the Revision and then using plain property access to access the page properties:
 
-    >> store.query('from Revision')[0].page.slug
+    >> var revision = store.query('from Revision')[0];
+    >> revision.page.slug
     'Home'
 
 one-to-many Relations

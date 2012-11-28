@@ -3,11 +3,15 @@
    border: 1px solid #C1CCD1;
    border-radius: 3px 3px 3px 3px;
    box-shadow: 0 0 1px 1px #D2D2D2 outset;
+}
+
+.knowmore {
+   min-height: 110px;
+   padding-left: 100px;
    background-image: url('./black-rhino.svg');
    background-position: 10px center;
    background-size: 90px;
    background-repeat: no-repeat;
-   min-height: 110px;
 }
 
 .mustknow {
