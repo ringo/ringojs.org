@@ -30,9 +30,9 @@ First, we create a Stick application and configure it to have the "route" middle
 Interlude: Response helpers
 -----------------------------
 
-Constructing the response object manually is cumbersome and error-prone. The `ringo/jsgi/helper` module provides various methods to create a respone. Check out the [jsgi/response API](http://ringojs.org/api/master/ringo/jsgi/response/) for complete list.
+Constructing the response object manually is cumbersome and error-prone. The `ringo/jsgi/helper` module provides various methods to create a respone. Check out the [jsgi/response API](http://ringojs.org/api/master/ringo/jsgi/response/) for a complete list.
 
-Instead of creating an object with "body", "headers" and "status" code, we can condense the response creationg down to one line:
+Instead of creating an object with "body", "headers" and "status" code, we can condense the response creation down to one line:
 
     app.get('/*', function(request) {
        return response.html('Hello World');
@@ -58,12 +58,12 @@ A named placeholder is prefixed with `:` (colon) and it does not match `/` (slas
     /blogposts/:yearplaceholder/:monthplaceholder/:anotherplaceholder/index.html
 
 
-The above is a valid path description with two placeholders, one for "year" and one for "month".
+The above is a valid path description with two placeholders: one for the year, one for the "month" and "another" placeholeder.
 
 Let's use this new knowledge to setup a URL structure similar to what Wikipedia provides, namely:
 
   * "/Home" - the wiki content pages, which have only one segment but any character in that first segment
-  * "/Home/edit" - and the "edit" view for each content page, which shares the first segment with its wiki page, followed by "edit"
+  * "/Home/edit" - the "edit" view for each content page, which shares the first segment with its wiki page, followed by "edit"
 
 As a path specification, the above translates into these routes:
 
