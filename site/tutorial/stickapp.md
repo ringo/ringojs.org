@@ -30,7 +30,7 @@ First, we create a Stick application and configure it to have the "route" middle
 Interlude: Response helpers
 -----------------------------
 
-Constructing the response object manually is cumbersome and error-prone. The `ringo/jsgi/helper` module provides various methods to create a respone. Check out the [jsgi/response API](http://ringojs.org/api/master/ringo/jsgi/response/) for a complete list.
+Constructing the response object manually is cumbersome and error-prone. The `ringo/jsgi/helper` module provides various methods to create a response. Check out the [jsgi/response API](http://ringojs.org/api/master/ringo/jsgi/response/) for a complete list.
 
 Instead of creating an object with "body", "headers" and "status" code, we can condense the response creation down to one line:
 
