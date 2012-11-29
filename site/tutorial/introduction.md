@@ -20,7 +20,7 @@ For example, one feature we regularly use is destructuring assignment. It is bes
     var b = 2;
     [a, b] = [b, a];
 
-After executing this code, `b` is 1 and `a` is 3. This works for objects too; you can write the following:
+After executing this code, `b` is 1 and `a` is 2. This works for objects too; you can write the following:
 
     var {foo} = {foo:1, bar:2};
 
