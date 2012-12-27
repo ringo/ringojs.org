@@ -7,7 +7,7 @@
 
 .knowmore {
    min-height: 110px;
-   padding-left: 100px;
+   padding-left: 110px;
    background-image: url('./black-rhino.svg');
    background-position: 10px center;
    background-size: 90px;
@@ -16,4 +16,5 @@
 
 .mustknow {
    border-color: #d96262;
+   padding-left:10px;
 }
