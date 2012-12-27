@@ -14,7 +14,7 @@ As a minimal starting point, consider the following web application:
 
     var app = function(request) {
        return {
-          body: 'Hello World',
+          body: ['Hello World'],
           headers: {'Content-Type': 'text/html'},
           status: 200
        }
