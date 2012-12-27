@@ -13,7 +13,9 @@ Activate this search box once duckduckgo.com has indexed the new site
 
 ## Topic Pages
   * [Web application tutorial](tutorial/)
-  * [Deployment options](documentation/deployment), [Ringo with Spring](documentation/ringo_with_spring)
+  * [Deployment options](documentation/deployment)
+     * [Ringo with Spring](documentation/ringo_with_spring)
+     * [Google App Engine](documentation/google_appengine)
   * [Command Line Tools](documentation/commandline_tools)
   * Modules
     * [Anatomy of a Module](documentation/modules)
