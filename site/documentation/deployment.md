@@ -1,10 +1,10 @@
-The easiest ways to deploy RingoJS web applications are via [Google App Engine] or using the [ringojs-daemon] package on Debian or Ubuntu systems.
+The easiest ways to deploy RingoJS web applications are via [Google App Engine](/documentation/google_appengine) or using the [ringojs-daemon] package on Debian or Ubuntu systems.
 
 Note that Google App Engine does not currently support all RingoJS APIs, especially asynchronous APIs or those relying on threads. 
 
 ## Google App Engine
 
-Google App Engine requires some special directory layout for applications to be deployed. You can find detailed instructions on the [Google App Engine] wiki page.
+Google App Engine requires some special directory layout for applications to be deployed. You can find detailed instructions on the [Google App Engine](/documentation/google_appengine) page.
 
 ## Red Hat OpenShift
 
