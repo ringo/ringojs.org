@@ -1,5 +1,7 @@
 # Changelog for RingoJS 0.9
 
+Release date: 2 January 2013
+
 ## New features and major changes
 
  * new [ringo/worker](http://ringojs.org/api/master/ringo/worker/) module; a Worker API based on W3C Web Workers
