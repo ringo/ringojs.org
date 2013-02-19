@@ -12,11 +12,11 @@ Open a fresh JavaScript file "model.js" where we put our Store instance and any 
 
 All we need for a H2 store is a file location where H2 can put its data. Assuming that file is "/tmp/tutorial-wiki/data", our instantiation code looks like this:
 
-    var {Store} = require("ringo-sqlstore");
-    var store = exports.store = new Store({
+    var {Store, ConnectionPool} = require("ringo-sqlstore");
+    var store = exports.store = new Store(new ConnectionPool({
         "url":"jdbc:h2:file:/tmp/tutorial-wiki/data",
         "driver": "org.h2.Driver"
-    });
+    }));
 
 <div class="knowmore">
     If you want to connect to a MySQL database, for example, you have to adapt the "jdbc:..." string and the driver name to fit your setup; depending on the database, additional paramters like "username" and "password" might also be needed.
