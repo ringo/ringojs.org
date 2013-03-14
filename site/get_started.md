@@ -1,20 +1,20 @@
 # Get Started
 
-This is a short guide on how to install RingoJS.
+This is a short guide on how to install Ringo on your system.
 
-## Requires Java SE 5 or higher
+## Ringo runs on the Java VM
 
-We recommend Java SE 6 or higher to run Ringo, which you find at [the Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/jdk6-jsp-136632.html) or on Debian simply `apt-get install openjdk-6-jre`.
+The only essential requirement to run Ringo is Java. The oldest supported release is Java 5. We recommend Java 6 or higher to run Ringo, which you find at [the Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or on Debian simply `apt-get install openjdk-7-jre`.
 
-## Option 1: Download the latest release
+## Download the latest release
 
-Download the latest Ringo release from the [download page](download). For convinience, you should add the `/bin` directory to the `PATH` environment variable.
+This is the recommended and straight forward way to install Ringo. Download the latest release from the [download page](download). For convinience, you should add the `/bin` directory to the `PATH` environment variable.
 
 See [First Steps](first_steps) for a short introduction on what you can do with Ringo or the [Documentation](documentation) page for an overview of all help resources.
 
-## Option 2: Install Ringo from Git
+## Advanced: Install Ringo from Git
 
-Instead of installing a Ringo release as described in Option 1, you can also use the current git master. This requires more tools since you have to build Ringo.
+Instead of installing a Ringo release as described in before, you can also use the current git master. This requires more tools and knowledge about Java development since you have to build Ringo by yourself.
 
 In addition to Java you will need [Apache Ant](http://ant.apache.org/) and the [Apache Ivy plugin](http://ant.apache.org/ivy/) for Ant. You can get those tools from their respective websites, or by using your favourite package manager (e.g. on Debian use `apt-get install ant ivy`).
 

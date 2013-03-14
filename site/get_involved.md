@@ -14,7 +14,7 @@ We have a [mailing list](http://groups.google.com/group/ringojs) hosted on Googl
 
 ### Weblog
 
-Main Ringo developer Hannes Wallnöfer has recently started a [Ringo related weblog](http://hns.github.com/).
+Main developer Hannes Wallnöfer (aka hns) has started a [Ringo related weblog](http://hns.github.com/).
 
 ## Submit Packages
 
