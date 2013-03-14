@@ -10,30 +10,22 @@ body {
 }
 
 a {
+  color: #2486CC;
   text-decoration: none;
+}
+
+a:visited {
+  color: #684AA5;
 }
 
 a:focus,
 a:hover {
-  color: #5393cf;
+  color: #115CAD;
   text-decoration: underline;
 }
 
 a img {
   border: 0;
-}
-
-a[href^="http://"],
-a[href^="https://"] {
-    background: url('external.svg') center right no-repeat;
-    padding-right: 14px;
-}
-
-/* Don't mark github links as external */
-a[href^="http://www.ringojs.org"],
-a[href^="http://ringojs.org"] {
-    background: none;
-    padding-right: 0;
 }
 
 header {
@@ -50,6 +42,7 @@ header a {
   text-decoration: none;
 }
 
+header nav a:visited,
 header nav a:focus,
 header nav a:hover {
   color: #222;
@@ -88,6 +81,7 @@ header h1 a {
 }
 
 .main {
+  display: block;
   clear: both;
   overflow: hidden;
   background: #fff;
