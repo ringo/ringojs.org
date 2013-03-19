@@ -1,4 +1,6 @@
-RingoJS runs fine on [Google App Engine] for Java. There are some limitations on App Engine compared to running on a dedicated Server. For example, asynchronous or long running connections are currently not supported. On the other hand, App Engine provides many interesting [proprietary APIs], for which the [AppengineJS] project provides nice JavaScript wrappers.
+# Google App Engine
+
+Ringo runs fine on [Google App Engine] for Java. There are some limitations on App Engine compared to running on a dedicated Server. For example, asynchronous or long running connections are currently not supported. On the other hand, App Engine provides many interesting [proprietary APIs], for which the [AppengineJS] project provides nice JavaScript wrappers.
 
 ### Local Setup
 
