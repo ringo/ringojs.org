@@ -1,3 +1,5 @@
+# JSGI and Stick
+
 This document describes a framework for building web applications on top of JSGI using middleware composition. There is an implementation of this specification called Stick. Stick is hosted on Github: <https://github.com/hns/stick>
 
 ## Definition of Terms

@@ -1,3 +1,5 @@
+# Coding Standard for the RingoJS Project
+
 This document collects the coding standards that are in use in the Ringo code base. Ultimately, there is one __golden rule__ almost universally applicable to open source projects:
 
 > If you are extending, enhancing, or bug fixing already

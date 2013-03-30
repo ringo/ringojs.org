@@ -1,6 +1,10 @@
-# Modules
+# Modules in Ringo
 
-Ringo implements the [CommonJS Modules 1.1](http://wiki.commonjs.org/wiki/Modules/1.1) specification.
+Ringo implements the [CommonJS Modules 1.1](http://wiki.commonjs.org/wiki/Modules/1.1) specification. There are multiple JavaScript module patterns out there but in RingoJs you should only use this one:
+
+  * Every file is a module living in its own top-level scope. No special syntax needed
+  * Any function or other property, which you attach to `exports` in your module, will be exposed
+  * `require('foobar')` returns an object holding all exposed properties of the module "foobar"
 
 ## Anatomy of a Module
 
@@ -8,21 +12,27 @@ In Ringo, every JavaScript file is treated as a module. When a module is
 executed, Ringo provides it with the means to import functionality from and
 export functionality to other modules.
 
-As an example, `app.js` loads module `lib.js` in the same directory.
-The contents of `app.js`:
+An example should make things clearer. A simple module in the file `foobar.js` might look like
+the following. I want to exposes the function `add` but not the private `adder`:
 
-    var lib = require('./lib');
-    console.log('The square of 3 is', lib.square(3));
+    // foobar.js
+    var adder = function(a, b) {
+        return a + b;
+    };
+    exports.add = function(a, b) {
+        return adder(a, b);
+    };
 
-The contents of `lib.js`:
+You can `require()` it and then access `add` as `foobar.add`:
 
-    exports.square = function(n) {
-        return n * n;
-    }
+    >> var foobar = require('foobar');
+    >> foobar.add(3,4)
+    7
 
-Module `lib.js` exports a function called `square` by adding it to the `exports`
-object. Module `app.js` imports `lib.js`'s exports object by calling the
-`require` function with `'./lib'` as argument.
+But you can *not* access the private "adder" function:
+
+    >> foobar.adder(2,2)
+    ReferenceError
 
 Ringo also provides a `module` object to each module with the following
 properties:

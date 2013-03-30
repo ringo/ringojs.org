@@ -1,3 +1,5 @@
+# Module and Global Scope
+
 Scope can be one of the more confusing aspects in JavaScript. (A quick Google
 search suggests that the main area of confusion is actually the
 this-object in the presence of multiple nested functions. The best way to think
@@ -14,6 +16,8 @@ Thus, JavaScript is largely [lexically scoped][lexical scope], meaning that
 functions can access variables defined in their surroundings. This is good,
 because it gives us [closures], one of the things that make JavaScript great.
 
+## Global Scope Flaws in JavaScript
+
 Lexical scope in JavaScript is not without flaws, however. Maybe the biggest
 problem is in fact the global object, which is the top level scope shared by all
 scripts. If multiple scripts execute in the same context, they all run in the
@@ -25,6 +29,8 @@ the last script wins. This is illustrated in the following diagram:
 To work around this problem, various workarounds have been adopted, from
 using only a single global variable using a special name such as "$" or "_"
 to shunning the global scope all together by putting all code within closures.
+
+## Global and Module Scope in Ringo
 
 Ringo solves this problem on a fundamental level by giving each module its
 own top level scope to run in. The global object is still there, but it's not

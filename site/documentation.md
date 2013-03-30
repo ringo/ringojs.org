@@ -13,27 +13,27 @@ Activate this search box once duckduckgo.com has indexed the new site
   * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
 
 ## Topic Pages
-  * [Web application tutorial](tutorial/)
-  * [Deployment options](documentation/deployment)
-     * [Ringo with Spring](documentation/ringo_with_spring)
-     * [Google App Engine](documentation/google_appengine)
+  * [Web Application Tutorial](tutorial/)
   * [Command Line Tools](documentation/commandline_tools)
   * Modules
-    * [Anatomy of a Module](documentation/modules)
-    * [Modules by example](tutorial/modules)
-    * [Module and Global Scope in Ringo](documentation/module_and_global_scope)
-  * [Package managment](documentation/packages)
-  * [Logging](documentation/logging)
+    * [Modules in Ringo](documentation/modules)
+    * [Module and Global Scope](documentation/module_and_global_scope)
   * [Java Integration](documentation/java_integration)
-  * [JSGI and Stick](documentation/jsgi_and_stick)
-  * [Profiler](documentation/profiler)
+  * [Package Managment](documentation/packages)
+  * [Deployment Options](documentation/deployment)
+     * [Ringo with Spring](documentation/ringo_with_spring)
+     * [Google App Engine](documentation/google_appengine)
+  * [Logging](documentation/logging)
   * [Debugger](documentation/debugger)
+  * [Profiler](documentation/profiler)
+  * [JSGI and Stick](documentation/jsgi_and_stick)
   * [Security Features](documentation/security_features)
+  * [Ringo's CommonJS Implementation](documentation/commonjs_implementation)
   * [Rhino Hacker's Guide](documentation/rhino_hacker_guide)
 
 ## For Ringo developers
 
-  * [Coding standards](documentation/coding_standards)
+  * [Coding Standards](documentation/coding_standards)
   * [Github Repository](http://github.com/ringo/ringojs)
   * [Issue Tracker](http://github.com/ringo/ringojs/issues)
 

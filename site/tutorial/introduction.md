@@ -3,7 +3,7 @@ Whetting Your Appetite
 
 Ringo is a JavaScript environment based on the [Rhino JavaScript engine](http://www.mozilla.org/rhino/).
 
-Compared to a browser environment, the JavaScript we have in Ringo is more modern and it comes with CommonJs compliant module and package support.
+Compared to a browser environment, the JavaScript we have in Ringo is more modern and it comes with CommonJS compliant module and package support.
 
 When writing Ringo code you should make use of Ringo's standard library; all modules in the standard library are written in Javascript. They are either pure JavaScript or thin wrappers around existing Java libraries. This means you can always dig into the code and look at how we do things without switching languages.
 
@@ -104,6 +104,6 @@ If I mention or use a module withouth explaining it much and you feel lost, it i
 Modules
 ----------
 
-If you do not know CommonJs modules, then you should absolutely read either the learn-by-example [Modules 101](modules.md) or the more theoretical [Anatomy of a Module](http://www.ringojs.org/documentation/modules).
+If you do not know CommonJS modules, then you should read the [Modules in Ringo](http://www.ringojs.org/documentation/modules) introduction.
 
 You are now prepared for the rest of the tutorial!

@@ -1,4 +1,6 @@
-RingoJs follows the [CommmonJs packages specification](http://wiki.commonjs.org/wiki/Packages/1.0).
+# Packages
+
+Ringo follows the [CommmonJS packages specification](http://wiki.commonjs.org/wiki/Packages/1.0).
 
 A tool to simply download and install any package ships with Ringo in the form of the `ringo-admin install` command. An easier way to manage packages and their dependencies is the evolving Ringo package manager [rp](https://github.com/grob/rp).
 
@@ -18,7 +20,7 @@ This will make the new `rp` command available in your $RINGO_HOME/bin directory:
 ringo-admin install
 -----------------------------
 
-RingoJS comes with a simple tool for installing packages. It can be run using the `ringo-admin` command with `install` as first argument. The install task takes a URL of a zip file containing the package to install as argument.
+Ringo comes with a simple tool for installing packages. It can be run using the `ringo-admin` command with `install` as first argument. The install task takes a URL of a zip file containing the package to install as argument.
 
 To install a package from the web:
 

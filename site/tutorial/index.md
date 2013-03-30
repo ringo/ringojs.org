@@ -24,12 +24,12 @@ Table of Contents
 
   1. [Middleware & Sessions](sessions.md) Session support and writing custom middleware
 
-
   1. [Java Integration](javaintegration.md) Scripting Java with Ringo
 
   1. Bits and pieces - logging, unit tests, workers
 
 Help
 ------
+
 If you run into trouble do not hesitate to ask for help on [Ringo's Mailinglist](http://groups.google.com/group/ringojs) or you can join us on IRC [#ringojs on irc.freenode.net](http://ringojs.com/bot/join).
 

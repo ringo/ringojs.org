@@ -1,4 +1,4 @@
-# Command Line
+# Command Line Tools
 
 Ringo comes with a command line tool `ringo` for running scripts and work with an interactive shell.
 

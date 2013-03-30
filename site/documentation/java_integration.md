@@ -1,3 +1,5 @@
+# Java Integration
+
 Ringo's underlying JavaScript engine Rhino provides full access to any kind of Java class that has been loaded into the Runtime Environment. A feature that gives Ringo developers (nearly) the full power of Java at their fingertips, and let's them take advantage of available Java libraries within their application. You can call a class' static methods, access constants, instantiate new objects, and so forth.
 
 There are three ways to integrate your Java _classes_ (class files) and _libraries_ (jar files) with Ringo:

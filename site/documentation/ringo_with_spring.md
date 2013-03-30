@@ -1,6 +1,8 @@
-Because there is more talk about using Spring and RingoJS together, Jim Cook thought he would [share][1] some code they use to make it easy to get a reference to the Spring `ApplicationContext` from within your controllers. In a Java controller, you usually get a reference to Spring's context in your Servlet's `init()` method because you end up calling a static helper function and passing in your `ServletConfig`. RingoJS adheres to the JSGI specification which is agnostic to how infrastructure like Spring is made available to the controller layer.
+# Ringo with Spring
 
-RingoJS uses the `org.ringojs.jsgi.JsgiServlet` class to bootstrap the SSJS environment. We extend this class to provide some Spring helper functions that can be accessed from a RingoJS controller.
+Because there is more talk about using Spring and Ringo together, Jim Cook thought he would [share][1] some code they use to make it easy to get a reference to the Spring `ApplicationContext` from within your controllers. In a Java controller, you usually get a reference to Spring's context in your Servlet's `init()` method because you end up calling a static helper function and passing in your `ServletConfig`. Ringo adheres to the JSGI specification which is agnostic to how infrastructure like Spring is made available to the controller layer.
+
+Ringo uses the `org.ringojs.jsgi.JsgiServlet` class to bootstrap the SSJS environment. We extend this class to provide some Spring helper functions that can be accessed from a Ringo controller.
 
     package org.ringojs.jsgi;
 
@@ -32,7 +34,7 @@ RingoJS uses the `org.ringojs.jsgi.JsgiServlet` class to bootstrap the SSJS envi
         }
     }
 
-In order to launch your RingoJS web application using this servlet, you simply replace the `JsgiServlet` with `ExtJsgiServlet`.
+In order to launch your Ringo web application using this servlet, you simply replace the `JsgiServlet` with `ExtJsgiServlet`.
 
 ## web.xml
 
@@ -67,6 +69,6 @@ The cool thing is that the Servlet instance (the `ExtJsgiServlet` class) is now 
                 .getMessage('welcome', null, req.env.servletRequest.locale);
     });
  
-You may notice that the `welcomeMessage` example uses another property stored on the context; the servlet request. It's funny how the JSGI specification does not mention Locale. It is so important to globalization. At least RingoJS has made it accessible by exposing the original Java servlet request object off the `env` property...
+You may notice that the `welcomeMessage` example uses another property stored on the context; the servlet request. It's funny how the JSGI specification does not mention Locale. It is so important to globalization. At least Ringo has made it accessible by exposing the original Java servlet request object off the `env` property...
 
   [1]: http://groups.google.com/group/ringojs/browse_frm/thread/2ded4b08c2fd6571?hl=en
