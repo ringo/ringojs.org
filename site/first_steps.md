@@ -8,8 +8,8 @@ Run the ringo script in the bin directory without arguments:
 This should start a shell session with a `>>` prompt. Use the `include`, `require`, or `import` functions to load any RingoJS module.
 
     >> var fs = require('fs');
-    >> var file = fs.open('README.md');
-    >> var lines = [line for (line in file)];
+    >> var file = fs.read('README.md');
+    >> print (file);
 
 Tips:
 
@@ -17,11 +17,11 @@ Tips:
   * You can scroll through your session history using the Up and Down keys
   * Ringo supports most of JavaScript 1.8 and ECMAScript 5.
 
-## Running the demo webapp
+## Running the examples
 
-Simply pass the main file of the app to the ringo command:
+Pass any JavaScript file to ringo to run in:
 
-    $ ./bin/ringo apps/demo/main.js
+    $ ./bin/ringo examples/httpserver.js
 
 This will start the RingoJS demo app on port 8080. Access the app in your browser by going to <http://localhost:8080/>
 
