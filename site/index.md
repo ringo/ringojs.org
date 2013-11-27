@@ -2,7 +2,7 @@ Ringo is a CommonJS-based JavaScript runtime written in Java and based on the Mo
 JavaScript engine. It takes a pragmatical and non-dogmatic stance on things like I/O paradigms.
 Blocking *and* asynchronous I/O both have their strengths and weaknesses in different areas.
 
-[Download the current Ringo 0.9 release!](/download)
+[Download the current Ringo 0.10 release!](/download)
 
 
 Our aim is to provide an off-browser JavaScript platform that has the right mix of features
