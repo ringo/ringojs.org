@@ -12,6 +12,8 @@ To run the application locally launch the `dev_appserver` script from the [App E
 
     dev_appserver.sh appdir
 
+![Sample application running in browser](/documentation/images/appengine-demoapp.png)
+
 ## Deployment
 
 To deploy an application, you first need to let the deployment tool know the id of the App Engine site to deploy to. You do this by editing the `application` element in file `WEB-INF/appengine-web.xml`. For example, if you want to deploy to example.appspot.com, the application element would look like this:
