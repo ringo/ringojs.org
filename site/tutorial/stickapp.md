@@ -13,7 +13,7 @@ The following behaves just like our example from the last section. We will step 
     var app = exports.app = new Application();
     app.configure('route');
 
-    app.get('/*', function(request) {
+    app.get('/', function(request) {
        return {
           body: ['Hello World'],
           headers: {'Content-Type': 'text/html'},
@@ -34,7 +34,7 @@ Constructing the response object manually is cumbersome and error-prone. The `ri
 
 Instead of creating an object with "body", "headers" and "status" code, we can condense the response creation down to one line:
 
-    app.get('/*', function(request) {
+    app.get('/', function(request) {
        return response.html('Hello World');
     });
 
@@ -45,8 +45,6 @@ URL Routing
 
 As we already saw, the "route" middleware adds `get()` to the Stick application. And it also adds the functions `post()`, `put()` and `del()`. All of them are used to setup URL routes depending on the request type. We only deal with `post()` and `get()` in this tutorial.
 
-
-We used the most simple placeholder: `*` (star) it matches *all* characters. More sophisticated are the named placeholders used to extract path segments.
 
 I call "path segments" the parts of a URI between `/` (slashes). For example, /Home/foo/bar/ as three segments: Home, foo and bar.
 
