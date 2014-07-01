@@ -19,5 +19,6 @@ __"Softer" rules__ widely adhered to in the Ringo, but not yet formally prescrib
 
 - Write your code in lines no longer than 80 characters
 - Avoid trailing whitespace (i.e. additional spaces at the end of a line or additional newlines at the end of a file)
+- Prefer single quoted strings
 
 In general, the Ringo code more often than not sticks to the ["Code Conventions for the JavaScript Programming Language"](http://javascript.crockford.com/code.html), which serve as a good guideline what to use when in doubt.
