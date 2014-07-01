@@ -16,7 +16,7 @@ Activate this search box once duckduckgo.com has indexed the new site
 ## Topic Pages
   * [Web Application Tutorial](tutorial/)
   * [Command Line Tools](documentation/commandline_tools)
-  * Modules
+  * Writing Modules
     * [Modules in Ringo](documentation/modules)
     * [Module and Global Scope](documentation/module_and_global_scope)
   * [Java Integration](documentation/java_integration)
