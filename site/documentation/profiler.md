@@ -1,6 +1,6 @@
 # Profiler
 
-Ringo comes with a [profiler module](http://ringojs.org/api/master/ringo/profiler) which allows to measure execution time of JavaScript functions. 
+Ringo comes with a [profiler module](http://ringojs.org/api/master/ringo/profiler/) which allows to measure execution time of JavaScript functions. 
 
 To make the profiler work you need to run in interpreter mode, i.e. with -o/--optlevel set to -1:
 
