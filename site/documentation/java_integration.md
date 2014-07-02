@@ -57,3 +57,9 @@ To load a whole package you can use `importPackage(package)`:
   [ENV]: http://en.wikipedia.org/wiki/Environment_variable
 
 For more information about Rhino's Java integration look at [this article](https://developer.mozilla.org/en-US/docs/Scripting_Java).
+
+## Internals of Java Class Loading
+
+During the startup Ringo's custom classloader looks for classes and other resources in the `$RINGO_HOME\lib` directory. This directory contains all of the core classes and their dependencies. You can override this path by specifying a Java system property `ringo.classpath`.
+
+Calling the global function `addToClasspath()` will invoke an `org.ringojs.engine.AppClassLoader`, which is a subclass of `java.net.URLClassLoader`. It checks if the URL has been already loaded and if not, adds it to the resource search path. If the given URL ends with `/` it will be treated as directory, otherwise it's assumed to refer to a JAR file. The `AppClassLoader` itself is tied to a Rhino engine.
