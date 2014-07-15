@@ -1,6 +1,8 @@
 # Rhino Hacker Guide
 
-This is a guide to getting started hacking on Mozilla Rhino, the underlying JavaScript engine of Ringo. Work in progress.
+This is a guide to getting started hacking on [Mozilla Rhino], the underlying JavaScript engine of Ringo. It's not intended for typical users of Ringo.
+
+[Mozilla Rhino]: https://developer.mozilla.org/de/docs/Rhino
 
 ### Prerequisites
 
