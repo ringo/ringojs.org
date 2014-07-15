@@ -30,13 +30,13 @@ Activate this search box once duckduckgo.com has indexed the new site
   * [JSGI and Stick](documentation/jsgi_and_stick)
   * [Security Features](documentation/security_features)
   * [Ringo's CommonJS Implementation](documentation/commonjs_implementation)
-  * [Rhino Hacker's Guide](documentation/rhino_hacker_guide)
 
 ## For Ringo developers
 
   * [Coding Standards](documentation/coding_standards)
   * [Github Repository](http://github.com/ringo/ringojs)
   * [Issue Tracker](http://github.com/ringo/ringojs/issues)
+  * [Rhino Hacker's Guide](documentation/rhino_hacker_guide)
 
 ## Community
 
