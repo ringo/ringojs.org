@@ -21,7 +21,7 @@ You'll need the following tools:
 
  2. Change into rhino directory and run `ant jar`
 
-    This should create a file called `build/rhino1_7R3/js.jar` where the name of the second directory may vary depending on the current version. 
+    This should create a file called `build/rhino1_7R3/js.jar` where the name of the second directory may vary depending on the current version.
 
 You can now run Rhino using the following command:
 
@@ -35,7 +35,7 @@ Congratulations, you're now ready to use Rhino. See <https://developer.mozilla.o
 
 ## Running the tests.
 
-Rhino comes with its own tests, but the majority of tests are shared with Mozilla's Spider-/Tracemonkey JavaScript engine. 
+Rhino comes with its own tests, but the majority of tests are shared with Mozilla's Spider-/Tracemonkey JavaScript engine.
 
 For the time being, we're still getting these tests from the old CVS repository. Set your CVSROOT environement variable to `:pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot` for anonymous access to the Mozilla CVS repository. Then change to the parent directory of your cloned Rhino directory and issue the following command:
 
@@ -43,7 +43,7 @@ For the time being, we're still getting these tests from the old CVS repository.
 
 This should give you a `tests` directory at the same level as your `rhino` directory.
 
-To run the tests, cd back to rhino and run 
+To run the tests, cd back to rhino and run
 
     ant junit-all
 
@@ -72,7 +72,7 @@ Some of the most important classes in `org.mozilla.javascript` are:
 
 Each thread executing JavaScript code in Rhino must be associated with a [Context] object. The static `Context.enter()` method can be used to associate a Context with the current thread, `Context.exit()` will leave the context. `Context.getCurrentContext()` can be used to retrieve the Context associated with the current thread.
 
-[Context]: http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/Context.html
+[Context]: http://www-archive.mozilla.org/rhino/apidocs/org/mozilla/javascript/Context.html
 
 ### ScriptRuntime
 
@@ -82,19 +82,19 @@ The ScriptRuntime is a purely static class providing methods used both by the In
 
 [Scriptable] is the basic interface for implementing native JavaScript objects. It provides methods `get()`, `put()`, `has()`, and `delete()` to query and manipulate object properties. It also provides ways to get and set the object prototype and parent scope.
 
-[Scriptable]: http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/Scriptable.html
+[Scriptable]: http://www-archive.mozilla.org/rhino/apidocs/org/mozilla/javascript/Scriptable.html
 
 ### ScriptableObject
 
-[ScriptableObject] is the base implementation of the Scriptable interface subclassed by almost all JavaScript objects in Rhino. It provides its own hash table implementation to support the property methods. It also provides [methods](http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/ScriptableObject.html#defineClass%28org.mozilla.javascript.Scriptable,%20java.lang.Class%29) to define JavaScript host objects from Java classes.
+[ScriptableObject] is the base implementation of the Scriptable interface subclassed by almost all JavaScript objects in Rhino. It provides its own hash table implementation to support the property methods. It also provides [methods](http://www-archive.mozilla.org/rhino/apidocs/org/mozilla/javascript/ScriptableObject.html#defineClass%28org.mozilla.javascript.Scriptable,%20java.lang.Class%29) to define JavaScript host objects from Java classes.
 
-[ScriptableObject]: http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/ScriptableObject.html
+[ScriptableObject]: http://www-archive.mozilla.org/rhino/apidocs/org/mozilla/javascript/ScriptableObject.html
 
 ### Function
 
 [Function] is the interface implemented by all callable functions in Rhino. There are two ways to call a function, `call()` and `construct()`, depending on whether the function is called with the `new` keyword.
 
-[Function]: http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/Function.html
+[Function]: http://www-archive.mozilla.org/rhino/apidocs/org/mozilla/javascript/Function.html
 
 ### Parser
 
@@ -129,4 +129,4 @@ For calling functions script classes have a `call()` method which is described i
 One pecularity of Rhino bytecode is that for each script exactly one Java class is generated. Since a script may contain multiple functions and functions are first class objects in JavaScript, a new instance of the class has to be created for each function. The way this is done is to have a single `call()` method that multiplexes all functions in the script using a case statement on an instance int field.
 
 [omj]: https://github.com/mozilla/rhino/tree/master/src/org/mozilla/javascript
-[API Documentation]: http://www.mozilla.org/rhino/apidocs/
+[API Documentation]: http://www-archive.mozilla.org/rhino/apidocs/
