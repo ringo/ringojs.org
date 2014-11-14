@@ -1,6 +1,7 @@
-
 .DS_Store
-
 packages/simplesite
-
+packages/reinhardt
+packages/stick
+packages/ringo-commonmark
 main-local.js
+.idea/
