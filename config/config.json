@@ -1,0 +1,6 @@
+{
+  "content": "../site",
+  "templates": "../templates",
+  "static": "../static",
+  "welcomePage": "index.md"
+}
