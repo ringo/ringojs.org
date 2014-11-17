@@ -14,7 +14,7 @@ Activate this search box once duckduckgo.com has indexed the new site
   * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
 
 ## Topic Pages
-  * [Web Application Tutorial](tutorial/)
+  * [Web Application Tutorial](/tutorial/)
   * [Command Line Tools](commandline_tools)
   * Writing Modules
     * [Modules in Ringo](modules)
