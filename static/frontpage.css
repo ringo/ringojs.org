@@ -1,0 +1,47 @@
+.technologyList {
+    list-style: none;
+    margin: 2rem 0 0 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.technologyList li {
+    width: calc(20% - 5px);
+    margin-right: 5px;
+    display: block;
+    float: left;
+    padding: 0.375rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 4px;
+    font-family: "Bitter", serif;
+    font-weight: 700;
+    text-align: center;
+    background-color: #929A9E;
+    color: #fcfcfc;
+}
+
+.technologyList li.selected,
+.technologyList li:hover,
+.technologyList li:focus {
+    background-color: #C1CCD1;
+    color: #494D4F;
+}
+
+.technologyList li:last-child {
+    border-right: none;
+}
+
+.technologyDetails {
+    list-style: none;
+    margin: 0.5rem 0 2rem 0;
+    padding: 0;
+}
+
+.technologyDetails li {
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    font-family: "Bitter", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #232c5f;
+}
