@@ -1,7 +1,13 @@
-<p style="display:none">
-Activate this search box once duckduckgo.com has indexed the new site
+# Documentation
+
+<style>.content h1 { display: none; }</style>
+
+
+<!--
 <iframe src="http://duckduckgo.com/search.html?site=ringojs.org&prefill=Search RingoJs.org" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
-</p>
+-->
+
+<div style="display: inline-block; width: 50%; float: right;">
 
 ## References
 
@@ -12,6 +18,15 @@ Activate this search box once duckduckgo.com has indexed the new site
     * [v0.8](/api/v0.8/index.html) &ndash; [release notes](release_0_8)
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)
   * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
+
+## Community
+
+  * [#ringojs on irc.freenode.net](http://ringojs.com/bot/join)
+  * [Mailing list](http://groups.google.com/group/ringojs)
+
+</div>
+
+<div style="display: inline-block; width: 50%;">
 
 ## Topic Pages
   * [Web Application Tutorial](/tutorial/)
@@ -38,7 +53,4 @@ Activate this search box once duckduckgo.com has indexed the new site
   * [Issue Tracker](http://github.com/ringo/ringojs/issues)
   * [Rhino Hacker's Guide](rhino_hacker_guide)
 
-## Community
-
-  * [#ringojs on irc.freenode.net](http://ringojs.com/bot/join)
-  * [Mailing list](http://groups.google.com/group/ringojs)
+</div>

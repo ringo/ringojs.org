@@ -9,6 +9,13 @@ body {
   color: #3c3c3c;
 }
 
+/* Screenreader Only */
+.sr-only {
+  position: absolute;
+  top: -3000rem;
+  left: -3000rem;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -17,13 +24,23 @@ html {
   box-sizing: inherit;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 a {
-  color: #2486CC;
+  color: #115CAD;
   text-decoration: none;
 }
 
 a:visited {
-  color: #684AA5;
+  color: #115CAD;
 }
 
 a:focus,
@@ -38,25 +55,24 @@ a img {
 
 header {
   display: block;
-  padding-top: 12px;
+  padding: 16px 0 6px 0;
   background: #c1ccd1;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 header a {
-  color: #222;
+  color: #494D4F;
   text-decoration: none;
 }
 
 header nav a:visited,
 header nav a:focus,
 header nav a:hover {
-  color: #222;
+  color: #494D4F;
 }
 
 header nav {
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 800px;
 }
 
 header nav ul {
@@ -67,8 +83,10 @@ header nav ul {
 header nav li {
   float: left;
   list-style: none;
-  font-size: 19px;
-  margin-left: 2em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-left: 2.063rem;
 }
 
 header h1 {
@@ -92,7 +110,7 @@ header h1 a {
   overflow: hidden;
   background: #fff;
   margin: 9px auto 0 auto;
-  max-width: 940px;
+  max-width: 800px;
 }
 
 .main .submenu {
@@ -113,7 +131,8 @@ header h1 a {
 
 .main .content {
   margin-bottom: 55px;
-  max-width: 75%;
+  font-size: 1.063rem;
+  line-height: 1.688rem;
 }
 
 .content h1,
@@ -125,7 +144,9 @@ header h1 a {
 }
 
 .content h1 {
-  font-size: 2rem;
+  font-size: 2.25rem;
+  line-height: 1.25em;
+  margin: 2.25rem 0 2.25rem 0;
 }
 
 /* If headline <h1> is missing on a content page */
@@ -134,40 +155,37 @@ header h1 a {
 }
 
 .content h2 {
-  margin: 30px 0 -12px 0;
-  font-size: 1.5rem;
+  margin: 2.75rem 0 -0.25rem 0;
+  font-size: 1.75rem;
 }
 
 .content h3 {
-  margin: 18px 0 -12px 0;
-  font-size: 1.250rem;
+  margin: 1.75rem 0 -10px 0;
+  font-size: 1.375rem;
 }
 
 .content p {
-  line-height: 24px;
   margin: 16px 0;
 }
 
 .content p code,
 .content ul code {
-  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 14px;
-  line-height: 18px;
-  display: inline-block;
-  margin: 0px 3px;
-  padding: 0px 3px;
+  color: #733F12;
+  font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: inline;
   white-space: nowrap;
-  border: 1px solid #e0e0e0;
-  background-color: #f9f9f9;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  margin: 0;
+  padding: 0;
 }
 
 .content pre {
-  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 14px;
+  font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
 
-  padding: 8px 10px 10px 10px;
+  padding: 4px 10px 4px 10px;
   margin-right: 5px;
 
   border-left: 3px solid #eee;
@@ -175,9 +193,7 @@ header h1 a {
 }
 
 .content pre code {
-  font-family: Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 14px;
-  line-height: 18px;
+  font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
 }
 
 .content li {
@@ -201,7 +217,7 @@ footer {
 }
 
 footer nav {
-  max-width: 940px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
