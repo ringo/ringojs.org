@@ -24,7 +24,7 @@ built-in modules and follows the CommonJS standard.
     the default Java scripting engine and powers thousands of applications. Ringo itself enhances Rhino to run
     performant multi-threaded code. Ringo's core modules are well tested and documented.</li>
     <li class="tab3">Applications can be deployed on nearly every JVM-based platform. Production-level Ringo
-    applications run on large clustered servers, inside Linux containers, on cheap Raspberry Pi micro-computers
+    applications run on large clustered servers, inside Linux containers, on cheap Raspberry Pi micro-computers,
     and on top of cloud platforms like Google App Engine.</li>
     <li class="tab4">Ringo allows you to apply the Java security model to JavaScript applications.
     Developers can provide own security policies and control which resources can be accessed by untrusted code.
@@ -68,6 +68,15 @@ create a simple web app:
 Simply save the code above as "server.js" and run it by executing `ringo server.js`.
 Like most Ringo apps, this app will automatically reload, picking up any changes you make
 without requiring a restart.
+
+### Command-line Scripting
+
+A very useful feature is the integrated REPL (Read-Eval-Print-Loop). You can enter it by starting
+`ringo` without any arguments from the command-line. This brings up a Ringo environment which can be
+used for debugging, testing, or just playing around with the runtime. Since the deep Java integration,
+it's possible to write CLI tools in JavaScript accessing arbitrary Java libraries.
+
+<script type="text/javascript" src="https://asciinema.org/a/14076.js" id="asciicast-14076" data-speed="2" async></script>
 
 # Integrated into the Java Ecosystem
 

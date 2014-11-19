@@ -125,7 +125,7 @@ header h1 a {
 }
 
 .content h1 {
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 /* If headline <h1> is missing on a content page */
@@ -135,12 +135,12 @@ header h1 a {
 
 .content h2 {
   margin: 30px 0 -12px 0;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 .content h3 {
   margin: 18px 0 -12px 0;
-  font-size: 18px;
+  font-size: 1.250rem;
 }
 
 .content p {
