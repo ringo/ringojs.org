@@ -15,15 +15,15 @@
     font-family: "Bitter", serif;
     font-weight: 700;
     text-align: center;
-    background-color: #929A9E;
+    background-color: #30364D;
     color: #fcfcfc;
 }
 
 .technologyList li.selected,
 .technologyList li:hover,
 .technologyList li:focus {
-    background-color: #C1CCD1;
-    color: #494D4F;
+    background-color: #7280A1;
+    color: #fff;
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
 }
 
