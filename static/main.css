@@ -93,7 +93,7 @@ header nav a:hover {
 
 header nav {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 820px;
 }
 
 header nav ul {
@@ -129,7 +129,7 @@ header h1 a {
   display: block;
   clear: both;
   margin: 9px auto 0 auto;
-  max-width: 800px;
+  max-width: 820px;
 }
 
 .main .submenu {
@@ -254,7 +254,7 @@ footer {
 }
 
 footer nav {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
@@ -281,7 +281,7 @@ footer p {
   margin: 28px 0 0 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .main .content,
   .main .submenu {
     float: none;

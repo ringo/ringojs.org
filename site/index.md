@@ -1,6 +1,6 @@
 <div style="margin: 3rem 0 3.125rem 0;">
-<img src="/static/mascot.png" alt="" style="float: left; margin-right: 1.75rem;" width="135">
-<h1 style="font-size: 2.125rem; margin-bottom: 1rem;">Multi-threaded JavaScript on the JVM</h1>
+<img src="/static/mascot.png" alt="" style="float: left; margin-right: 1.688rem;" width="140">
+<h1 style="margin-bottom: 1rem;">Multi-threaded JavaScript on the JVM</h1>
 
 Ringo is a JavaScript platform built on the JVM and optimized for server-side applications.
 It takes a non-dogmatic stance on things like I/O paradigms. Ringo ships with a large set of
