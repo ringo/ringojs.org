@@ -1,5 +1,11 @@
 {% extends "base.html" %}
-{% block title %}{{ pageTitle }}{% endblock %}
+{% block title %}
+{% if pageTitle %}
+    {{ pageTitle }} - RingoJS
+{% else %}
+    RingoJS - A JavaScript Platform for the JVM
+{% endif %}
+{% endblock %}
 
 {% block content %}
     {{ content | safe }}

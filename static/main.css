@@ -128,36 +128,48 @@ header h1 a {
 .main {
   display: block;
   clear: both;
-  overflow: hidden;
   margin: 9px auto 0 auto;
   max-width: 800px;
 }
 
 .main .submenu {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-
+  display: inline-block;
+  vertical-align: top;
   width: 30%;
   padding-left: 8%;
-
-  float: left;
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .submenu button {
   width: 100%;
 }
 
+.submenu ol,
+.submenu ul {
+  margin: 0 0 0 1.125rem;
+  padding: 0;
+}
+
+.submenu li {
+  padding-left: 6px;
+}
+
 .main .content {
   margin-bottom: 55px;
   font-size: 1.063rem;
   line-height: 1.688rem;
+  position: relative;
 }
 
-.content h1,
-.content h2,
-.content h3 {
+.main .content.withMenu {
+  width: calc(70% - 5px);
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4 {
   color: #494d4f;
   font-family: "Bitter", serif;
   font-weight: 400;
@@ -179,9 +191,14 @@ header h1 a {
   font-size: 1.75rem;
 }
 
+.submenu h1,
 .content h3 {
   margin: 1.75rem 0 -10px 0;
   font-size: 1.375rem;
+}
+
+.submenu h1 {
+  margin: 0 0 0.5rem 0;
 }
 
 .content p {
@@ -255,7 +272,6 @@ footer ul {
 
 footer h4 {
   margin: 0 0 2px 0;
-  font-family: "Bitter", serif;
   font-weight: 700;
   font-size: 0.875rem;
 }

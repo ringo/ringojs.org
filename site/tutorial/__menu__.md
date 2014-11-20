@@ -1,4 +1,4 @@
-Tutorial
+# Tutorial
 
   1. [Ringo Overview](/tutorial/introduction/)
   1. [Installing Packages](/tutorial/dependencies/)
