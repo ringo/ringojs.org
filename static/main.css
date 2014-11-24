@@ -160,6 +160,7 @@ header h1 a {
   font-size: 1.063rem;
   line-height: 1.688rem;
   position: relative;
+  min-height: 70vh;
 }
 
 .main .content.withMenu {
@@ -202,6 +203,10 @@ h4 {
   margin: 0 0 0.5rem 0;
 }
 
+.submenu li {
+  margin-bottom: 0.75rem;
+}
+
 .content p {
   margin: 16px 0;
 }
@@ -220,18 +225,19 @@ h4 {
 
 .content pre {
   font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
-  font-size: 1rem;
-  line-height: 1.5rem;
-
-  padding: 4px 10px 4px 14px;
+  font-size: 0.938rem;
+  line-height: 1.375rem;
+  padding: 3px 8px 0px 8px;
   margin: 1.5rem 0;
-
-  border-left: 3px solid #eee;
-
+  border-left: 3px solid #c0c3c5;
 }
 
 .content pre code {
   font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
+}
+
+.content .hljs {
+  background: transparent;
 }
 
 .content li {
