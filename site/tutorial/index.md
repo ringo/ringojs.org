@@ -1,12 +1,14 @@
-About
----------
+# Web Application Tutorial
+
+<style>.content h1 { display: none; }</style>
+
+## About
 
 This tutorial does not attempt to be comprehensive and cover every single feature available in Ringo. Instead, it walks you through the creation of a simple wiki and touches on the most important concepts and modules. Nonetheless the later sections of this tutorial are about more advanced topics like middleware authoring and java integration.
 
 I assume you already have Ringo installed. See [Get Started](/get_started) if you need help with that.
 
-Table of Contents
----------------------
+## Table of Contents
 
   1. [Ringo Overview](introduction) Introducing the basic concepts and features
 
@@ -28,8 +30,7 @@ Table of Contents
 
   1. Bits and pieces - logging, unit tests, workers
 
-Help
-------
+## Help
 
 If you run into trouble do not hesitate to ask for help on [Ringo's Mailinglist](http://groups.google.com/group/ringojs) or you can join us on IRC [#ringojs on irc.freenode.net](http://ringojs.com/bot/join).
 
