@@ -58,9 +58,9 @@ header {
   display: block;
   padding: 22px 0 14px 0;
   background: #c1ccd1;
-  background: url('/static/photos/bkg_server.jpg') no-repeat;
+  background: url('/static/photos/bkg_server_alps.jpg') no-repeat;
   background-size: 100% auto;
-  background-position: 0 -70px;
+  background-position: 0 -133px;
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -71,7 +71,7 @@ header:before {
   display: block;
   width: 100%;
   height: 100%;
-  background: rgba(10,10,10,0.4);
+  background: rgba(10,10,10,0.30);
   position: absolute;
   top: 0;
   left: 0;
@@ -83,6 +83,7 @@ header nav a {
   color: #fff;
   text-decoration: none;
   z-index: 100;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
 }
 
 header nav a:visited,
@@ -268,6 +269,16 @@ footer ul {
   padding: 0;
   float: left;
   width: 25%;
+}
+
+footer .credits {
+  clear: both;
+  font-size: 0.625rem;
+  padding-top: 0.5rem;
+}
+
+footer .credits a {
+  color: #3C3C3C;
 }
 
 footer h4 {
