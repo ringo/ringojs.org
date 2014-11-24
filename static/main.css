@@ -139,6 +139,7 @@ header h1 a {
   width: 30%;
   padding-left: 8%;
   margin-top: 3rem;
+  position: fixed;
 }
 
 .submenu button {
@@ -246,6 +247,7 @@ h4 {
 }
 
 .content ul ul {
+  margin-top: 4px;
   padding-left: 35px;
 }
 
