@@ -48,6 +48,7 @@
 
 ## For Ringo developers
 
+  * [Install Ringo from Git](ringo_from_git)
   * [Coding Standards](coding_standards)
   * [Github Repository](http://github.com/ringo/ringojs)
   * [Issue Tracker](http://github.com/ringo/ringojs/issues)

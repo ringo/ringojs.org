@@ -2,28 +2,70 @@
 
 This is a short guide on how to install Ringo on your system.
 
-## Ringo runs on the Java VM
+## Installing Ringo
 
-The only essential requirement to run Ringo is Java. The oldest supported release is Java 5. We recommend Java 6 or higher to run Ringo, which you find at [the Oracle download page](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or on Debian simply `apt-get install openjdk-7-jre`.
+The only essential requirement to run Ringo is Java. The oldest supported release is Java 5. We recommend Java 6 or
+higher to run Ringo. You can download Java from:
 
-## Download the latest release
+* [Oracle Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Linux, Windows, Mac OS X, Solaris)
+* Debian users: `apt-get install openjdk-7-jre`
 
-This is the recommended and straight forward way to install Ringo. Download the latest release from the [download page](download). For convinience, you should add the `/bin` directory to the `PATH` environment variable.
+### Download the latest Ringo release
 
-See [First Steps](first_steps) for a short introduction on what you can do with Ringo or the [Documentation](documentation) page for an overview of all help resources.
+This is the recommended and straight forward way to install Ringo. Download the latest precompiled release from the
+[download page](/download). For convinience, you should add the `/bin` directory to the `PATH` environment variable.
 
-## Advanced: Install Ringo from Git
+## Starting the Ringo shell
 
-Instead of installing a Ringo release as described in before, you can also use the current git master. This requires more tools and knowledge about Java development since you have to build Ringo by yourself.
+If you added Ringo to your `PATH` variable, run `ringo` without arguments:
 
-In addition to Java you will need [Apache Ant](http://ant.apache.org/) and the [Apache Ivy plugin](http://ant.apache.org/ivy/) for Ant. You can get those tools from their respective websites, or by using your favourite package manager (e.g. on Debian use `apt-get install ant ivy`).
+    $ ringo
 
-Clone the Git repository with:
+This should start a shell session with a `>>` prompt. Use the `include`, `require`, or `import` functions to load any RingoJS module.
 
-    $ git clone git://github.com/ringo/ringojs.git
+    >> var fs = require('fs');
+    >> var file = fs.read('README.md');
+    >> print (file);
 
-Change to the ringojs directory you just checked out and run ant with the "update" and "jar" target to fetch all dependencies and then build Ringo:
+Tips:
 
-    $ ant update jar
+  * Hitting `Tab` will try to auto-complete your current input.
+  * You can scroll through your session history using the Up and Down keys
+  * Ringo supports most of JavaScript 1.8 and ECMAScript 5.
 
-See [First Steps](first_steps) for a short introduction on what you can do with Ringo or the [Documentation](documentation) page for an overview of all help resources.
+## Running the examples
+
+Pass any JavaScript file to ringo to run in:
+
+    $ ringo examples/httpserver.js
+
+This will start the RingoJS demo app on port 8080. Access the app in your browser by going to <http://localhost:8080/>
+
+Tips:
+
+  * You can also run an application and the shell at the same time by adding the `-i` or `--interactive` option before the application name
+  * Use Ringo's `-h` or `--help` options for more information on available options.
+  * Start the debugger with `-d` to get a better insight into your application.
+
+## Starting your own application
+
+To start hacking on your own RingoJS application, use the ringo-admin create script to create a new app:
+
+    $ ringo-admin create [app directory]
+
+If you don't pass the app directory on the command line the script will prompt you for it. Once the application has been created you can start it by running its main.js script:
+
+    $ ringo [app directory]/main.js
+
+## Packages for Ringo
+
+To install additional Ringo packages you can either use the bare bones `ringo-admin install` command or the more advanced [rp](https://github.com/grob/rp) Ringo package manager.
+
+See the help page on [packages](/documentation/packages) for more details.
+
+## Community help
+
+If you don't find what you are looking for please tell us on the [mailing list][group] or in the [IRC channel][irc]!
+
+[group]: http://groups.google.com/group/ringojs
+[irc]: irc://freenode.org/ringojs
