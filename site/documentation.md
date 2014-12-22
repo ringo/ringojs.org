@@ -7,6 +7,7 @@ Activate this search box once duckduckgo.com has indexed the new site
 
   * Ringo API Reference
     * [master](/api/master/index.html)
+    * [v0.11](/api/v0.11/index.html) &ndash; [release notes](release_0_11)
     * [v0.10](/api/v0.10/index.html) &ndash; [release notes](release_0_10)
     * [v0.9](/api/v0.9/index.html) &ndash; [release notes](release_0_9)
     * [v0.8](/api/v0.8/index.html) &ndash; [release notes](release_0_8)
