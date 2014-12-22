@@ -1,13 +1,18 @@
 # Documentation
 
-<style>.content h1 { display: none; }</style>
+<style>
+.content h1 { display: none; }
+#documentation-right { display: inline-block; width: 50%; float: right; }
+#documentation-left { display: inline-block; width: 50%; }
+@media screen and (max-width: 820px) {#documentation-left, #documentation-right { float: none; display: block; width: 100%;}}
+</style>
 
 
 <!--
 <iframe src="http://duckduckgo.com/search.html?site=ringojs.org&prefill=Search RingoJs.org" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
 -->
 
-<div style="display: inline-block; width: 50%; float: right;">
+<div id="documentation-right">
 
 ## References
 
@@ -26,7 +31,7 @@
 
 </div>
 
-<div style="display: inline-block; width: 50%;">
+<div id="documentation-left">
 
 ## Topic Pages
   * [Web Application Tutorial](/tutorial/)

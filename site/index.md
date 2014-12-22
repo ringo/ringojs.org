@@ -1,11 +1,13 @@
-<div style="margin: 3rem 0 3.125rem 0;">
-<img src="/static/mascot.png" alt="" style="float: left; margin-right: 1.688rem;" width="140">
+<div class="frontpageTeaser">
+<img src="/static/ringo-mascot.svg" alt="" id="frontpage-mascot" style="float: left; margin-right: 1.688rem;" width="140">
 <h1 style="margin-bottom: 1rem;">Multi-threaded JavaScript on the JVM</h1>
 
 Ringo is a JavaScript platform built on the JVM and optimized for server-side applications.
 It takes a non-dogmatic stance on things like I/O paradigms. Ringo ships with a large set of
 built-in modules and follows the CommonJS standard.
 </div>
+
+<div id="nutshell">
 
 ## Ringo in a Nutshell
 
@@ -35,6 +37,7 @@ built-in modules and follows the CommonJS standard.
     code is hosted on Github. It’s possible to fork, modify and distribute it in source or binary form.
     If you have a very specific question, you can look up the according code and see the detailed implementation.</li>
 </ul>
+</div>
 
 <script>
 $(".technologyDetails li").hide();
