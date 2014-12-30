@@ -10,14 +10,15 @@
 }
 
 .technologyList li {
-    width: calc(20% - 8px);
-    margin-right: 8px;
+    width: calc(20% - 12px);
+    margin-right: 12px;
     display: block;
     float: left;
-    padding: 0.375rem 0.5rem 0.5rem 0.5rem;
+    padding: 12px 8px;
     border-radius: 4px;
     font-family: "Bitter", serif;
     font-weight: 700;
+    font-size: 19px;
     text-align: center;
     background-color: #30364D;
     color: #fcfcfc;

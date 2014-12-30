@@ -57,8 +57,9 @@ a img {
 header {
   display: block;
   padding: 22px 0 14px 0;
+  height: 114px;
   background-color: #c1ccd1;
-  background-image: url('/static/photos/bkg_server_alps.jpg');
+  background-image: url('/static/photos/bkg_server_alps_blur.jpg');
   background-size: 100% auto;
   background-position: 0 -95px;
   overflow: hidden;
@@ -95,7 +96,7 @@ header:before {
   display: block;
   width: 100%;
   height: 100%;
-  background: rgba(10,10,10,0.30);
+  background: rgba(10,10,10,0.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -118,7 +119,7 @@ header a:hover {
 
 header .wrapper {
   margin: 0 auto;
-  max-width: 820px;
+  max-width: 960px;
 }
 
 header ul {
@@ -131,8 +132,8 @@ header li {
   list-style: none;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  font-size: 1.313rem;
-  margin-left: 1.625rem;
+  font-size: 1.5rem;
+  margin-left: 2.5rem;
 }
 
 header h1 {
@@ -156,7 +157,7 @@ header h1 a {
   display: block;
   clear: both;
   margin: 9px auto 0 auto;
-  max-width: 820px;
+  max-width: 960px;
 }
 
 .main .submenu {
@@ -184,7 +185,7 @@ header h1 a {
 
 .main .content {
   margin-bottom: 55px;
-  font-size: 1.063rem;
+  font-size: 1.125rem;
   line-height: 1.588em;
   position: relative;
   min-height: 70vh;
@@ -270,8 +271,8 @@ h4 {
 }
 
 .content li {
-  margin-bottom: 4px;
-  line-height: 24px;
+  margin-bottom: 8px;
+  line-height: 1.5rem;
 }
 
 .content ul ul {
@@ -291,7 +292,7 @@ footer {
 }
 
 footer nav {
-  max-width: 820px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -328,7 +329,7 @@ footer p {
   margin: 28px 0 0 0;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 960px) {
   .main .content,
   .main .submenu {
     float: none;
@@ -346,6 +347,7 @@ footer p {
   header {
     background: #30364D;
     padding: 10px 0 0 0;
+    height: inherit;
   }
 
   header h1 {
