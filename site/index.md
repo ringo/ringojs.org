@@ -1,5 +1,5 @@
 <div class="frontpageTeaser">
-<img src="/static/ringo-mascot.svg" alt="" id="frontpage-mascot" style="float: left; margin-right: 1.688rem;" width="140">
+<img src="/static/ringo-mascot.svg" alt="" id="frontpage-mascot" style="float: left; margin-right: 2.25rem;" width="140">
 <h1 style="margin-bottom: 1rem;">Multi-threaded JavaScript on the JVM</h1>
 
 Ringo is a JavaScript platform built on the JVM and optimized for server-side applications.

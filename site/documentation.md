@@ -4,30 +4,27 @@
 .content h1 { display: none; }
 #documentation-right { display: inline-block; width: 50%; float: right; }
 #documentation-left { display: inline-block; width: 50%; }
-@media screen and (max-width: 820px) {#documentation-left, #documentation-right { float: none; display: block; width: 100%;}}
+@media screen and (max-width: 960px) {#documentation-left, #documentation-right { float: none; display: block; width: 100%;}}
 </style>
 
-
-<!--
-<iframe src="http://duckduckgo.com/search.html?site=ringojs.org&prefill=Search RingoJs.org" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
--->
 
 <div id="documentation-right">
 
 ## References
 
   * Ringo API Reference
-    * [master](/api/master/index.html)
-    * [v0.10](/api/v0.10/index.html) &ndash; [release notes](release_0_10)
-    * [v0.9](/api/v0.9/index.html) &ndash; [release notes](release_0_9)
-    * [v0.8](/api/v0.8/index.html) &ndash; [release notes](release_0_8)
+    * [master](/api/master/index.html) &ndash; <em>under development</em>
+    * [0.11](/api/0.11/index.html) &ndash; [release notes](release_0_11)  &ndash; <em>latest stable release</em>
+    * [0.10](/api/0.10/index.html) &ndash; [release notes](release_0_10)
+    * [0.9](/api/0.9/index.html) &ndash; [release notes](release_0_9)
+    * [0.8](/api/0.8/index.html) &ndash; [release notes](release_0_8)
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)
   * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
 
 ## Community
 
-  * [#ringojs on irc.freenode.net](http://ringojs.com/bot/join)
   * [Mailing list](http://groups.google.com/group/ringojs)
+  * [#ringojs on irc.freenode.net](http://ringojs.com/bot/join)
 
 </div>
 
@@ -51,7 +48,7 @@
   * [Security Features](security_features)
   * [Ringo's CommonJS Implementation](commonjs_implementation)
 
-## For Ringo developers
+## For Ringo Developers
 
   * [Install Ringo from Git](ringo_from_git)
   * [Coding Standards](coding_standards)
