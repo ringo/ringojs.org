@@ -1,19 +1,25 @@
 # Get Started
 
-This is a short guide on how to install Ringo on your system.
+This is a short guide on how to install Ringo on your system. The only essential requirement is the Java Platform, Standard Edition.
+The oldest supported release is Java SE 5. We recommend Java SE 7 or higher to run Ringo. You can download Java from:
+
+ * [OpenJDK](http://openjdk.java.net/install/) (Linux)
+ * [Oracle Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Linux, Windows, Mac OS X, Solaris)
 
 ## Installing Ringo
-
-The only essential requirement to run Ringo is Java. The oldest supported release is Java 5. We recommend Java 6 or
-higher to run Ringo. You can download Java from:
-
-* [Oracle Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Linux, Windows, Mac OS X, Solaris)
-* Debian users: `apt-get install openjdk-7-jre`
 
 ### Download the latest Ringo release
 
 This is the recommended and straight forward way to install Ringo. Download the latest precompiled release from the
 [download page](/download). For convinience, you should add the `/bin` directory to the `PATH` environment variable.
+
+### Hombrew on Mac OS X
+
+If you use the &#127866;Homebrew package manager, you can use the `ringojs` formula:
+
+```
+brew install ringojs
+```
 
 ## Starting the Ringo shell
 
