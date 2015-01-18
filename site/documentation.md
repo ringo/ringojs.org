@@ -30,30 +30,34 @@
 
 <div id="documentation-left">
 
-## Topic Pages
-  * [Web Application Tutorial](/tutorial/)
-  * [Command Line Tools](commandline_tools)
-  * Writing Modules
-    * [Modules in Ringo](modules)
-    * [Module and Global Scope](module_and_global_scope)
-  * [Java Integration](java_integration)
-  * [Package Managment](packages)
-  * [Deployment Options](deployment)
+## First Steps
+
+ * [Command line tools](commandline_tools)
+ * [Web application tutorial](/tutorial/)
+ * Writing modules
+   * [Modules in Ringo](modules)
+   * [Module and global Scope](module_and_global_scope)
+ * [Package managment](packages)
+
+## Detailed topics
+
+  * [Java integration](java_integration)
+  * [package.json descriptors](package_descriptors)
+  * [Deployment options](deployment)
      * [Ringo with Spring](ringo_with_spring)
      * [Google App Engine](google_appengine)
   * [Logging](logging)
   * [Debugger](debugger)
   * [Profiler](profiler)
   * [JSGI and Stick](jsgi_and_stick)
-  * [Security Features](security_features)
-  * [Ringo's CommonJS Implementation](commonjs_implementation)
+  * [Security features](security_features)
+  * [Ringo's CommonJS implementation](commonjs_implementation)
 
 ## For Ringo Developers
 
-  * [Install Ringo from Git](ringo_from_git)
-  * [Coding Standards](coding_standards)
-  * [Github Repository](http://github.com/ringo/ringojs)
-  * [Issue Tracker](http://github.com/ringo/ringojs/issues)
-  * [Rhino Hacker's Guide](rhino_hacker_guide)
+  * [Install Ringo from git](ringo_from_git)
+  * [Coding standards](coding_standards)
+  * [Github repository](http://github.com/ringo/ringojs)
+  * [Issue tracker](http://github.com/ringo/ringojs/issues)
 
 </div>
