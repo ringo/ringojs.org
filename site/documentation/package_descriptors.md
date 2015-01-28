@@ -35,6 +35,9 @@ The `package.json` file must be valid JSON, not just a JavaScript object literal
            "stick": ">= 0.4",
            "gestalt": "=> 0.1"
        },
+       "directories": {
+           "lib": "myLibFiles"
+       },
        "main": "lib/foobar.js"
     }
 
@@ -97,6 +100,12 @@ release of Ringo is required to install the package, but their are no hard check
 
 A package should define it's dependencies in an object that maps a package name to a version using semantic versioning.
 The `rp` client tries to resolve all dependencies and installs them together with the package.
+
+## directories.lib
+
+If part of a module id resolves to a package directory, Ringo will try to resolve the remaining part of the id against
+the `lib` directory of that package. The location of the `lib` directory can be overridden using the
+`directories.lib` property in the descriptor.
 
 ## main
 

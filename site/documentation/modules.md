@@ -1,21 +1,27 @@
 # Modules in Ringo
 
-Ringo implements the [CommonJS Modules 1.1](http://wiki.commonjs.org/wiki/Modules/1.1) specification. There are multiple JavaScript module patterns out there but in RingoJs you should only use this one:
+Ringo implements the [CommonJS Modules](http://wiki.commonjs.org/wiki/Modules/1.1) specification. In short this means:
 
-  * Every file is a module living in its own top-level scope. No special syntax needed
-  * Any function or other property, which you attach to `exports` in your module, will be exposed
-  * `require('foobar')` returns an object holding all exposed properties of the module "foobar"
+  * Every JavaScript file is treated a module living in its own top-level scope.
+  * Any function or property attached to a module's `exports` object will be exposed.
+  * The `require()` function returns a module's `exports` object.
+    * If the given [identifier string](#identifiers) starts with `./` or `../` Ringo's module loader searches for a file and tries to load it.
+    Therefore `require('./foo')` advices Ringo to load the file `./foo.js` as module.
+    * Otherwise Ringo looks for the module in every folder of the [module path](#modulepath).
 
-## Anatomy of a Module
+The CommonJS module specification is also the foundation behind Node's module system, so for Node developers modules
+in Ringo are quite familiar.
 
-In Ringo, every JavaScript file is treated as a module. When a module is
+## Anatomy of a module
+
+In Ringo every JavaScript file is treated as a module. When a module is
 executed, Ringo provides it with the means to import functionality from and
 export functionality to other modules.
 
-An example should make things clearer. A simple module in the file `foobar.js` might look like
-the following. I want to exposes the function `add` but not the private `adder`:
+An example should make things clearer. A simple module in the file `simplemath.js` might look like
+the following. It exposes the function `add`, but not the private `adder` function:
 
-    // foobar.js
+    // simplemath.js
     var adder = function(a, b) {
         return a + b;
     };
@@ -23,15 +29,15 @@ the following. I want to exposes the function `add` but not the private `adder`:
         return adder(a, b);
     };
 
-You can `require()` it and then access `add` as `foobar.add`:
+You can `require()` it and then access `add` as `simplemath.add()`:
 
-    >> var foobar = require('foobar');
-    >> foobar.add(3,4)
+    >> var simplemath = require('./simplemath');
+    >> simplemath.add(3,4)
     7
 
 But you can *not* access the private "adder" function:
 
-    >> foobar.adder(2,2)
+    >> simplemath.adder(2,2)
     ReferenceError
 
 Ringo also provides a `module` object to each module with the following
@@ -47,7 +53,7 @@ Modules are executed in their own private scope. Thus, everything defined in
 a module which is not explicitly exported is private to the module and invisible
 to other modules.
 
-## Module IDs
+<h2 id="identifiers">Module identifiers</h2>
 
 The string that identifies a module is called a module id.
 
@@ -61,7 +67,7 @@ file system semantics.
 A module id not starting with `'./'` or `'../'` is called an absolute id and is
 resolved against the module path.
 
-## The Module Path
+<h2 id="modulepath">The module path</h2>
 
 The module path is a list of standard locations in which Ringo will look for
 modules.
@@ -72,28 +78,21 @@ The module path can be set in the following ways:
 
  * Setting the `ringo.modulepath` Java system property.
 
- * Using the `-m` or `--modules` option to the bin/ringo command.
+ * Using the `-m` or `--modules` option to the `ringo` command-line tool.
 
  * Using the `module-path` servlet init parameter with JsgiServlet.
 
  * Adding or removing elements to the `require.paths` Array-like property
    from within Ringo.
 
-Ringo versions prior to 0.8 used to put the `lib` directory of each installed
-package on the module path.
-
-Starting with version 0.8, the default module path
-consists of the `modules` and `packages` directories in the ringojs installation
-directory. Ringo 0.8 is also able to load modules from the Java classpath
-without further configuration.
-
 ## Packages
 
-Packages provide a means of bundling several modules and other resources into
-one unit.
+*Note: rp and `ringo-admin` are two [package management tools for Ringo](../package_management).*
 
-Packages are directories that contain a `package.json` package descriptor file.
-The following `package.json` properties are recognized by Ringo's module loader:
+Packages provide a means of bundling several modules and other resources into
+one unit. Packages are directories that contain a `package.json` package descriptor file.
+The `main` property in the `package.json` descriptor is recognized by Ringo's module loader as
+the main entry point for a module:
 
     {
         "main": "lib/main.js"
@@ -107,21 +106,18 @@ If a module id resolves to a directory that does not contain a `package.json`
 file, or `package.json` does not define a `main` property, Ringo will try to
 load file `index.js` in that directory.
 
-    {
-        "directories": {
-            "lib": "lib"
-        }
-    }
-
 If part of a module id resolves to a package directory, Ringo will try to
 resolve the remaining part of the id against the `lib` directory of that
 package. The location of the `lib` directory can be overridden using the
 `directories.lib` property in package.json.
 
-Ringo also provides very basic package management support through the
-`ringo-admin` tool.
+    {
+        "directories": {
+            "lib": "new-lib"
+        }
+    }
 
-## Caching and Reloading
+## Caching and reloading
 
 Modules are cached after they are loaded for the first time. Ringo tries to
 resolve module ids to a canonical path in order to not load the same module
@@ -134,7 +130,7 @@ on has changed each time it is required. If so, the module is loaded again.
 To disable module reloading run ringo with the `-p` or `--production` option,
 or set the `production` servlet init parameter to `true`.
 
-## Ringo Module Extensions
+## Ringo module extensions
 
 The CommonJS modules specification was kept deliberately small. Ringo provides
 some extra niceties for exporting and importing stuff. The downside to using

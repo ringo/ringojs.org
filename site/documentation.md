@@ -36,8 +36,8 @@
  * [Web application tutorial](/tutorial/)
  * Writing modules
    * [Modules in Ringo](modules)
-   * [Module and global Scope](module_and_global_scope)
- * [Package managment](packages)
+   * [Understanding module and global scope](module_and_global_scope)
+ * [Package managment](package_management)
 
 ## Detailed topics
 
