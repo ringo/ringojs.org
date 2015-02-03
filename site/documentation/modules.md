@@ -50,8 +50,12 @@ properties:
     default exports object.
 
 Modules are executed in their own private scope. Thus, everything defined in
-a module which is not explicitly exported is private to the module and invisible
-to other modules.
+a module, which is not explicitly exported, is private to the module and invisible
+to other modules. Variables (unintentionally) declared without `var` will be only
+*global to the module*. This keeps the global scope isolated from the potential
+module scope leaks. The global object is accessible through the implicit `global`
+variable. Good application design avoids the global variable! Otherwise shared global
+state is introduced, which is a fundamental anti-pattern in Ringo.
 
 <h2 id="identifiers">Module identifiers</h2>
 
