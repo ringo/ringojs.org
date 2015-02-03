@@ -43,14 +43,14 @@
 
   * [Java integration](java_integration)
   * [package.json descriptors](package_descriptors)
-  * [JSGI and servlet lifecycle in Ringo](jsgi_servlet_lifecycle)
+  * [JSGI and servlet lifecycle for HTTP](jsgi_servlet_lifecycle)
+  * [stick's JSGI implementation](stick_jsgi_implementation)
   * [Deployment options](deployment)
     * [Google App Engine](google_appengine)
     * [Ringo with Spring](ringo_with_spring)
   * [Logging](logging)
   * [Debugger](debugger)
   * [Profiler](profiler)
-  * [JSGI and Stick](jsgi_and_stick)
   * [Security features](security_features)
   * [Ringo's CommonJS implementation](commonjs_implementation)
 

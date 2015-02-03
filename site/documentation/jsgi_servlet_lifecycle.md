@@ -1,4 +1,4 @@
-# JSGI and servlet lifecycle in Ringo
+# JSGI and servlet lifecycle for HTTP
 
 The JSGI (JavaScript Gateway Interface) specification defines an interface between a HTTP web server and JavaScript-based
 applications. It has been developed by the CommonJS project and is implemented by Ringo. Since Ringo takes advantage of the
