@@ -45,6 +45,7 @@
   * [package.json descriptors](package_descriptors)
   * [JSGI and servlet lifecycle for HTTP](jsgi_servlet_lifecycle)
   * [stick's JSGI implementation](stick_jsgi_implementation)
+  * [Workers and multithreading](workers)
   * [Deployment options](deployment)
     * [Google App Engine](google_appengine)
     * [Ringo with Spring](ringo_with_spring)

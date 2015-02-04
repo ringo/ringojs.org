@@ -1,7 +1,7 @@
-# Workers
+# Workers and multithreading
 
 Multi-threading is hard if its done with threads.
-To introduce a good level of abstraction and to hide implementation details, Ringo offers "shared-nothing" workers for multi-threading.
+To introduce a good level of abstraction and to hide implementation details, Ringo offers "shared-nothing" workers for parallel execution.
 A worker has its own private set of modules and an isolated scope, tied together in a single JVM thread.
 Each worker also gets its own single-threaded event loop that behaves just like the event loop in the browser or in node / io.js.
 They are inspired by W3C Web Workers and their communication model via the `postMessage()` method and the `onmessage` event handler.
@@ -9,8 +9,8 @@ In contrast to their relatively heavy-weight browser counterpart, Ringo's worker
 To further improve performance Ringo keeps free workers in a queue and only allocates new workers if all existing workers are busy.
 Workers help to keep multi-threaded JavaScript free from any common threading pitfalls, like synchronization or locking.
 
-Every worker has its own incoming message queue and can only process one single message at a time.
-If you are familiar with the concept of *Actors* in frameworks like [Akka](http://akka.io/), this might sound familiar.
+Every worker has its own incoming message queue and a worker's event loop running a single thread can process exactly one message at a time.
+If you know the concept of *Actors* from toolkits like [Akka](http://akka.io/), this might sound familiar.
 
 ## Creating a worker
 
@@ -22,7 +22,7 @@ Thus, each worker operates in its private module environment, making concurrent 
 
     // Module "ringo/worker" exports the Worker constructor
     var {Worker} = require('ringo/worker');
-    var workerInstance = new Worker('someModuleId');
+    var workerInstance = new Worker(module.resolve('./someModuleId'));
 
 ## Message passing
 
@@ -40,7 +40,35 @@ This example show a minimal module which can receive messages and posts back to 
       event.source.postMessage('Processed.');
     }
 
-### Putting everything together
+## Shared state
+
+It's a good practice to avoid any shared state in an application. This makes it easier to scale it and prevents critical code paths.
+If an application needs to share data over multiple workers, it can use module singletons with the `module.singleton()` method.
+The following example shows how a module could share a common database connection pool for all of its instances:
+
+    // there exists exactly one connection pool for all instances of this module
+    var connectionPool = module.singleton("connectionpool", function() {
+      return new ConnectionPool({
+        "url": "jdbc:postgresql://localhost/dbname",
+        "driver": "org.postgresql.Driver",
+        "username": "dbuser",
+        "password": "dbpassword"
+      });
+    });
+
+    // and every instance of this module can access it
+    var connection = connectionPool.connect();
+
+
+Ringo also shares the global object with all standard constructors and prototypes, but `global` should be used in a read-only way.
+Since there are module singletons, avoid the global object to store data.
+
+    // quick and very dirty
+    global.config = {
+      title: "RingoJS"
+    };
+
+## Putting everything together
 
 In the following example a worker is created in the main script and a message is passed to it.
 It is important to use `module.resolve` to pass in the correctly resolved path to the `Worker` constructor.
@@ -94,8 +122,28 @@ If we start the program with `ringo main.js` the output will look like this:
     Received message: {"a":5,"b":3}
     The result is: 90000000
 
-## Shared state
+The following sequence diagram roughly shows how the the different modules are executed in separate workers. The JVM starts the
+*main-worker* (1) which is only responsible for the execution of the main script we load with the `ringo` command.
+The main script posts a new message (2) to a calculator worker, in this case *worker-1*.
+It executes the computation and posts back the result, but not to the original *main-worker*,
+because the main script is already fully executed and its worker is terminated.
+Calling `postMessage()` will always put the message into an event-loop and returns immediately.
+So (3) creates a new worker *worker-2* with its own event-loop and puts a message in the loop.
+Then *worker-2* pulls the message and runs the last `console.log()`.
+Since no worker is active anymore, which also means that all JVM threads are dead and no thread is in the waiting or running state,
+the JVM shuts down.
 
-It's a good practice to avoid any shared state in an application. If an application needs to share data over multiple workers,
-it can use module singletons. Ringo shares the global object with all standard constructors and prototypes, but `global` should
-be used in a read-only way.
+<img src="../images/worker-threads.svg" style="width: 100%; max-width: 550px;" alt="A worker thread sequence diagram" title="" />
+
+## Workers in web apps
+
+Not only application developers can create workers and execute JavaScript in parallel, Ringo also uses them internally at many places.
+For every incoming HTTP request the JsgiServlet looks for a free worker in an internal pool of workers.
+If all workers are busy a new worker is created, otherwise an idle worker is pulled out of the pool and reactivated.
+After a worker has been found, it gets assigned with the web application module and runs it.
+This means that Ringo provides a truly multi-threaded web server executing JavaScript web applications.
+
+## Scopes are always single-threaded
+
+Calling a function originating from one worker in another worker basically breaks the single-threaded-ness of the scope in which the function was defined.
+This throws an exception at runtime indicating this violation. Instead use message passing with `postMessage()`.
