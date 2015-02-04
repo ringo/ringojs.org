@@ -162,7 +162,7 @@ with the parent application.
 This creates an application `development` whose middleware chain is a proxy function to the middleware chain of the
 original application `app`. We call this proxy function `_parent_()`. The following statement:
 
-    development.configure(debug, profile])
+    development.configure(debug, profile);
 
 will result in development's middleware chain to consist of `debug(profile(_parent_()))`.
 
