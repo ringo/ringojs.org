@@ -39,6 +39,10 @@
    * [Understanding module and global scope](module_and_global_scope)
  * [Package managment](package_management)
 
+### Talks and Presentations
+
+ * [RingoJS - An Introduction](../talks-presentations/ringo-an-introduction)
+
 ## Detailed topics
 
   * [Java integration](java_integration)
