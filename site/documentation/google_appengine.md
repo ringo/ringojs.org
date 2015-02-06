@@ -1,8 +1,15 @@
 # Google App Engine
 
-Ringo runs fine on [Google App Engine] for Java. There are some limitations on App Engine compared to running on a
-dedicated server. For example, asynchronous or long running connections are currently not supported.
-On the other hand Google App Engine provides many interesting [proprietary APIs].
+[Google App Engine] is a cloud PaaS (Platform-as-a-Service) product by Google.
+It allows building auto-scalable applications on top of the Google Cloud platform and provides fully managed services to developers.
+Ringo runs fine on App Engine for Java. There are some limitations on App Engine compared to running on a
+dedicated server. For example, asynchronous or long running connections are currently not supported by App Engine itself.
+On the other hand it provides many interesting [proprietary APIs].
+
+It's no problem for Ringo to integrate and call the provided Java services.
+Storing entities into the App Engine Datastore, sending mails with the Mail API, or accessing the Memcache service is easy.
+Developers can use the normal Java integration Ringo has to call these services.
+It's also possible to use Datastore persistence frameworks like Objectify to make storing entities even easier.
 
 ## Local Setup
 
@@ -55,6 +62,6 @@ at a high number and the load is not predictable.
 To use other packages than the standard modules drop them into `WEB-INF/packages` directory. So if you're using e.g.
 Stick as web framework, this is the right place for it.
 
-[google app engine]: http://code.google.com/intl/de/appengine/
-[app engine sdk]: http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Java
-[proprietary APIs]: http://code.google.com/intl/de/appengine/docs/java/overview.html
+[Google App Engine]: https://cloud.google.com/appengine/
+[app engine sdk]: https://cloud.google.com/appengine/downloads/
+[proprietary APIs]: https://cloud.google.com/appengine/docs/
