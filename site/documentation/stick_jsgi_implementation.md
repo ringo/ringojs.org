@@ -64,6 +64,10 @@ This figure shows a possible middleware chain for a stick web application:
 
 <img src="../images/stick-middleware-chain.png" alt="A typical middleware chain" title="" width="344" />
 
+The according middleware chain for the example is `gzip( etag( cors( route( unhandled()))))`.
+Unhandled is the implicit core of each middleware chain and triggers an error if it's reached.
+This means that requests with no matched route are unhandled by default.
+
 ### Middleware factory
 
 A middleware factory is a function that accepts exactly two arguments:
