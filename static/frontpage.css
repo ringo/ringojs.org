@@ -58,6 +58,7 @@
         margin-top: 0;
     }
     #frontpage-mascot {
-        display: none;
+        width: 20% !important;
+        margin-right: 14px !important;
     }
 }
