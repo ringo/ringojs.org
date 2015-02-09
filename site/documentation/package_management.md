@@ -12,7 +12,7 @@ An easy way to manage packages and their dependencies is the evolving Ringo pack
 The main benefit of rp over `ringo-admin` is that rp downloads dependencies defined in the packages descriptors.
 rp can install any package available in its online registry <http://packages.ringojs.org>.
 
-Install rp itself you can use the simple `ringo-admin` tool:
+To install rp itself you can use the built-in `ringo-admin` tool:
 
     $ ringo-admin install grob/rp
 
