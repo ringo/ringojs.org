@@ -2,5 +2,8 @@
   "content": "../site",
   "templates": "../templates",
   "static": "../static",
-  "welcomePage": "index.md"
+  "welcomePage": "index.md",
+  "defaultContext": {
+    "baseURI": "http://ringobeta.hoffburg.at"
+  }
 }
