@@ -1,3 +1,8 @@
+<div style="font-size: 1.5rem; margin: 20px 0 30px 0;">
+<img src="http://ringobeta.hoffburg.at/static/ringo-mascot.svg" alt="" title="" style="float: left; display: block; margin-right: 15px;" width="65">
+<strong>Preview the new website:<br><a href="http://ringobeta.hoffburg.at/" rel="nofollow">ringobeta.hoffburg.at</a></strong>
+</div>
+
 Ringo is a CommonJS-based JavaScript runtime written in Java and based on the Mozilla Rhino
 JavaScript engine. It takes a pragmatical and non-dogmatic stance on things like I/O paradigms.
 Blocking *and* asynchronous I/O both have their strengths and weaknesses in different areas.
