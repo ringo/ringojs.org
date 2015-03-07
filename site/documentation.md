@@ -1,3 +1,8 @@
+<div style="font-size: 1.5rem; margin: 20px 0 30px 0;">
+<img src="http://ringobeta.hoffburg.at/static/ringo-mascot.svg" alt="" title="" style="float: left; display: block; margin-right: 15px;" width="65">
+<strong>Preview the new documentation:<br><a href="http://ringobeta.hoffburg.at/documentation/" rel="nofollow">ringobeta.hoffburg.at/documentation</a></strong>
+</div>
+
 <p style="display:none">
 Activate this search box once duckduckgo.com has indexed the new site
 <iframe src="http://duckduckgo.com/search.html?site=ringojs.org&prefill=Search RingoJs.org" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
