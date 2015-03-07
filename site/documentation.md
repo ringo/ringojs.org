@@ -15,9 +15,6 @@
   * Ringo API Reference
     * [master](/api/master/index.html) &ndash; <em>under development</em>
     * [0.11](/api/0.11/index.html) &ndash; [release notes](release_0_11)  &ndash; <em>latest stable release</em>
-    * [0.10](/api/0.10/index.html) &ndash; [release notes](release_0_10)
-    * [0.9](/api/0.9/index.html) &ndash; [release notes](release_0_9)
-    * [0.8](/api/0.8/index.html) &ndash; [release notes](release_0_8)
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)
   * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
 
