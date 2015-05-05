@@ -29,6 +29,7 @@
 
 ## First Steps
 
+ * [Ringo 101](ringo_101)
  * [Command line tools](commandline_tools)
  * [Web application tutorial](/tutorial/)
  * Writing modules
