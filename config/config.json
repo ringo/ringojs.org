@@ -4,6 +4,6 @@
   "static": "../static",
   "welcomePage": "index.md",
   "defaultContext": {
-    "baseURI": "http://ringobeta.hoffburg.at"
+    "baseURI": "http://ringojs.org"
   }
 }
