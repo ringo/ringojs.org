@@ -1,0 +1,456 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #3c3c3c;
+  background: #fcfcfc;
+}
+
+/* Screenreader Only */
+.sr-only {
+  position: absolute;
+  top: -3000rem;
+  left: -3000rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+a {
+  color: #115CAD;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #115CAD;
+}
+
+a:focus,
+a:hover {
+  color: #115CAD;
+  text-decoration: underline;
+}
+
+a img {
+  border: 0;
+}
+
+q {
+  font-style: italic;
+}
+
+header {
+  display: block;
+  padding: 22px 0 14px 0;
+  height: 114px;
+  background-color: #c1ccd1;
+  background-image: url('/static/photos/bkg_server_alps_blur.jpg');
+  background-size: 100% auto;
+  background-position: 0 -95px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+@media screen and (min-width: 1100px) {
+  header {
+    background-position: 0 -120px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  header {
+    background-position: 0 -130px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  header {
+    background-position: 0 -140px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  header {
+    background-position: 0 -145px;
+  }
+}
+
+header:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(10,10,10,0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+header a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  z-index: 100;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+}
+
+header a:visited,
+header a:focus,
+header a:hover {
+  color: #fff;
+}
+
+header .wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+header ul {
+  padding: 14px 0 1px 0;
+  float: right;
+}
+
+header li {
+  float: left;
+  list-style: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-left: 2.5rem;
+}
+
+header h1 {
+  margin: 3px 0 0 0;
+  display: inline;
+  float: left;
+}
+
+header h1 img {
+  display: inline;
+  width: 200px;
+  height: 65px;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  display: block;
+  clear: both;
+  margin: 9px auto 0 auto;
+  max-width: 960px;
+}
+
+.main .submenu {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  margin-top: 40px;
+  padding-left: 4rem;
+}
+
+.submenu h1 {
+  font-size: 1.75rem;
+  line-height: 1.25em;
+  margin: 0 0 1rem 0;
+}
+
+.submenu ol,
+.submenu ul {
+  margin: 0 0 0 1.125rem;
+  padding: 0;
+}
+
+.submenu li {
+  padding-left: 6px;
+  margin-bottom: 0.375rem;
+}
+
+.main .content {
+  margin-bottom: 55px;
+  font-size: 1.125rem;
+  line-height: 1.588em;
+  position: relative;
+  min-height: 70vh;
+}
+
+.main .content.withMenu {
+  display: inline-block;
+  width: calc(70% - 5px);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #494d4f;
+  font-family: "Bitter", serif;
+  font-weight: 400;
+}
+
+.content h1 {
+  font-size: 2.25rem;
+  line-height: 1.25em;
+  margin: 1em 0 1em 0;
+}
+
+/* If headline <h1> is missing on a content page */
+.content > p:first-child {
+  margin-top: 28px;
+}
+
+.content h2 {
+  margin: 1.571em 0 -0.143em 0;
+  font-size: 1.75rem;
+  line-height: 1.25em;
+}
+
+.content h3 {
+  margin: 1.75rem 0 -10px 0;
+  font-size: 1.375rem;
+  line-height: 1.227em;
+}
+
+.content p {
+  margin: 16px 0;
+}
+
+.content p code,
+.content ul code {
+  color: #733F12;
+  font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: inline;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.content pre {
+  font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 0.938rem;
+  line-height: 1.375rem;
+  padding: 3px 8px 0px 8px;
+  margin: 1.5rem 0;
+  border-left: 3px solid #c0c3c5;
+}
+
+.content pre code {
+  font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
+}
+
+.content .hljs {
+  background: transparent;
+}
+
+.content li {
+  margin-bottom: 8px;
+  line-height: 1.5rem;
+}
+
+.content ul ul {
+  margin-top: 4px;
+  padding-left: 35px;
+}
+
+footer {
+  margin: 0 auto;
+  padding: 30px 50px;
+
+  border-top: 1px solid #ddd;
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(200, 245, 245, 1);
+  box-shadow: inset 0px 0px 4px 1px rgba(230, 230, 230, 1);
+
+  font-size: 13px;
+}
+
+footer nav {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer .ringolinks {
+  overflow: hidden;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 25%;
+}
+
+footer .credits {
+  clear: both;
+  font-size: 0.625rem;
+  padding-top: 0.5rem;
+}
+
+footer .credits a {
+  color: #3C3C3C;
+}
+
+footer h4 {
+  margin: 0 0 2px 0;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+footer p {
+  font-size: 10px;
+  margin: 28px 0 0 0;
+}
+
+@media screen and (max-width: 960px) {
+  .main .content,
+  .main .submenu {
+    float: none;
+    width: 100%;
+    padding: 0 2%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .main .submenu {
+    margin-bottom: 28px;
+  }
+
+  .main .content {
+    margin-bottom: 0px;
+  }
+
+  header {
+    background: #30364D;
+    padding: 10px 0 0 0;
+    height: inherit;
+  }
+
+  header h1 {
+    padding-left: 20px;
+  }
+
+  header h1 ,
+  header ul,
+  header li {
+    float: none;
+    margin: 0;
+  }
+
+  header h1 img {
+    width: 100px;
+    height: 32px;
+  }
+
+  header ul {
+    padding: 6px 0 2px 15px;
+    background: #7280A1;
+    display: block;
+    margin: 0;
+  }
+
+  header li {
+    margin: 0 0 4px 20px;
+    color: #fff;
+    list-style: disc;
+    font-size: 16px;
+  }
+
+  header li a {
+    text-shadow: none;
+  }
+
+  .submenu h1,
+  .content h1 {
+    font-size: 1.5rem;
+    margin: 0.75em 0 0 0;
+  }
+
+  .submenu h2,
+  .content h2 {
+    font-size: 1.25rem;
+  }
+
+  .submenu h3,
+  .content h3 {
+    font-size: 1.125rem;
+  }
+
+  .submenu,
+  .main .content {
+    font-size: 0.875rem;
+  }
+
+  .content p {
+    margin: 0.5rem 0;
+  }
+
+  .content p img {
+    width: 100%;
+    float: none;
+  }
+
+  .content pre {
+    padding: 3px 4px 2px 8px;
+    margin: 1rem 0;
+    border-left: 2px solid #c0c3c5;
+  }
+
+  .content pre,
+  .content p code,
+  .content ul code {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+
+  .content pre {
+    line-height: 1.25rem;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+
+  footer ul {
+    float: none;
+    width: 96%;
+    padding: 0 2%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+    ul {
+        padding-left: 14px;
+    }
+
+    .content ul ul {
+        padding-left: 14px;
+    }
+
+}

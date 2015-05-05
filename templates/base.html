@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>{% block title %}RingoJS{% endblock %}</title>
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Fira+Mono:400,700|Open+Sans:400italic,700italic,700,400,600' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/static/main.css" />
+    <link rel="stylesheet" href="/static/frontpage.css" />
+    <link rel="stylesheet" href="/static/tutorial.css" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/googlecode.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/static/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    {% block head %}
+    {% endblock %}
+
+
+     <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-touch-72.png">
+     <link rel="apple-touch-icon" sizes="120x120" href="/static/favicons/apple-touch-120.png">
+     <link rel="apple-touch-icon" sizes="144x144" href="/static/favicons/apple-touch-144.png">
+     <link rel="apple-touch-icon" sizes="152x152" href="/static/favicons/apple-touch-152.png">
+
+     <link rel="shortcut icon" href="/static/favicons/favicon.ico">
+     <link rel="icon" href="/static/favicons/favicon-16.png" sizes="16x16">
+     <link rel="icon" href="/static/favicons/favicon-32.png" sizes="32x32">
+     <link rel="icon" href="/static/favicons/favicon-48.png" sizes="48x48">
+     <link rel="icon" href="/static/favicons/favicon-64.png" sizes="64x64">
+     <link rel="icon" href="/static/favicons/favicon-128.png" sizes="128x128">
+
+     <meta property="og:type" content="website">
+     <meta property="og:site_name" content="RingoJS">
+     <meta property="og:description" content="Ringo is a multi-threaded JavaScript platform built on the JVM and optimized for server-side applications.">
+     <meta property="og:image" content="{{ baseURI }}/static/favicons/og-image-1200.png">
+
+  </head>
+
+  <body lang="en">
+
+    <header>
+        <div class="wrapper">
+          <h1><a href="/"><img src="/static/ringojs-logo-white.svg" alt="RingoJS" title="Home" /></a></h1>
+          <ul>
+            <li><a href="/get_started">Get Started</a></li>
+            <li><a href="/download">Download</a></li>
+            <li><a href="/documentation">Documentation</a></li>
+            <li><a href="/contribute">Contribute</a></li>
+          </ul>
+        </div>
+    </header>
+
+    <main class="main">
+
+      <div class="content {% if menu %}withMenu{% endif %}">
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      </div>
+
+      {% if menu %}
+      <div class="submenu">
+        <div class="wrapper">
+          {% block menu %}
+            {{ menu }}
+          {% endblock %}
+        </div>
+      </div>
+      {% endif %}
+
+    </main>
+
+    <footer>
+      <nav class="ringolinks">
+        <ul>
+          <li><h4>Documentation</h4></li>
+          <li><a href="/documentation">Overview</a></li>
+          <li><a href="/api/master/">API Master</a></li>
+          <li><a href="/api/0.11/">API Release 0.11</a></li>
+        </ul>
+
+        <ul>
+          <li><h4>Community</h4></li>
+          <li><a href="irc://irc.freenode.net/ringojs">IRC Channel</a></li>
+          <li><a href="http://groups.google.com/group/ringojs">Mailing List</a></li>
+          <li><a href="https://twitter.com/ringojs">@ringojs on Twitter</a></li>
+        </ul>
+
+        <ul>
+          <li><h4>Download</h4></li>
+          <li><a href="/download">Latest Release</a></li>
+          <li><a href="http://github.com/ringo/ringojs/zipball/master">Master as ZIP</a></li>
+          <li><a href="http://github.com/ringo/ringojs/tarball/master">Master as tarball</a></li>
+        </ul>
+
+        <ul>
+          <li><h4>Contribute</h4></li>
+          <li><a href="https://github.com/ringo/ringojs/">Source on Github</a></li>
+          <li><a href="https://github.com/ringo/ringojs/issues">Report a Bug</a></li>
+        </ul>
+
+        <div class="credits"><a href="https://www.flickr.com/photos/36129113@N05/8521591173">Header photo CC BY-SA sonic.knight</a></div>
+      </nav>
+    </footer>
+
+
+  <script type="text/javascript">
+    (function() {
+      var stss = document.createElement('script');
+      stss.type = 'text/javascript';
+      stss.async = true;
+      stss.src = 'http://stats.nekapuzer.at/hit/?referer=' +
+           escape(document.referrer) +
+           '&site=ringojs' +
+           '&random=' + (new Date()).getTime();
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(stss, s);
+    })();
+  </script>
+  </body>
+</html>

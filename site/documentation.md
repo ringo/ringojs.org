@@ -1,50 +1,67 @@
-<div style="font-size: 1.5rem; margin: 20px 0 30px 0;">
-<img src="http://ringobeta.hoffburg.at/static/ringo-mascot.svg" alt="" title="" style="float: left; display: block; margin-right: 15px;" width="65">
-<strong>Preview the new documentation:<br><a href="http://ringobeta.hoffburg.at/documentation/" rel="nofollow">ringobeta.hoffburg.at/documentation</a></strong>
-</div>
+# Documentation
 
-<p style="display:none">
-Activate this search box once duckduckgo.com has indexed the new site
-<iframe src="http://duckduckgo.com/search.html?site=ringojs.org&prefill=Search RingoJs.org" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
-</p>
+<style>
+.content h1 { display: none; }
+#documentation-right { display: inline-block; width: 50%; float: right; }
+#documentation-left { display: inline-block; width: 50%; }
+@media screen and (max-width: 960px) {#documentation-left, #documentation-right { float: none; display: block; width: 100%;}}
+</style>
+
+
+<div id="documentation-right">
 
 ## References
 
   * Ringo API Reference
-    * [master](/api/master/index.html)
-    * [v0.11](/api/v0.11/index.html) &ndash; [release notes](release_0_11)
-    * [v0.10](/api/v0.10/index.html) &ndash; [release notes](release_0_10)
-    * [v0.9](/api/v0.9/index.html) &ndash; [release notes](release_0_9)
-    * [v0.8](/api/v0.8/index.html) &ndash; [release notes](release_0_8)
+    * [master](/api/master/index.html) &ndash; <em>under development</em>
+    * [0.11](/api/0.11/index.html) &ndash; [release notes](release_0_11)  &ndash; <em>latest stable release</em>
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)
   * [CommonJS](http://wiki.commonjs.org/wiki/CommonJS)
 
-## Topic Pages
-  * [Web Application Tutorial](tutorial/)
-  * [Command Line Tools](documentation/commandline_tools)
-  * Writing Modules
-    * [Modules in Ringo](documentation/modules)
-    * [Module and Global Scope](documentation/module_and_global_scope)
-  * [Java Integration](documentation/java_integration)
-  * [Package Managment](documentation/packages)
-  * [Deployment Options](documentation/deployment)
-     * [Ringo with Spring](documentation/ringo_with_spring)
-     * [Google App Engine](documentation/google_appengine)
-  * [Logging](documentation/logging)
-  * [Debugger](documentation/debugger)
-  * [Profiler](documentation/profiler)
-  * [JSGI and Stick](documentation/jsgi_and_stick)
-  * [Security Features](documentation/security_features)
-  * [Ringo's CommonJS Implementation](documentation/commonjs_implementation)
-
-## For Ringo developers
-
-  * [Coding Standards](documentation/coding_standards)
-  * [Github Repository](http://github.com/ringo/ringojs)
-  * [Issue Tracker](http://github.com/ringo/ringojs/issues)
-  * [Rhino Hacker's Guide](documentation/rhino_hacker_guide)
-
 ## Community
 
-  * [#ringojs on irc.freenode.net](http://ringojs.com/bot/join)
   * [Mailing list](http://groups.google.com/group/ringojs)
+  * [#ringojs on irc.freenode.net](http://ringojs.com/bot/join)
+
+</div>
+
+<div id="documentation-left">
+
+## First Steps
+
+ * [Ringo 101](ringo_101)
+ * [Command line tools](commandline_tools)
+ * [Web application tutorial](/tutorial/)
+ * Writing modules
+   * [Modules in Ringo](modules)
+   * [Understanding module and global scope](module_and_global_scope)
+ * [Package managment](package_management)
+
+### Talks and Presentations
+
+ * [RingoJS - An Introduction](../talks-presentations/ringo-an-introduction)
+
+## Detailed topics
+
+  * [Java integration](java_integration)
+  * [package.json descriptors](package_descriptors)
+  * [JSGI and servlet lifecycle for HTTP](jsgi_servlet_lifecycle)
+  * [stick's JSGI implementation](stick_jsgi_implementation)
+  * [Workers and multithreading](workers)
+  * [Deployment options](deployment)
+    * [Google App Engine](google_appengine)
+    * [Ringo with Spring](ringo_with_spring)
+  * [Logging](logging)
+  * [Debugger](debugger)
+  * [Profiler](profiler)
+  * [Security features](security_features)
+  * [Ringo's CommonJS implementation](commonjs_implementation)
+
+## For Ringo Developers
+
+  * [Install Ringo from git](ringo_from_git)
+  * [Coding standards](coding_standards)
+  * [Github repository](http://github.com/ringo/ringojs)
+  * [Issue tracker](http://github.com/ringo/ringojs/issues)
+
+</div>

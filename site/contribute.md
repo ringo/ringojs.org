@@ -1,4 +1,4 @@
-# Get Involved
+# Contribute to the Community
 
 ## Submit Packages
 

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+{% if pageTitle %}
+    {{ pageTitle }} - RingoJS
+{% else %}
+    RingoJS - Multi-threaded JavaScript on the JVM
+{% endif %}
+{% endblock %}
+
+{% block content %}
+    {{ content | safe }}
+{% endblock %}
+
+{% block menu %}
+    {{ menu | safe }}
+{% endblock %}

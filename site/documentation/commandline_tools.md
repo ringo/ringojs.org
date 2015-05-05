@@ -1,35 +1,57 @@
-# Command Line Tools
+# Command line tools
 
-Ringo comes with a command line tool `ringo` for running scripts and work with an interactive shell.
+Ringo comes with a command line tool `ringo` to run script files and to enter an interactive shell. It's recommended
+to add the `/bin` directory of the Ringo installation to the `PATH` system variable. To start an interactive shell,
+also known as REPL (Read-Eval-Print-Loop), launch the `ringo` command line tool without any arguments.
 
-## Running Command Line Scripts
+<script type="text/javascript" src="https://asciinema.org/a/14076.js" id="asciicast-14076" data-speed="2" async></script>
 
-Writing command line scripts with Ringo is straightforward. To make a script work both as a command and as a module you can use the following boilerplate code. 
-    
+## Executing a command line script
+
+Writing command line scripts with Ringo is straightforward. Every arbitrary JavaScript file can be passed as `[script-file]`
+argument to the `ringo` command:
+
+`ringo [script-file] [script-arg1] [script-arg2] ...`
+
+Ringo loads the script file and provides the argument via the system module's `args` array. The first element in the
+`args` array is the script file's name.
+
+### Modules of particular interest for command line applications
+
+  * [system](/api/master/system/) &ndash; provides access to the system environment
+  * [ringo/shell](/api/master/ringo/shell/) &ndash; preloaded module in every Ringo REPL
+  * [ringo/args](/api/master/ringo/args/) &ndash; parser for command line options
+  * [ringo/term](/api/master/ringo/term/) &ndash; ANSI terminal color and style
+  * [ringo/scheduler](/api/master/ringo/scheduler/) &ndash; scheduling invocation of functions (threads)
+  * [ringo/subprocess](/api/master/ringo/subprocess/) &ndash; spawning separate processes
+
+## Detecting invocation as main script
+
+To make a script work both as a command and as a module, use this boilerplate code:
+
     function main(args) {
         // your code
     }
 
     // is this the main module executed?
     if (require.main === module) {
-        main(system.args);
+        main(require('system').args);
     }
 
-This will call function `main` only if the script is run as a command line script. Otherwise it will act like an ordinary module. The `require`, `module`, and `system` objects used in this piece of code are provided by Ringo.
+This will call function `main` only if the script is run as a command line script. Otherwise it will act like an
+ordinary module. The `require` and `module` objects used in this boilerplate code are provided by Ringo.
 
-The command line scripts bundled with Ringo may also serve as a learning aid.
+## Passing Java and Ringo options
 
-### Modules of particular interest for command line applications
+In addition to the command specific options, all commands will pass any options prefixed by `-J` to the underlying java runtime. For example, use the folloging command to run ringo on the server HotSpot VM with a stack size of 64 kb:
 
-  * [fs](/api/master/fs/) &ndash; filesystem manipulation
-  * [system](/api/master/system/)
-  * [ringo/args](/api/master/ringo/args/) &ndash; parser for command line options
-  * [ringo/term](/api/master/ringo/term/) &ndash; ANSI terminal color and style
-  * [ringo/scheduler](/api/master/ringo/scheduler/) &ndash; scheduling invocation of functions (threads)
-  * [ringo/shell](/api/master/ringo/shell/) 
-  * [ringo/subprocess](/api/master/ringo/subprocess/) &ndash; spawning processes
+    ringo -J-server -J-Xss64k
 
-## Command Line Tools
+The app-specific commands (`ringo-web`, `ringo-doc`, `ringo-admin`) additionally pass all options prefixed with `-R` to the ringo command. For example, the following command will run `ringo-web` in debugger mode:
+
+    ringo-web -R-d
+
+## Available command line tools
 
 Ringo comes with a number of command line tools. You can invoke all tools with the `-h` or `--help` flag to learn more about their options and arguments.
 
@@ -55,12 +77,3 @@ If an argument passed to `ringo-web` is interpreted as the path of the applicati
 
 `ringo-admin` provides commands to create new Ringo applications or install Ringo packagers.
 
-### Passing Java and Ringo options
-
-In addition to the command specific options, all commands will pass any options prefixed by `-J` to the underlying java runtime. For example, use the folloging command to run ringo on the server HotSpot VM with a stack size of 64 kb:
-
-    ringo -J-server -J-Xss64k
-
-The app-specific commands (`ringo-web`, `ringo-doc`, `ringo-admin`) additionally pass all options prefixed with `-R` to the ringo command. For example, the following command will run `ringo-web` in debugger mode:
-
-    ringo-web -R-d

@@ -1,0 +1,64 @@
+.frontpageTeaser {
+    margin: 3rem 0 3.125rem 0;
+}
+
+.technologyList {
+    list-style: none;
+    margin: 2rem 0 0 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.technologyList li {
+    width: calc(20% - 12px);
+    margin-right: 12px;
+    display: block;
+    float: left;
+    padding: 12px 8px;
+    border-radius: 4px;
+    font-family: "Bitter", serif;
+    font-weight: 700;
+    font-size: 19px;
+    text-align: center;
+    background-color: #30364D;
+    color: #fcfcfc;
+}
+
+.technologyList li.selected,
+.technologyList li:hover,
+.technologyList li:focus {
+    background-color: #7280A1;
+    color: #fff;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
+}
+
+.technologyList li:last-child {
+    border-right: none;
+}
+
+.technologyDetails {
+    list-style: none;
+    margin: 0.5rem 0 3.063rem 0;
+    padding: 0;
+}
+
+.technologyDetails li {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-family: "Bitter", serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 820px) {
+    #nutshell {
+        display: none;
+    }
+    .frontpageTeaser {
+        margin-top: 0;
+    }
+    #frontpage-mascot {
+        width: 20% !important;
+        margin-right: 14px !important;
+    }
+}
