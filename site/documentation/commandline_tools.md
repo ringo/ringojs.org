@@ -22,7 +22,6 @@ Ringo loads the script file and provides the argument via the system module's `a
   * [ringo/shell](/api/master/ringo/shell/) &ndash; preloaded module in every Ringo REPL
   * [ringo/args](/api/master/ringo/args/) &ndash; parser for command line options
   * [ringo/term](/api/master/ringo/term/) &ndash; ANSI terminal color and style
-  * [ringo/scheduler](/api/master/ringo/scheduler/) &ndash; scheduling invocation of functions (threads)
   * [ringo/subprocess](/api/master/ringo/subprocess/) &ndash; spawning separate processes
 
 ## Detecting invocation as main script
@@ -59,11 +58,11 @@ Ringo comes with a number of command line tools. You can invoke all tools with t
 
 `ringo` starts the Ringo runtime or shell. If called with one or more command line arguments it will try to run the first argument as script. If called without arguments, it starts an interactive shell (aka REPL).
 
-The ringo command accepts a number of options. To learn more about them run ringo with the `-h` or `--help` switch. 
+The ringo command accepts a number of options. To learn more about them run ringo with the `-h` or `--help` switch.
 
 ### ringo-web
 
-`ringo-web` starts the Ringo web server. This command runs `ringo` with `ringo/httpserver` as main module. 
+`ringo-web` starts the Ringo web server. This command runs `ringo` with `ringo/httpserver` as main module.
 
 If an argument passed to `ringo-web` is interpreted as the path of the application to run. If the argument is a directory, it is assumed to contain a module called `config` exporting a [JSGI] app as `app`. If run without arguments, the application is assumed to be in the current working directory.
 
