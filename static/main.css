@@ -62,49 +62,10 @@ header {
   display: block;
   padding: 22px 0 14px 0;
   height: 114px;
-  background-color: #c1ccd1;
-  background-image: url('/static/photos/bkg_server_alps_blur.jpg');
-  background-size: 100% auto;
-  background-position: 0 -95px;
+  background: #546170;
   overflow: hidden;
   position: relative;
   z-index: 0;
-}
-
-@media screen and (min-width: 1100px) {
-  header {
-    background-position: 0 -120px;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  header {
-    background-position: 0 -130px;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  header {
-    background-position: 0 -140px;
-  }
-}
-
-@media screen and (min-width: 1700px) {
-  header {
-    background-position: 0 -145px;
-  }
-}
-
-header:before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: rgba(10,10,10,0.3);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 50;
 }
 
 header a {
@@ -112,7 +73,6 @@ header a {
   color: #fff;
   text-decoration: none;
   z-index: 100;
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
 }
 
 header a:visited,
@@ -346,7 +306,7 @@ footer p {
   }
 
   header {
-    background: #30364D;
+    background: #546170;
     padding: 10px 0 0 0;
     height: inherit;
   }
@@ -369,7 +329,7 @@ footer p {
 
   header ul {
     padding: 6px 0 2px 15px;
-    background: #7280A1;
+    background: #5A697A;
     display: block;
     margin: 0;
   }

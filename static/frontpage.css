@@ -17,23 +17,20 @@
     padding: 12px 8px;
     border-radius: 4px;
     font-family: "Bitter", serif;
-    font-weight: 700;
     font-size: 19px;
     text-align: center;
-    background-color: #30364D;
+    background: #546170;
     color: #fcfcfc;
+    font-weight: normal;
 }
 
 .technologyList li.selected,
 .technologyList li:hover,
 .technologyList li:focus {
-    background-color: #7280A1;
+    font-weight: bold;
     color: #fff;
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-}
-
-.technologyList li:last-child {
-    border-right: none;
+    padding-bottom: 18px;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
 }
 
 .technologyDetails {
