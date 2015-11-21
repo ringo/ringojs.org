@@ -36,17 +36,17 @@ html {
 }
 
 a {
-  color: #115CAD;
+  color: #b7505d;
   text-decoration: none;
 }
 
 a:visited {
-  color: #115CAD;
+  color: #b7505d;
 }
 
 a:focus,
 a:hover {
-  color: #115CAD;
+  color: #2075bc;
   text-decoration: underline;
 }
 
@@ -200,7 +200,7 @@ h4 {
 
 .content p code,
 .content ul code {
-  color: #733F12;
+  color: #3C3C3C;
   font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", Courier, monospace;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -271,8 +271,8 @@ footer .credits {
   padding-top: 0.5rem;
 }
 
-footer .credits a {
-  color: #3C3C3C;
+footer a {
+  color: #a37d7a !important;
 }
 
 footer h4 {
