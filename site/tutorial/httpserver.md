@@ -114,7 +114,11 @@ If you are wondering what other properties "module" and "require" have, remember
 
 </div>
 
-Take away
--------------
+## Take away
 
-So much about JSGI and Ringo's Httpserver. Those two are always at the core of your web application even if packages like Stick put sugar on top of it.
+So much about JSGI and Ringo’s Httpserver. Those two are always at the core of your web application even if packages like Stick put sugar on top of it.
+
+## The Stick Web Framework
+
+Working with low-level APIs could be frustration over time. More complex applications require sophisticated frameworks and libraries. For this we will look into stick, a web framework on top of JSGI and Ringo:<br>
+[4. A Stick web application](/tutorial/stickapp/)

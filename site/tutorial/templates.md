@@ -77,3 +77,6 @@ Now that we have a template to use, we modify the view to actually render it wit
     });
 
 Did it work? If not: are the templates in the right directory? Did you instantiate an environment? Is the example data from the last section still in the DB? If everything is correct, you should get a HTML response from <http://localhost:8080/Home>.
+
+## Next Step
+[7. Processing Data](/tutorial/processingdata/)

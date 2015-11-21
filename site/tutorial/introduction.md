@@ -72,7 +72,7 @@ A classic hello world:
 
 <div class="knowmore">
 
-See the API [documentation on globals](http://www.ringojs.org/api/master/globals/) for a complete list of global variables and functions provided by RingoJs.
+See the API [documentation on globals](http://www.ringojs.org/api/master/globals/) for a complete list of global variables and functions provided by Ringo.
 
 </div>
 
@@ -101,9 +101,10 @@ If I mention or use a module withouth explaining it much and you feel lost, it i
 
 </div>
 
-Modules
-----------
+## Modules
 
-If you do not know CommonJS modules, then you should read the [Modules in Ringo](http://www.ringojs.org/documentation/modules) introduction.
+If you do not know CommonJS modules or modules from Node, then you should read the [Modules in Ringo](http://www.ringojs.org/documentation/modules) introduction.
 
-You are now prepared for the rest of the tutorial!
+## Next Step …
+You are now prepared for the next step of the tutorial:<br>
+[2. Installing Packages](/tutorial/dependencies/)

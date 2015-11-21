@@ -44,4 +44,5 @@ The packages are easy to install with the `ringo-admin` command. `ringo-admin in
     ringo-admin install grob/ringo-sqlstore
     ringo-admin install oberhamsi/reinhardt
 
-Let's get on with the code...
+## Let’s get on with the code …
+[3. A Ringo-based web application](/tutorial/httpserver/)

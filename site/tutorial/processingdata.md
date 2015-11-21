@@ -224,3 +224,6 @@ We are still missing the "edit" link on the wiki page. In our page view function
     <a href="{{editUrl}}">edit</a>
 
 Voila! We got ourselves a minimal but functional wiki.
+
+## Next Step
+[8. Middleware & Sessions](/tutorial/sessions/)

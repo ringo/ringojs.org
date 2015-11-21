@@ -98,3 +98,7 @@ One thing to notice here is the order of the routes. Try accessing <http://local
 The last thing you need to know about named placeholders is that they can be made optional by appending a `?` to the name of a placeholder. This allows us to fix a shortcoming in our routes, namely, that the root URL <http://localhost:8080/> is not handled. Making '/:slug?' optional in the last route fixes this. The root Url should now return "I am undefined". Good enough for now.
 
 Later, we will redirect this root Url to the homepage of our wiki.
+
+## Storing Data
+A typical application stores data into a database system. In this tutorial we will focus on relational databases and their data models:<br>
+[5. Database Mappings](/tutorial/sqlstore/)

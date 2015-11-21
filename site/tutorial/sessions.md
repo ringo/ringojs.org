@@ -225,3 +225,6 @@ To make them visible, we need to change the "edit.html". We output the list of r
     </ul>
 
 We store revisions, now even with User information, but we do not make much use of it. In the next section, we optimize our revision storing by only storing differences, not the full text, and we allow reverting to older revisions.
+
+## Next Step
+[9. Java Integration](/tutorial/javaintegration/)
