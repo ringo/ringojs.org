@@ -1,20 +1,22 @@
 .mustknow, .knowmore {
-   padding: 10px 10px 10px 115px;
-   border: 1px solid #C1CCD1;
-   border-radius: 3px 3px 3px 3px;
-   box-shadow: 0 0 1px 1px #D2D2D2 outset;
+   margin: 25px 0;
+   padding: 0 20px;
+   border: 2px solid #C1CCD1;
+   border-radius: 5px;
+   box-shadow: 0 0 1px 1px #D2D2D2;
+   background: #fff;
 }
 
 .knowmore {
-   min-height: 110px;
-   padding-left: 110px;
-   background-image: url('./black-rhino.svg');
-   background-position: 10px center;
+   min-height: 145px;
+   background-image: url('./ringo-mascot.svg');
+   background-position: 15px 25px;
    background-size: 90px;
    background-repeat: no-repeat;
+   padding-left: 125px;
 }
 
 .mustknow {
-   border-color: #d96262;
-   padding-left:10px;
+   border-color: #f2da79;
+   background: #fff9f0;
 }
