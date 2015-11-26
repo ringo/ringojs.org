@@ -9,7 +9,7 @@ can be configured from the outside using the `configure()` function.
 ### JSGI
 
 The [JSGI (JavaScript Gateway Interface)](http://wiki.commonjs.org/wiki/JSGI) specification defines an interface between
-a HTTP web server and JavaScript-based applications.
+a HTTP web server and JavaScript-based applications. The application can consume a plain JavaScript object having properties filled with information about the HTTP request and has to return as response a standardized JavaScript object. A JSGI compatible web server converts this response object into a HTTP response and sends it back to the client.
 
 ### JSGI application
 
