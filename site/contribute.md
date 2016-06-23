@@ -8,10 +8,6 @@ You can upload your packages an [packages.ringojs.org](http://packages.ringojs.o
 
 [RingoJS is on Twitter](http://twitter.com/ringojs). Follow us to keep up with latest development!
 
-### IRC Channel
-
-Some contributors can usually be found on the [#ringojs IRC channel](irc://irc.freenode.net/ringojs) at irc.freenode.net. An [IRC log](/bot/) is also available.
-
 ### Mailing List
 
 We have a [mailing list](http://groups.google.com/group/ringojs) hosted on Google Groups. You're welcome to ask questions there, or just say hello and tell us how you're using Ringo.

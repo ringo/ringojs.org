@@ -23,7 +23,7 @@
 ## Community
 
   * [Mailing list](http://groups.google.com/group/ringojs)
-  * [#ringojs on irc.freenode.net](http://ringojs.com/bot/join)
+  * [@ringojs on Twitter](https://twitter.com/ringojs)
 
 </div>
 

@@ -71,7 +71,4 @@ See the help page on [packages](/documentation/packages) for more details.
 
 ## Community help
 
-If you don't find what you are looking for please tell us on the [mailing list][group] or in the [IRC channel][irc]!
-
-[group]: http://groups.google.com/group/ringojs
-[irc]: irc://freenode.org/ringojs
+If you don't find what you are looking for please tell us on the [mailing list][group] or [@ringojs on Twitter](https://twitter.com/ringojs).
