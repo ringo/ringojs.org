@@ -10,8 +10,8 @@
 
 ### Source Releases
 
- * [RingoJS v0.12.0 tar.gz source archive](https://github.com/ringo/ringojs/archive/v0.11.0.tar.gz)
- * [RingoJS v0.12.0 zip source archive](https://github.com/ringo/ringojs/archive/v0.11.0.zip)
+ * [RingoJS v0.12.0 tar.gz source archive](https://github.com/ringo/ringojs/archive/v0.12.0.tar.gz)
+ * [RingoJS v0.12.0 zip source archive](https://github.com/ringo/ringojs/archive/v0.12.0.zip)
 
 ### Current git Snapshots
 
