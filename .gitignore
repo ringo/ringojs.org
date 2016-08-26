@@ -7,3 +7,4 @@ packages/ringo-commonmark
 packages/commonmark
 main-local.js
 .idea/
+/static/logos/promotional/.DS_Store
