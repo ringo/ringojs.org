@@ -33,7 +33,7 @@ built-in modules and follows the CommonJS standard.
     <li class="tab4">Ringo allows you to apply the Java security model on JavaScript applications.
     Developers can provide own security policies and control which resources can be accessed by untrusted code.
     JavaScript applications can be locked into a sandbox to isolate them from the OS.</li>
-    <li class="tab5">Ringo and all of its modules are released under the Apache 2 License and the
+    <li class="tab5">Ringo and all of its modules are released as open source software and the
     code is hosted on Github. It’s possible to fork, modify and distribute it in source or binary form.
     If you have a very specific question, you can look up the according code and see the detailed implementation.</li>
 </ul>
