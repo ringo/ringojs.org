@@ -1,7 +1,6 @@
 # Get Started
 
-This is a short guide on how to install Ringo on your system. The only essential requirement is the Java Platform, Standard Edition.
-The oldest supported release is Java SE 5. We recommend Java SE 7 or higher to run Ringo. You can download Java from:
+This is a short guide on how to install Ringo on your system. The only essential requirement is the Java Platform, Standard Edition. We recommend Java SE 8 or higher to run Ringo. You can download Java from:
 
  * [OpenJDK](http://openjdk.java.net/install/) (Linux)
  * [Oracle Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Linux, Windows, Mac OS X, Solaris)
