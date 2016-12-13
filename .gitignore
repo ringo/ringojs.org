@@ -8,3 +8,4 @@ packages/commonmark
 main-local.js
 .idea/
 /static/logos/promotional/.DS_Store
+/config/config.json
