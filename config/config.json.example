@@ -8,7 +8,19 @@
   },
   "content": "../site",
   "templates": "../templates",
-  "static": "../static",
+  "static": [
+    {
+      "path": "../static",
+      "index": "index.html",
+      "baseURI": "/static",
+      "options": {
+        "servePrecompressed": true,
+        "maxAge": 0,
+        "lastModified": true,
+        "dotfiles": "ignore"
+      }
+    }
+  ],
   "welcomePage": "index.md",
   "defaultContext": {
     "baseURI": "http://ringojs.org"
