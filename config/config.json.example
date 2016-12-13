@@ -19,6 +19,17 @@
         "lastModified": true,
         "dotfiles": "ignore"
       }
+    },
+    {
+      "path": "../releases",
+      "index": "index.html",
+      "baseURI": "/releases",
+      "options": {
+        "servePrecompressed": false,
+        "maxAge": 0,
+        "lastModified": true,
+        "dotfiles": "ignore"
+      }
     }
   ],
   "welcomePage": "index.md",

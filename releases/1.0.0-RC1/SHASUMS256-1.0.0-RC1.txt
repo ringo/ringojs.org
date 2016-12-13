@@ -1,0 +1,4 @@
+033b71277ebd6dc315d74f8a8a30dc367a16f97374f338d1e04fa008a501771a  ringojs-1.0.0-RC1.tar.gz
+94893d371ca8bfa2b1eb1023a27eeaa83d49fff3e37ae8425a60c3fa35abbe38  ringojs-1.0.0-RC1.zip
+154cab89b8ee8fa49962b2c2eeb3cf89d5a160a2b0b858d2fbfe03a526e5afa4  ringojs-daemon_1.0.0-RC1_all.deb
+bc814eb79d70714372fc3295d88fc9ac56706a8c8d2ac6b41e1f0a1998fee358  ringojs_1.0.0-RC1_all.deb
