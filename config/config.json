@@ -1,4 +1,11 @@
 {
+  "server": {
+    "vhosts": ["127.0.0.1", "localhost"],
+    "http": {
+      "host": "127.0.0.1",
+      "port": 8080
+    }
+  },
   "content": "../site",
   "templates": "../templates",
   "static": "../static",
