@@ -1,6 +1,6 @@
 # Logging
 
-The [ringo/logging](http://ringojs.org/api/master/ringo/logging) module provides a rich and fine-grained logging API. It uses [Simple Logging Facade for Java][slf4j] (SLF4J) as abstraction layer for various Java logging frameworks, e.g. java.util.logging, log4j and logback, allowing the end user to plug in the desired logging framework at deployment time.
+The [ringo/logging](https://ringojs.org/api/master/ringo/logging) module provides a rich and fine-grained logging API. It uses [Simple Logging Facade for Java][slf4j] (SLF4J) as abstraction layer for various Java logging frameworks, e.g. java.util.logging, log4j and logback, allowing the end user to plug in the desired logging framework at deployment time.
 
 By default, RingoJS comes with and uses [Apache log4j 1.x][log4j]. The default log4j configuration for RingoJS is in `modules/config/log4j.properties`. Web apps can override this by providing their own configuration in `config/log4j.properties`. Using this file, setting log levels for individual loggers/modules is straightforward. Another way is to call `setConfig()` and provide custom logging properties.
 

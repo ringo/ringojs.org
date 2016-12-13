@@ -10,7 +10,7 @@ The `package.json` file must be valid JSON, not just a JavaScript object literal
        "name": "FooBar",
        "version": "0.1",
        "description": "Description of foo is bar",
-       "homepage": "http://example.com",
+       "homepage": "https://example.com",
        "keywords": [
            "example",
            "foobar"
@@ -19,7 +19,7 @@ The `package.json` file must be valid JSON, not just a JavaScript object literal
        "contributors": [
            "Contributor X"
        ],
-       "bugs": "http://github.com/foo/bar/issues",
+       "bugs": "https://github.com/foo/bar/issues",
        "licenses": [
            {
                "type": "MIT",

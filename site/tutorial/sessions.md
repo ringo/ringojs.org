@@ -26,7 +26,7 @@ This should output the following:
      volatile: null
     }
 
-We are most interested in `data` where we can story arbitrary data which persists between requests. Most of the other properties are self-explanatory, and you can find more information in the [Stick API documentation](http://ringojs.org/api/stick/stick/middleware/session/).
+We are most interested in `data` where we can story arbitrary data which persists between requests. Most of the other properties are self-explanatory, and you can find more information in the [Stick API documentation](https://ringojs.org/api/stick/stick/middleware/session/).
 
 `volatile` is similar to `data` but it only survives one request, for example one redirect request, which is exactly what we do after a save! We can thus use `volatile` to store a success- or error- message in the session, which we then display once the user redirected back to the edit page.
 

@@ -6,18 +6,18 @@ We want to make developing with Ringo fun and productive, and that shows on many
 
 Maybe the single most important productivity feature in Ringo is its auto-reloading module loader. It will pick up any changes as you code on a web applications without restarting. And while it is possible to disable reloading for deployment, it is so fast that you can usually leave it on if you want.
 
-Another area we've put a lot of effort in is error reporting. In Ringo you will virtually always get file name and line number information as well as a full JavaScript stack trace with your errors. What you will usually not see (unless you enable it using the -V or --verbose option) are endless Java stack traces. In addition, you'll get detailed descriptions of syntax errors and warnings for missing var declarations, which are hard to debug and can alter the behaviour of JavaScript code in bad ways. 
+Another area we've put a lot of effort in is error reporting. In Ringo you will virtually always get file name and line number information as well as a full JavaScript stack trace with your errors. What you will usually not see (unless you enable it using the -V or --verbose option) are endless Java stack traces. In addition, you'll get detailed descriptions of syntax errors and warnings for missing var declarations, which are hard to debug and can alter the behaviour of JavaScript code in bad ways.
 
-Another major productivity boost is Ringo's Java interoperability. Using the [LiveConnect feature of the Rhino JavaScript engine](http://www.mozilla.org/rhino/scriptjava.html) gives you instant access to the gazillion of Java libraries out there. Just put it on your classpath and start using it.
+Another major productivity boost is Ringo's Java interoperability. Using the [LiveConnect feature of the Rhino JavaScript engine](https://developer.mozilla.org/de/docs/Rhino) gives you instant access to the gazillion of Java libraries out there. Just put it on your classpath and start using it.
 
 ### Stability
 
-While the Ringo [API](http://ringojs.org/api) is still changing, the runtime itself is very solid. Ringo is still a young project, but it is the result of over 10 years of experience of running [server-side JavaScript on top of the Java virtual machine](http://helma.org/). All the underlying components such as Rhino, Jetty, and the JVM itself are mature and solid technologies that have proven themselves in server deployments for years. Unless you do something wrong, Ringo should not crash on you.
+While the Ringo [API](https://ringojs.org/api) is still changing, the runtime itself is very solid. Ringo is still a young project, but it is the result of over 10 years of experience of running [server-side JavaScript on top of the Java virtual machine](http://helma.org/). All the underlying components such as Rhino, Jetty, and the JVM itself are mature and solid technologies that have proven themselves in server deployments for years. Unless you do something wrong, Ringo should not crash on you.
 
 <a name="pragmatism"></a>
 ### Pragmatism
 
-Ringo takes a pragmatical and non-dogmatic stance on things like I/O paradigms. Blocking and asynchronous I/O both have their strengths and weaknesses in different areas. 
+Ringo takes a pragmatical and non-dogmatic stance on things like I/O paradigms. Blocking and asynchronous I/O both have their strengths and weaknesses in different areas.
 
 In a local environment where file system and database latency are low and under your own control, the simplicity and performance of one-thread-per-request paradigm using blocking IO really shines.
 

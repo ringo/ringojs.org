@@ -37,7 +37,7 @@ The first example shows how your application can use standard Java classes and m
     // to access Java packages in your JS code
     var user = new Packages.com.yourbusiness.User();
     user.setUsername("Bill");
-    
+
     // Rhino provides a shortcut for java.* Packages
     var log10 = java.lang.StrictMath.log10(1517.19234);
 
@@ -45,18 +45,18 @@ To load a whole package you can use `importPackage(package)`:
 
     // Add the Jena library to the classpath
     addToClasspath("../lib/jena.jar");
-    
+
     // Import a whole package from the loaded library
     importPackage(com.hp.hpl.jena.query);
-    
+
     // Use the com.hp.hpl.jena.query.Query class
     var query = new Query();
     query.executeStatement("...");
 
-  [JVM]: http://en.wikipedia.org/wiki/Java_Virtual_Machine
-  [ENV]: http://en.wikipedia.org/wiki/Environment_variable
+  [JVM]: https://en.wikipedia.org/wiki/Java_Virtual_Machine
+  [ENV]: https://en.wikipedia.org/wiki/Environment_variable
 
-For more information about Rhino's Java integration look at [this article](https://developer.mozilla.org/en-US/docs/Scripting_Java).
+For more information about Rhino's Java integration look at [this article](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Scripting_Java).
 
 ## Internals of Java Class Loading
 

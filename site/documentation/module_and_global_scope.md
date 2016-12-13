@@ -34,5 +34,5 @@ created in the module's own scope. The global object with all the standard
 objects such as `Object`, `Array`, or `String` is still there, though, providing
 an environment that is totally compatible with the one found in browsers.
 
-[lexical scope]: http://en.wikipedia.org/wiki/Scope_(programming)#Lexical_versus_dynamic_scoping
-[closures]: http://en.wikipedia.org/wiki/Closure_(computer_science)
+[lexical scope]: https://en.wikipedia.org/wiki/Scope_(programming)#Lexical_versus_dynamic_scoping
+[closures]: https://en.wikipedia.org/wiki/Closure_(computer_science)

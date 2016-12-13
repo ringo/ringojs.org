@@ -1,13 +1,13 @@
 Whetting Your Appetite
 ===============================
 
-Ringo is a JavaScript environment based on the [Rhino JavaScript engine](http://www.mozilla.org/rhino/).
+Ringo is a JavaScript environment based on the [Rhino JavaScript engine](https://developer.mozilla.org/de/docs/Rhino).
 
 Compared to a browser environment, the JavaScript we have in Ringo is more modern and it comes with CommonJS compliant module and package support.
 
 When writing Ringo code you should make use of Ringo's standard library; all modules in the standard library are written in Javascript. They are either pure JavaScript or thin wrappers around existing Java libraries. This means you can always dig into the code and look at how we do things without switching languages.
 
-The [API documentation](http://www.ringojs.org/api/master/) has a good overview of all modules available in the standard library with a short explanation of what they do.
+The [API documentation](https://www.ringojs.org/api/master/) has a good overview of all modules available in the standard library with a short explanation of what they do.
 
 Modern JavaScript
 --------------------
@@ -72,7 +72,7 @@ A classic hello world:
 
 <div class="knowmore">
 
-See the API [documentation on globals](http://www.ringojs.org/api/master/globals/) for a complete list of global variables and functions provided by Ringo.
+See the API [documentation on globals](https://www.ringojs.org/api/master/globals/) for a complete list of global variables and functions provided by Ringo.
 
 </div>
 
@@ -97,13 +97,13 @@ If you are unsure what methods a module provides, type until the "." and press T
 
 <div class="knowmore">
 
-If I mention or use a module withouth explaining it much and you feel lost, it is a good idea to look it up in the [API documention](http://ringojs.org/api/master/).
+If I mention or use a module withouth explaining it much and you feel lost, it is a good idea to look it up in the [API documention](https://ringojs.org/api/master/).
 
 </div>
 
 ## Modules
 
-If you do not know CommonJS modules or modules from Node, then you should read the [Modules in Ringo](http://www.ringojs.org/documentation/modules) introduction.
+If you do not know CommonJS modules or modules from Node, then you should read the [Modules in Ringo](https://www.ringojs.org/documentation/modules) introduction.
 
 ## Next Step …
 You are now prepared for the next step of the tutorial:<br>

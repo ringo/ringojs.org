@@ -10,7 +10,7 @@ To deploy Ringo on Debian or Ubuntu, install both the `ringojs` and `ringojs-dae
 
 Deploying on your own system will allow you to use the full Ringo API, including asynchronous and thread-based features.
 
-[app engine sdk]: http://code.google.com/intl/de/appengine/downloads.html
+[app engine sdk]: https://cloud.google.com/appengine/downloads
 [ringojs-daemon]: /downloads
 
 ## Google App Engine
@@ -26,11 +26,7 @@ To deploy a Ringo application in a servlet container, use `ringo-admin` to creat
 
 The resulting directory can be deployed as a servlet on most common Java web containers.
 
-## Red Hat OpenShift
+## Other Options
 
 Download the OpenShift example from GitHub and deploy your Ringo application to the cloud:
-[OpenShift Template](https://github.com/oberhamsi/ringojs-openshift-example)
-
-## Heroku 
-
-To deploy Ringo on [Heroku](http://heroku.com), follow the directions included with the [Heroku RingoJS Buildpack](https://github.com/jockm/heroku-buildpack-ringojs-jdk7).
+[OpenShift Template](https://github.com/oberhamsi/ringojs-openshift-example). To deploy Ringo on [Heroku](http://heroku.com), follow the directions included with the [Heroku RingoJS Buildpack](https://github.com/jockm/heroku-buildpack-ringojs-jdk7).

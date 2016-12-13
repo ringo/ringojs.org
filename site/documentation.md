@@ -22,7 +22,7 @@
 
 ## Community
 
-  * [Mailing list](http://groups.google.com/group/ringojs)
+  * [Mailing list](https://groups.google.com/group/ringojs)
   * [@ringojs on Twitter](https://twitter.com/ringojs)
 
 </div>
@@ -63,7 +63,7 @@
 
   * [Install Ringo from git](ringo_from_git)
   * [Coding standards](coding_standards)
-  * [Github repository](http://github.com/ringo/ringojs)
-  * [Issue tracker](http://github.com/ringo/ringojs/issues)
+  * [Github repository](https://github.com/ringo/ringojs)
+  * [Issue tracker](https://github.com/ringo/ringojs/issues)
 
 </div>

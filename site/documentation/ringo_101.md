@@ -1,7 +1,7 @@
 # Ringo 101
 
-First things first! [Download Ringo](http://ringojs.org/get_started/),
-install it on your system and play around with the [Ringo REPL shell](http://ringojs.org/documentation/commandline_tools/).
+First things first! [Download Ringo](https://ringojs.org/get_started/),
+install it on your system and play around with the [Ringo REPL shell](https://ringojs.org/documentation/commandline_tools/).
 If you already know JavaScript or Node.js, this will feel very similar.
 Though, Ringo runs on top of the Java Virtual Machine (JVM) and therefor integrates well into the Java ecosystem.
 This is similar to other JVM-based languages like Scala or Clojure, but now with JavaScript.
@@ -56,7 +56,7 @@ and prototypes. This is safe because the global object in Ringo plays de facto 
 
 ## Who is behind Ringo?
 
-Ringo is developed by a number of contributors and was started by [Hannes Wallnöfer](http://hns.github.io/) around 2010.
+Ringo is developed by a number of contributors and was started by [Hannes Wallnöfer](https://hns.github.io/) around 2010.
 At the moment it is maintained by the people you can find on [the team page](https://github.com/orgs/ringo/people).
-One of the major users of Ringo is the Austrian public broadcasting corporation [ORF](http://orf.at). 
+One of the major users of Ringo is the Austrian public broadcasting corporation [ORF](http://orf.at).
 

@@ -34,6 +34,6 @@
   ],
   "welcomePage": "index.md",
   "defaultContext": {
-    "baseURI": "http://ringojs.org"
+    "baseURI": "https://ringojs.org"
   }
 }

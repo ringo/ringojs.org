@@ -22,11 +22,11 @@ Stick's original author presumably thought it is funny to describe Stick as a "J
 
 </div>
 
-Another library we want in our tool-belt is [ringo-sqlstore](https://github.com/grob/ringo-sqlstore). A light-weigt ORM for defining our database models, issuing queries and generally [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete)ing data.
+Another library we want in our tool-belt is [ringo-sqlstore](https://github.com/grob/ringo-sqlstore). A light-weigt ORM for defining our database models, issuing queries and generally [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)ing data.
 
     sqlStore.query('from Author where Author.name=:name', {name: 'Simon'});
 
-The final piece in our package-puzzle is a template engine. We use [Reinhardt](http://github.com/oberhams/reinhardt) for this tutorial. It is heavily inspired by Django's template language.
+The final piece in our package-puzzle is a template engine. We use [Reinhardt](https://github.com/oberhams/reinhardt) for this tutorial. It is heavily inspired by Django's template language.
 
     {% for story in stories %}
     <h2>

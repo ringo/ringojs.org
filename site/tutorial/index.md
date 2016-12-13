@@ -32,5 +32,5 @@ I assume you already have Ringo installed. See [Get Started](/get_started) if yo
 
 ## Help
 
-If you run into trouble do not hesitate to ask for help on [Ringo's Mailinglist](http://groups.google.com/group/ringojs) or you can ask us via [@RingoJS on Twitter](https://twitter.com/ringojs).
+If you run into trouble do not hesitate to ask for help on [Ringo's Mailinglist](https://groups.google.com/group/ringojs) or you can ask us via [@RingoJS on Twitter](https://twitter.com/ringojs).
 

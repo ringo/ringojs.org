@@ -23,5 +23,5 @@
 
 ### Current git Snapshots
 
- * [RingoJS master tar.gz git snapshot](http://github.com/ringo/ringojs/tarball/master)
- * [RingoJS master zip git snapshot](http://github.com/ringo/ringojs/zipball/master)
+ * [RingoJS master tar.gz git snapshot](https://github.com/ringo/ringojs/tarball/master)
+ * [RingoJS master zip git snapshot](https://github.com/ringo/ringojs/zipball/master)

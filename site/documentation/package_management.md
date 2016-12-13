@@ -69,4 +69,4 @@ Github user and repository name:
     ringo-admin install [github-user]/[repository]
 
 This will fetch and install the current zipball of the repository's master branch,
-e.g. `http://github.com/[github-user]/[repository]/zipball/master`.
+e.g. `https://github.com/[github-user]/[repository]/zipball/master`.

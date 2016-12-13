@@ -15,7 +15,7 @@ Other highlights of this release:
 
 Pre-built downloads for Linux, Mac and Windows: <http://github.com/ringo/ringojs/downloads>
 
-[Our](http://ringojs.org/wiki/Community/) new site, fully [powered](http://ringojs.org/wiki/Colophon/) by RingoJS, is <http://ringojs.org/>.
+[Our](http://ringojs.org/wiki/Community/) new site, fully [powered](http://ringojs.org/wiki/Colophon/) by RingoJS, is <https://ringojs.org/>.
 
 RingoJS 0.4 also contains some bleeding-edge features. We are fleshing out the details on those, but they are usable:
 

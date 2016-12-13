@@ -57,18 +57,18 @@ The cool thing is that the Servlet instance (the `ExtJsgiServlet` class) is now 
     app.post('/profiles/:profileId', function (req, profileId) {
         // Get access to the servlet using the 'env' garbage dump property.
         var servlet = req.env.servlet;
-        
-        // Use the servlet's getBean(String) function to 
+
+        // Use the servlet's getBean(String) function to
         // retrieve a configured bean from Spring.
         var datasource = servlet.getBean('datasource');
 
-        // Or maybe you are using Spring's reloadable resource bundles for 
+        // Or maybe you are using Spring's reloadable resource bundles for
         // externalizing your website's localized content.
         var context = servlet.getSpringContext();
         var welcomeMessage = context
                 .getMessage('welcome', null, req.env.servletRequest.locale);
     });
- 
+
 You may notice that the `welcomeMessage` example uses another property stored on the context; the servlet request. It's funny how the JSGI specification does not mention Locale. It is so important to globalization. At least Ringo has made it accessible by exposing the original Java servlet request object off the `env` property...
 
-  [1]: http://groups.google.com/group/ringojs/browse_frm/thread/2ded4b08c2fd6571?hl=en
+  [1]: https://groups.google.com/group/ringojs/browse_frm/thread/2ded4b08c2fd6571?hl=en

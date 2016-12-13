@@ -33,7 +33,7 @@ Ringo's Httpserver calls the "app" function for every request it recieves; the "
 
 <div class="knowmore">
 
-For a complete list of configuration options for the HttpServer see the [Httpserver API documentation](http://ringojs.org/api/master/ringo/httpserver/#Server).
+For a complete list of configuration options for the HttpServer see the [Httpserver API documentation](https://ringojs.org/api/master/ringo/httpserver/#Server).
 
 </div>
 
@@ -109,8 +109,8 @@ This can be accomplished with the following if-block, which ensures that the cod
 
 If you are wondering what other properties "module" and "require" have, remember my tip from earlier to always check the API docs if in doubt:
 
-   * <http://ringojs.org/api/master/globals/#module>
-   * <http://ringojs.org/api/master/globals/#require.main>
+   * <https://ringojs.org/api/master/globals/#module>
+   * <https://ringojs.org/api/master/globals/#require.main>
 
 </div>
 
