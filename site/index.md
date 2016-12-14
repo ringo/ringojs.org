@@ -59,16 +59,19 @@ and simplicity to be pleasant to work with and easy to deploy. The primary goal 
 a stable, high-performance runtime for server-side use. The following code is all you need to
 create a simple web app:
 
-    exports.app = function(req) {
-        return {
-            status: 200,
-            headers: {"Content-Type": "text/plain"},
-            body: ["Hello World!"]
-        };
-    };
+```
+exports.app = function(req) {
+  return {
+    status: 200,
+    headers: {"Content-Type": "text/plain"},
+    body: ["Hello World!"]
+  };
+};
 
-    if (require.main == module)
-        require("ringo/httpserver").main(module.id);
+if (require.main == module) {
+  require("ringo/httpserver").main(module.id);
+}
+```
 
 Simply save the code above as "server.js" and run it by executing `ringo server.js`.
 Like most Ringo apps, this app will automatically reload, picking up any changes you make
