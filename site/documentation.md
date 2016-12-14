@@ -14,7 +14,7 @@
 
   * Ringo API Reference
     * [master](/api/master/index.html) &ndash; <em>under development</em>
-    * [0.12](/api/0.12/index.html) &ndash; [release notes](release_0_12)  &ndash; <em>latest stable release</em>
+    * [1.0.0](/api/1.0.0/index.html) &ndash; [release notes](release_1_0_0)  &ndash; <em>latest stable release</em>
   * Official Packages
     * [stick](/api/stick/index.html)
   * [JavaScript (mozilla.org)](https://developer.mozilla.org/en/JavaScript/Reference)

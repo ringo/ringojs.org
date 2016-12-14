@@ -27,7 +27,7 @@ The `package.json` file must be valid JSON, not just a JavaScript object literal
            }
        ],
        "engines": {
-           "ringojs": ">= 0.12"
+           "ringojs": ">= 1.0.0"
        },
        "dependencies": {
            "ringo-sqlstore": ">= 0.5",
