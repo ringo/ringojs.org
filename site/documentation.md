@@ -25,6 +25,10 @@
   * [Mailing list](https://groups.google.com/group/ringojs)
   * [@ringojs on Twitter](https://twitter.com/ringojs)
 
+## About the Project
+
+  * [Logos](../logos)
+
 </div>
 
 <div id="documentation-left">
@@ -43,7 +47,7 @@
 
  * [RingoJS - An Introduction](../talks-presentations/ringo-an-introduction)
 
-## Detailed topics
+## Detailed Topics
 
   * [Java integration](java_integration)
   * [package.json descriptors](package_descriptors)
@@ -59,7 +63,7 @@
   * [Security features](security_features)
   * [Ringo's CommonJS implementation](commonjs_implementation)
 
-## For Ringo Developers
+## Developing RingoJS
 
   * [Install Ringo from git](ringo_from_git)
   * [Coding standards](coding_standards)
