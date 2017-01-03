@@ -51,6 +51,7 @@
 
   * [Java integration](java_integration)
   * [package.json descriptors](package_descriptors)
+  * [JSGI Requests and Responses](jsgi_requests_responses)
   * [JSGI and servlet lifecycle for HTTP](jsgi_servlet_lifecycle)
   * [stick's JSGI implementation](stick_jsgi_implementation)
   * [Workers and multithreading](workers)
