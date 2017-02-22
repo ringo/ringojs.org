@@ -2,17 +2,17 @@
 
 ## Latest stable release
 
- * [RingoJS 1.1.0 tar.gz archive](/releases/1.1.0/ringojs-1.1.0.tar.gz)
- * [RingoJS 1.1.0 zip archive](/releases/1.1.0/ringojs-1.1.0.zip)
- * [RingoJS 1.1.0 Debian package](/releases/1.1.0/ringojs_1.1.0_all.deb)
- * [RingoJS 1.1.0 Debian daemon package](/releases/1.1.0/ringojs-daemon_1.1.0_all.deb)
- * [RingoJS 1.1.0 checksums](/releases/1.1.0/SHASUMS256-1.1.0.txt)
- * [RingoJS 1.1.0 signed checksums](/releases/1.1.0/SHASUMS256-1.1.0.txt.asc)
+ * [RingoJS 1.1.1 tar.gz archive](/releases/1.1.1/ringojs-1.1.1.tar.gz)
+ * [RingoJS 1.1.1 zip archive](/releases/1.1.1/ringojs-1.1.1.zip)
+ * [RingoJS 1.1.1 Debian package](/releases/1.1.1/ringojs_1.1.1_all.deb)
+ * [RingoJS 1.1.1 Debian daemon package](/releases/1.1.1/ringojs-daemon_1.1.1_all.deb)
+ * [RingoJS 1.1.1 checksums](/releases/1.1.1/SHASUMS256-1.1.1.txt)
+ * [RingoJS 1.1.1 signed checksums](/releases/1.1.1/SHASUMS256-1.1.1.txt.asc)
 
 ### Source releases
 
- * [RingoJS 1.1.0 tar.gz source archive](https://github.com/ringo/ringojs/archive/v1.1.0.tar.gz)
- * [RingoJS 1.1.0 zip source archive](https://github.com/ringo/ringojs/archive/v1.1.0.zip)
+ * [RingoJS 1.1.1 tar.gz source archive](https://github.com/ringo/ringojs/archive/v1.1.1.tar.gz)
+ * [RingoJS 1.1.1 zip source archive](https://github.com/ringo/ringojs/archive/v1.1.1.zip)
 
 ## Current git snapshots
 
