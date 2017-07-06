@@ -17,3 +17,23 @@ All logger methods take a variable number of arguments. If the first argument pa
     var log = require("ringo/logging").getLogger(module.id);
     log.info("Hello {}", "world", 1, 2, 3);
     // 0    [main] INFO  <shell>  - Hello world 1 2 3
+
+## Example `log4j.properties`
+
+The following properties show how you can use the `log4j.category.` prefix. It overrides the default log level from `INFO` to `DEBUG` for the modules `main`, `myapp/utils/database`, `myapp/utils/search`, and the built-in http server and client.
+
+```
+log4j.reset = true
+log4j.rootLogger = INFO, console
+
+log4j.appender.console = org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout = org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern = %-4r [%t] %-5p %c %x - %m%n
+
+# Sets log4j categories for module names you're working on to DEBUG level:
+log4j.category.main = DEBUG
+log4j.category.myapp.utils.database = DEBUG
+log4j.category.myapp.utils.search = DEBUG
+log4j.category.ringo.httpserver = DEBUG
+log4j.category.ringo.httpclient = DEBUG
+```
