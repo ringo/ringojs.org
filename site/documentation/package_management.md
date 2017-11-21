@@ -6,6 +6,26 @@ update them. Ringo follows the [CommmonJS packages specification](http://wiki.co
 There are two different approaches to install new packages: rp and `ringo-admin`. Since rp has more capabilities and
 is connected to the [Ringo Package Registry](http://packages.ringojs.org), it's the recommended tool to use.
 
+## Packages and Module Lookup
+
+By default packages reside in the `packages` folder of an application for application-specific dependencies, or in the `{$ringo-home}/packages` folder for system-wide packages. It’s best practice not to store any application code into any of these two `packages` folders. The default Ringo configuration adds both `{$ringo-home}/packages` (called the system module path) and `{$current-working-directory}/packages` (called the user module path) to its module lookup. You can provide a custom user module search path with the `-m` command line option.
+
+For example, if you start an application’s main script inside its directory `/home/username/my-app/` with `ringo main.js` and the main script calls `require("foo");`, then Ringo will look in the following package folders for the `foo` module:
+
+1. `/home/username/my-app/packages/foo/`
+1. `/path/to/ringojs/packages/foo/`
+
+If you start the script with `ringo -m /my/private/stuff/ main.js`, Ringo’s lookup changes to:
+
+1. `/my/private/stuff/foo/`
+1. `/path/to/ringojs/packages/foo/`
+
+To include also the standard user module path, you have to call `ringo -m ./packages/;/my/private/stuff/ main.js`, Ringo’s lookup changes to:
+
+1. `/home/username/my-app/packages/foo/`
+1. `/my/private/stuff/foo/`
+1. `/path/to/ringojs/packages/foo/`
+
 ## rp - Ringo Package Manager
 
 An easy way to manage packages and their dependencies is the evolving Ringo package manager [rp](https://github.com/grob/rp).
