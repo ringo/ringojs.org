@@ -42,6 +42,7 @@
    * [Modules in Ringo](modules)
    * [Understanding module and global scope](module_and_global_scope)
  * [Package managment](package_management)
+ * [Modern JavaScript Support](modern_javascript)
 
 ### Talks and Presentations
 
