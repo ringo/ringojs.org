@@ -6,7 +6,7 @@ It ships with a new and fully re-written HttpServer module, which is mostly comp
 Developers must be careful if they use modern JavaScript features or are porting code from other JavaScript runtimes, e.g. Node.
 Rhino only implements a subset of the full standard. The most notable additions to previous releases are:
 
-* `let` and `const`, but `const` is not block-, but function-scoped.
+* `let` and `const`, though `const` is not block-, but function-scoped
 * arrow functions, e.g. `(x, y) => { ... }`
 * `for..of` loops for Arrays and iterables
 * octal and binary literals, e.g. `0o10` and `0b10`
