@@ -199,7 +199,7 @@ Once we have the name, it is a simple matter of calling `urlFor(app, bindings)` 
     ....
     app.post('/:slug/edit', function(request, slug) {
        model.Page.updateOrCreate(slug, request.postParams);
-       var url = urlFor(app, {view: 'edit', slug: slug});
+       var url = urlFor(app, {action: 'edit', slug: slug});
        return response.redirect(url);
     });
 
@@ -215,7 +215,7 @@ We are still missing the "edit" link on the wiki page. In our page view function
        var page = model.Page.getBySlug(slug);
        return env.renderResponse('page.html', {
           page: page,
-          editUrl: urlFor(app, {view: 'edit'})
+          editUrl: urlFor(app, {action: 'edit'})
        });
     });
 

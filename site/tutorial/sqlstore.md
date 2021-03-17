@@ -12,11 +12,14 @@ Open a fresh JavaScript file "model.js" where we put our Store instance and any 
 
 All we need for a H2 store is a file location where H2 can put its data. Assuming that file is "/tmp/tutorial-wiki/data", our instantiation code looks like this:
 
-    var {Store, ConnectionPool} = require("ringo-sqlstore");
-    var store = exports.store = new Store(new ConnectionPool({
-        "url":"jdbc:h2:file:/tmp/tutorial-wiki/data",
-        "driver": "org.h2.Driver"
-    }));
+    var {Store} = require("ringo-sqlstore");
+    var connectionPool = module.singleton("connectionPool", function() {
+        return Store.initConnectionPool({
+            "url": "jdbc:h2:file:/tmp/tutorial-wiki/data",
+            "driver": "org.h2.Driver"
+        });
+    });
+    var store = exports.store = new Store(connectionPool);
 
 <div class="knowmore">
 
@@ -38,6 +41,7 @@ Our wiki surely needs a "Page" entity but we do not attach much information to i
            type: "text"
         },
     }});
+    store.syncTables();
 
 
 Time to start a Ringo shell and put something in our database. Assuming you put all of the above - the store instantiation and the Page entity - into `model.js`, we start an interactive Ringo session and load our "model" module:
@@ -77,7 +81,7 @@ It works, but the output is ugly. At least we can see it is an Array containg on
        return "Page#" + this.slug;
     }
 
-... then reload the module by req-requiring it, and issue the query again:
+... then reload the module by re-requiring it, and issue the query again:
 
     >> var {store} = require('./model')
     >> store.query('from Page where Page.slug="Home"')
@@ -137,7 +141,7 @@ Back into the shell to create a test Revision:
 
     >> var {Revision} = require('./model')
     >> var revision = new Revision({body: "Quamquam sint sub aqua", name: "Home", created: new Date()})
-    >> rev.save()
+    >> revision.save()
 
 To connect the revision to the page, we first retrieve the Page instance and assign it to `revision.page`. We could also have done this when construction the revision above, but we will just save the revision again:
 
@@ -206,13 +210,13 @@ To get easier access to the body of a Page, we define a JavaScript getter which 
     Object.defineProperties(Page.prototype, {
         "body": {
             get: function() {
-                var currentRevison = this.revisions.get(0);
+                var currentRevision = this.revisions.get(0);
                 return currentRevision.body;
             }
         },
         "name": {
             get: function() {
-                var currentRevison = this.revisions.get(0);
+                var currentRevision = this.revisions.get(0);
                 return currentRevision.name;
             }
         }

@@ -26,7 +26,7 @@ This should output the following:
      volatile: null
     }
 
-We are most interested in `data` where we can story arbitrary data which persists between requests. Most of the other properties are self-explanatory, and you can find more information in the [Stick API documentation](https://ringojs.org/api/stick/stick/middleware/session/).
+We are most interested in `data` where we can story arbitrary data which persists between requests. Most of the other properties are self-explanatory, and you can find more information in the [Stick API documentation](https://ringojs.org/api/stick/middleware/session/).
 
 `volatile` is similar to `data` but it only survives one request, for example one redirect request, which is exactly what we do after a save! We can thus use `volatile` to store a success- or error- message in the session, which we then display once the user redirected back to the edit page.
 
@@ -34,7 +34,7 @@ To make the success messages distinguishable, our `Page.updateOrCreate` should r
 
     Page.updateOrCreate = function(slug, obj) {
        ...
-       return revision._id;
+       return revision.id;
     }
 
 ...and in the POST edit view we add error handling and set `session.volatile` appropriatly:
@@ -46,7 +46,7 @@ To make the success messages distinguishable, our `Page.updateOrCreate` should r
        } catch (e) {
           request.session.volatile = "Error saving page: " + e;
        }
-       return response.redirect(urlFor(app, {view: 'edit', slug: slug}));
+       return response.redirect(urlFor(app, {action: 'edit', slug: slug}));
     });
 
 Of course in the GET edit view, this message has to be passed to template, and the template needs to display it... what a great exercise for you!
@@ -141,7 +141,7 @@ Autologin middleware
 
 Enough of the silly examples. If you have not fully groked JSGI middleware yet, do not worry. If you are interested, checkout the many Stick middleware modules. But even if you only have a basic understanding of what's going on (request is coming in, response is being returned) you should be fine for the rest of the tutorial.
 
-The autologin middleware is quiet minimal: we just attach a new User object to the session, if it doesn't already have one:
+The autologin middleware is quite minimal: we just attach a new User object to the session, if it doesn't already have one:
 
     var {User} = require('../model');
     exports.middleware = function autologin(next) {
@@ -181,7 +181,7 @@ And we need to modify the Revision model to have a reference to the User object 
     }});
 
 
-Remember what I told you about ringo-sqlstore and evolving the database scheme? It does not do it We defined the mapping for these new properties, but the database on disk does not know about them. You have to delete the database file (or modify it - but that does not seem worth the effort for our test data) and let ringo-sqlstore recreate the whole database.
+Remember what I told you about ringo-sqlstore and evolving the database scheme? It does not do it. We defined the mapping for these new properties, but the database on disk does not know about them. You have to delete the database file (or modify it - but that does not seem worth the effort for our test data) and let ringo-sqlstore recreate the whole database.
 
 Saving author information
 ---------------------------

@@ -80,9 +80,6 @@ As you can see in the code above, Stick passes the placeholder's value as an add
 
 Besides those content pages, there are special pages with the prefix "special". Those pages expose internal information like recent changes to the wiki. For the special pages we add another route, which grabs everything which has "/special/" as a first segment and a placeholder for the second. Put together, our routes now look like this:
 
-      app.get('/special/:specialtype', function(request, specialtype) {
-         return response.html('I am special "' + specialtype + '"');
-      });
 
       app.get('/:slug', function(request, slug) {
          return response.html('I am ' + slug);
@@ -92,10 +89,13 @@ Besides those content pages, there are special pages with the prefix "special". 
          return response.html('Edit ' + slug);
       });
 
+      app.get('/special/:specialtype', function(request, specialtype) {
+         return response.html('I am special "' + specialtype + '"');
+      });
 
 One thing to notice here is the order of the routes. Try accessing <http://localhost:8080/special/edit>. This path would fit two of the routes: either the first or the last one. As you might have guessed by now, the routes are tried in the order they are defined.
 
-The last thing you need to know about named placeholders is that they can be made optional by appending a `?` to the name of a placeholder. This allows us to fix a shortcoming in our routes, namely, that the root URL <http://localhost:8080/> is not handled. Making '/:slug?' optional in the last route fixes this. The root Url should now return "I am undefined". Good enough for now.
+The last thing you need to know about named placeholders is that they can be made optional by appending a `?` to the name of a placeholder. This allows us to fix a shortcoming in our routes, namely, that the root URL <http://localhost:8080/> is not handled. Making '/:slug?' optional in the first route fixes this. The root Url should now return "I am undefined". Good enough for now.
 
 Later, we will redirect this root Url to the homepage of our wiki.
 
