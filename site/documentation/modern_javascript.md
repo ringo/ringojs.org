@@ -1,4 +1,4 @@
-# Modern JavaScript Support
+# JavaScript Support
 
 [RingoJS 2.0.0](https://ringojs.org/documentation/release_2_0_0/) is the first release based on Rhino’s EcmaScript 6 (ES6) engine mode.
 It ships with a new and fully re-written HttpServer module, which is mostly compatible with the previous implementation.
@@ -25,3 +25,19 @@ The Rhino-team tracks implemented language features and the level of conformity 
 
 There are no plans to migrate to another JavaScript engine with a higher compatibility level. Ringo will be based on Rhino for the foreseeable future.
 Ringo follows the Rhino releases as soon as possible. New minor releases may be triggered by a new engine release with additional language features included.
+
+## Reserved keywords
+
+In addition to [ECMAScript keywords][ESkeywords], the following keywords are reserved as top-level package names: 
+
+* `java`
+* `javax`
+* `org`
+* `com`
+* `edu`
+* `net`
+* `android`
+
+They cannot be used as identifiers.
+
+[ESkeywords]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_keywords_as_of_ecmascript_2015
