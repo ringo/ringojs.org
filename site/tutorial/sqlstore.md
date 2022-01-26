@@ -23,9 +23,7 @@ All we need for a H2 store is a file location where H2 can put its data. Assumin
 
 <div class="knowmore">
 
- If you want to connect to a MySQL database, for example, you have to adapt the "jdbc:..." string and the driver name to fit your setup; depending on the database, additional paramters like "username" and "password" might also be needed.
-
- FIXME howto install jdbc mysql jar and which "driver" line to put there. http://dev.mysql.com/downloads/connector/j/
+ If you want to connect to a MySQL / Postgres database, for example, you have to adapt the `"jdbc:..."` string and the driver name to fit your setup; depending on the database, additional paramters like "username" and "password" might also be needed. Don't forget to put the JDBC driver JARs into Ringo's classpath.
 
 </div>
 
@@ -135,7 +133,7 @@ Look at the mapping for "page" at the bottom of our Revision definition:
         }
     }});
 
-A one-to-one relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property, which has the value "Page" in this example. If you do not specify any additional mapping information (FIXME how would i do that?), then the Page entity is by default referenced by its id. That is want we want here.
+A one-to-one relation - a "object" mapping - needs to know which kind of entity it references. We specify this with the "entity" property, which has the value "Page" in this example. If you do not specify any additional mapping information, then the Page entity is by default referenced by its id. That is want we want here.
 
 Back into the shell to create a test Revision:
 
@@ -201,7 +199,7 @@ We have a clean model setup to store pages and multiple revisions per page. But 
 
 <div class="mustknow">
 
-This assumes you now how to define [getters and setters in JavaScript](http://mdn.beonex.com/en/JavaScript/Reference/Global_Objects/Object/defineProperties.html).
+This assumes you now how to define [getters and setters in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties).
 
 </div>
 

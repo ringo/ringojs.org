@@ -10,7 +10,7 @@
 }
 
 .technologyList li {
-    width: calc(20% - 12px);
+    width: calc(25% - 12px);
     margin-right: 12px;
     display: block;
     float: left;

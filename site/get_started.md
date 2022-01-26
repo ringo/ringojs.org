@@ -1,9 +1,9 @@
 # Get Started
 
-This is a short guide on how to install Ringo on your system. The only essential requirement is the Java Platform, Standard Edition. We recommend Java SE 8 to run Ringo. You can download Java from:
+This is a short guide on how to install Ringo on your system. The only essential requirement is the Java Platform, Standard Edition. We recommend Java LTS releases 11 or 17 to run Ringo. You can download Java from:
 
- * [OpenJDK via AdoptOpenJDK](https://adoptopenjdk.net/) (free; Linux, macOS, Windows)
- * [Oracle JDK 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) (commonly requires a commercial license)
+ * [OpenJDK via Adoptium](https://adoptium.net/) (free; Linux, macOS, Windows)
+ * [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) (commonly requires a commercial license)
 
 ## Installing Ringo
 
@@ -37,6 +37,7 @@ Tips:
   * Hitting `Tab` will try to auto-complete your current input.
   * You can scroll through your session history using the Up and Down keys
   * Ringo supports most of JavaScript 1.8 and ECMAScript 5.
+  * ES6 support has been improved in RingoJS 3.0
 
 ## Running the examples
 
@@ -64,10 +65,4 @@ If you don't pass the app directory on the command line the script will prompt y
 
 ## Packages for Ringo
 
-To install additional Ringo packages you can either use the bare bones `ringo-admin install` command or the more advanced [rp](https://github.com/grob/rp) Ringo package manager.
-
-See the help page on [packages](/documentation/packages) for more details.
-
-## Community help
-
-If you don't find what you are looking for please tell us on the [mailing list](https://groups.google.com/group/ringojs) or [@ringojs on Twitter](https://twitter.com/ringojs).
+To install additional Ringo packages you can either use the `ringo-admin install` command. See the help page on [packages](/documentation/packages) for more details.
