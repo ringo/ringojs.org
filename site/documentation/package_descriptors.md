@@ -1,8 +1,8 @@
 # package.json descriptors
 
 Each package must provide a package descriptor with the name `package.json`. The descriptor holds metadata and detailed
-information about the package. It's used by tools like `rp` to install the package and to resolve dependencies.
-The `package.json` file must be valid JSON, not just a JavaScript object literal.
+information about the package. It's used by tools like `ring-admin install` to install the package and
+to resolve dependencies. The `package.json` file must be valid JSON, not just a JavaScript object literal.
 
 ## Example
 
@@ -27,7 +27,7 @@ The `package.json` file must be valid JSON, not just a JavaScript object literal
            }
        ],
        "engines": {
-           "ringojs": ">= 1.0.0"
+           "ringojs": ">= 3.0.0"
        },
        "dependencies": {
            "ringo-sqlstore": ">= 0.5",
@@ -99,7 +99,7 @@ release of Ringo is required to install the package, but their are no hard check
 ## dependencies
 
 A package should define it's dependencies in an object that maps a package name to a version using semantic versioning.
-The `rp` client tries to resolve all dependencies and installs them together with the package.
+The `ringo-admin` client tries to resolve all dependencies and installs them together with the package.
 
 ## directories.lib
 

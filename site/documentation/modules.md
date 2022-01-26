@@ -91,7 +91,7 @@ The module path can be set in the following ways:
 
 ## Packages
 
-*Note: rp and `ringo-admin` are two [package management tools for Ringo](../package_management).*
+*Note: `ringo-admin` is the recommended [package management tools for Ringo](../package_management).*
 
 Packages provide a means of bundling several modules and other resources into
 one unit. Packages are directories that contain a `package.json` package descriptor file.
